@@ -1,5 +1,6 @@
 import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react';
 import type { NextPage } from 'next';
+import { Link } from 'next/link';
 import styles from "../styles/Home.module.css";
 import brownList from "../public/brownList.json";
 import goldList from "../public/goldList.json";
@@ -80,7 +81,9 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainNav}>
-        <a href="/passive/nonsense/">Nonsense</a>
+        <Link href="/passive/nonsense/">
+          <a>Nonsense</a>
+        </Link>
       </div>
       <h1 className={styles.total}>{totalMFs} MFs strong!</h1>
       <div className={styles.counter1}>
