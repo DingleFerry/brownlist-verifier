@@ -3,11 +3,11 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image'
 import styles from "../styles/Home.module.css";
-import logo from '../public/black-logo.png';
+// import logo from '../public/black-logo.png';
 import brownList from "../public/brownList.json";
 import goldList from "../public/goldList.json";
 import platinumList from "../public/platinumList.json";
-import twitLogo from "https://tmb.imgix.net/twitter-0a0a0a.png";
+// import twitLogo from "https://tmb.imgix.net/twitter-0a0a0a.png";
 
 const Home: NextPage = () => {
   const address = useAddress();
@@ -93,7 +93,7 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.logo}>
             <Link href="">
-              <Image src='/../public/black-logo.png' alt='Black asshole logo.' width={90} height={90}/>
+              <Image src='https://tmb.imgix.net/black-logo.png' alt='Black asshole logo.' width={90} height={90}/>
             </Link>
           </div>
           <div className={styles.social}>
