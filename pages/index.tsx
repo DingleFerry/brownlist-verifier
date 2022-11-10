@@ -80,7 +80,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainNav}>
-        <a href="/passive/nonsense.tsx/">Nonsense</a>
+        <a href="/passive/nonsense/">Nonsense</a>
       </div>
       <h1 className={styles.total}>{totalMFs} MFs strong!</h1>
       <div className={styles.counter1}>
