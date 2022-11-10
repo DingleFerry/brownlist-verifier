@@ -3,10 +3,11 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image'
 import styles from "../styles/Home.module.css";
-// import logo from '../public/black-logo.png';
+import logo from '../public/black-logo.png';
 import brownList from "../public/brownList.json";
 import goldList from "../public/goldList.json";
-import platinumList from "../public/platinumList.json"
+import platinumList from "../public/platinumList.json";
+import twitLogo from "https://tmb.imgix.net/twitter-0a0a0a.png";
 
 const Home: NextPage = () => {
   const address = useAddress();
@@ -97,7 +98,7 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
-              <a className={styles.twitLogoCont} target="_blank"><Image src='/../public/twitter-0a0a0a.png' alt='Black Twitter logo.' width={56} height={45}/></a>
+              <a className={styles.twitLogoCont} target="_blank"><Image src='/https://tmb.imgix.net/twitter-0a0a0a.png' alt='Black Twitter logo.' width={56} height={45}/></a>
             </Link>
           </div>
         </div>
