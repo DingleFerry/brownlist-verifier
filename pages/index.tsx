@@ -1,7 +1,9 @@
 import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react';
 import type { NextPage } from 'next';
-import { Link } from 'next/link';
+import Link from 'next/link';
+import Image from 'next/image'
 import styles from "../styles/Home.module.css";
+// import logo from '../public/black-logo.png';
 import brownList from "../public/brownList.json";
 import goldList from "../public/goldList.json";
 import platinumList from "../public/platinumList.json"
@@ -80,42 +82,59 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.mainNav}>
-        <Link href="/passive/nonsense/">
-          <a>Nonsense</a>
-        </Link>
-      </div>
-      <h1 className={styles.total}>{totalMFs} MFs strong!</h1>
-      <div className={styles.counter1}>
-        <h1 className={styles.counter}>Brown: {bListTotal}
-          <span className={styles.goldCounter}> Gold: {gListTotal}</span>
-          <span className={styles.platCounter}> Platinum: {pListTotal}</span>
-        </h1>
-      </div>
-      <div className={styles.counter2}>
-        <h1 className={styles.counter} id={styles.platCounter}> Platinum: {pListTotal}</h1>
-        <h1 className={styles.counter} id={styles.goldCounter}> Gold: {gListTotal}</h1>
-        <h1 className={styles.counter}>Brown: {bListTotal}</h1>
-      </div>
-      {address ? (
-        <>
-          <p id="status" className={styles.message}>{message}</p>
-          <p id="clideo" className={styles.clideo}>{clideo}</p>
-          <p id="mistake" className={styles.mistake}>{mistake}</p>
+      <main className={styles.main}>
 
-          <div className={styles.buttons1}>
-            <button onClick={checkList} className={styles.mainButton}>Which list am I on?</button>
-            <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button>
+        <div className={styles.mainNav}>
+          <div className={styles.pageLinks}>
+            <Link href="/passive/nonsense">
+              <a><h3 className={styles.pageLink}>Nonsense</h3></a>
+            </Link>
           </div>
+          <div className={styles.logo}>
+            <Link href="">
+              <Image src='/../public/black-logo.png' alt='Black asshole logo.' width={90} height={90}/>
+            </Link>
+          </div>
+          <div className={styles.social}>
+            <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+              <a className={styles.twitLogoCont} target="_blank"><Image src='/../public/twitter-0a0a0a.png' alt='Black Twitter logo.' width={56} height={45}/></a>
+            </Link>
+          </div>
+        </div>
 
-          <div className={styles.buttons2}>
-            <button onClick={checkList} className={styles.mainButton}>Which list am I on?</button><br></br>
-            <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button>
-          </div>
-        </>
-      ) : (
-        <button onClick={connect} className={styles.mainButton} id={styles.connectBtn}>Connect Wallet</button>
-      )}
+        <h1 className={styles.total}>{totalMFs} MFs strong!</h1>
+        <div className={styles.counter1}>
+          <h1 className={styles.brownCounter}>Brown: {bListTotal}
+            <span className={styles.goldCounter}> Gold: {gListTotal}</span>
+            <span className={styles.platCounter}> Platinum: {pListTotal}</span>
+          </h1>
+        </div>
+        <div className={styles.counter2}>
+          <h1 className={styles.counter} id={styles.platCounter}> Platinum: {pListTotal}</h1>
+          <h1 className={styles.counter} id={styles.goldCounter}> Gold: {gListTotal}</h1>
+          <h1 className={styles.counter} id={styles.brownCounter}>Brown: {bListTotal}</h1>
+        </div>
+
+        {address ? (
+          <>
+            <p id="status" className={styles.message}>{message}</p>
+            <p id="clideo" className={styles.clideo}>{clideo}</p>
+            <p id="mistake" className={styles.mistake}>{mistake}</p>
+
+            <div className={styles.buttons1}>
+              <button onClick={checkList} className={styles.mainButton}>Which list am I on?</button>
+              <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button>
+            </div>
+
+            <div className={styles.buttons2}>
+              <button onClick={checkList} className={styles.mainButton}>Which list am I on?</button><br></br>
+              <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button>
+            </div>
+          </>
+        ) : (
+          <button onClick={connect} className={styles.mainButton} id={styles.connectBtn}>Connect Wallet</button>
+        )}
+      </main>
     </div>
   );
 };
