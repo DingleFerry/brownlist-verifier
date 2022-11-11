@@ -89,7 +89,7 @@ const Home: NextPage = () => {
 
         <div className={styles.mainNav}>
           <div className={styles.pageLinks}>
-            <Link href="/passive/nonsense">
+            <Link href="/nonsense">
               <a><h3 className={styles.pageLink}>Nonsense</h3></a>
             </Link>
           </div>
