@@ -6,6 +6,8 @@ import Image from 'next/image'
 // import twitter from '../public/twitter-0a0a0a.png';
 import styles from "../../styles/Home.module.css";
 
+// https://bafkreid5yasqlpflxg2fq7irzs5mgisvq7waskc5t2tf7nlrkqtaeaj3wm.ipfs.nftstorage.link/
+
 const Nonsense: NextPage = () => {
   return (
     <>
@@ -25,7 +27,7 @@ const Nonsense: NextPage = () => {
           </div>
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
-              <a className={styles.twitLogoCont} target="_blank"><Image src='https://tmb.imgix.net/twitter-0a0a0a.png' alt='Black Twitter logo.' width={56} height={45}/></a>
+              <a className={styles.twitLogoCont} target="_blank"><Image src='https://bafkreid5yasqlpflxg2fq7irzs5mgisvq7waskc5t2tf7nlrkqtaeaj3wm.ipfs.nftstorage.link/' alt='Black Twitter logo.' width={56} height={45}/></a>
             </Link>
           </div>
         </div>
@@ -47,7 +49,7 @@ const Nonsense: NextPage = () => {
           <div className={styles.sect3}>
             <h1 className={styles.warningHeader}>And one more thing...</h1><br></br>
             <p className={styles.warningBody}>
-              We will NEVER ask you for your seed phrase.
+              We will NEVER ask you for your seed phrase or private key.
               <br></br>&<br></br>
               We will ALWAYS give advanced notice on our official Twitter and this website of any upcoming mint or release of any kind.
               Web 3 is still a wild place, MF! Be smart out there and DYOR!!

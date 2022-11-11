@@ -9,6 +9,8 @@ import goldList from "../public/goldList.json";
 import platinumList from "../public/platinumList.json";
 // import twitLogo from "https://tmb.imgix.net/twitter-0a0a0a.png";
 
+// https://bafkreid5yasqlpflxg2fq7irzs5mgisvq7waskc5t2tf7nlrkqtaeaj3wm.ipfs.nftstorage.link/ - twitterLogo
+
 const Home: NextPage = () => {
   const address = useAddress();
   const connect = useMetamask();
@@ -93,12 +95,14 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.logo}>
             <Link href="">
-              <Image src='https://tmb.imgix.net/black-logo.png' alt='Black asshole logo.' width={90} height={90}/>
+              <Image src='https://bafkreihjag3e6uz3ykuzjfsu6qlvyejznug5maz3z2hha3a2ufo5xhxjxi.ipfs.nftstorage.link/' alt='Black asshole logo.' width={90} height={90}/>
             </Link>
           </div>
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
-              <a className={styles.twitLogoCont} target="_blank"><Image src='https://tmb.imgix.net/twitter-0a0a0a.png' alt='Black Twitter logo.' width={56} height={45}/></a>
+              <a className={styles.twitLogoCont} target="_blank">
+                <Image src='https://bafkreid5yasqlpflxg2fq7irzs5mgisvq7waskc5t2tf7nlrkqtaeaj3wm.ipfs.nftstorage.link/' alt='Black Twitter logo.' width={56} height={45}/>
+              </a>
             </Link>
           </div>
         </div>
