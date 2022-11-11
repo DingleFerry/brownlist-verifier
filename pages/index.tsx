@@ -1,15 +1,19 @@
 import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+
 import styles from "../styles/Home.module.css";
-// import logo from '../public/black-logo.png';
+
 import brownList from "../public/brownList.json";
 import goldList from "../public/goldList.json";
 import platinumList from "../public/platinumList.json";
-// import twitLogo from "https://tmb.imgix.net/twitter-0a0a0a.png";
+
+// import logoBMA from '../public/bma-logo-black.png';
+// import logoTwit from '../public/twitter-logo-black.png';
 
 // https://bafkreid5yasqlpflxg2fq7irzs5mgisvq7waskc5t2tf7nlrkqtaeaj3wm.ipfs.nftstorage.link/ - twitterLogo
+// https://bafkreihjag3e6uz3ykuzjfsu6qlvyejznug5maz3z2hha3a2ufo5xhxjxi.ipfs.nftstorage.link/ - BMA logo
 
 const Home: NextPage = () => {
   const address = useAddress();
@@ -96,14 +100,14 @@ const Home: NextPage = () => {
           <div className={styles.logo}>
             <Link href="">
               <a>
-                <Image src='/../public/bma-logo-black.png' alt='Black BMA logo.' width={90} height={90}/>
+                <Image src={'https://bafkreihjag3e6uz3ykuzjfsu6qlvyejznug5maz3z2hha3a2ufo5xhxjxi.ipfs.nftstorage.link/'} alt='Black BMA logo' width={90} height={90} />
               </a>
             </Link>
           </div>
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
               <a className={styles.twitLogoCont} target="_blank">
-                <Image src='/../public/twitter-logo-black.png' alt='Black Twitter logo.' width={56} height={45}/>
+                <Image src={'https://bafkreid5yasqlpflxg2fq7irzs5mgisvq7waskc5t2tf7nlrkqtaeaj3wm.ipfs.nftstorage.link/'} alt='Black Twitter logo' width={56} height={45} />
               </a>
             </Link>
           </div>
