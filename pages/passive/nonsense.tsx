@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 // import logo from '../public/black-logo.png';
 // import twitter from '../public/twitter-0a0a0a.png';
-import styles from "../../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 
 
 const Nonsense: NextPage = () => {
