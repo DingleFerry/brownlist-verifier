@@ -96,14 +96,14 @@ const Home: NextPage = () => {
           <div className={styles.logo}>
             <Link href="">
               <a>
-                <Image src='https://bafkreihjag3e6uz3ykuzjfsu6qlvyejznug5maz3z2hha3a2ufo5xhxjxi.ipfs.nftstorage.link' alt='Black asshole logo.' width={90} height={90}/>
+                <Image src='/../public/bma-logo-black.png' alt='Black BMA logo.' width={90} height={90}/>
               </a>
             </Link>
           </div>
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
               <a className={styles.twitLogoCont} target="_blank">
-                <Image src='https://bafkreid5yasqlpflxg2fq7irzs5mgisvq7waskc5t2tf7nlrkqtaeaj3wm.ipfs.nftstorage.link' alt='Black Twitter logo.' width={56} height={45}/>
+                <Image src='/../public/twitter-logo-black.png' alt='Black Twitter logo.' width={56} height={45}/>
               </a>
             </Link>
           </div>
