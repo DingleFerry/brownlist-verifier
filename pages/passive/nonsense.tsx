@@ -26,7 +26,9 @@ const Nonsense: NextPage = () => {
           </div>
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
-              <a className={styles.twitLogoCont} target="_blank"><Image src='https://tmb.imgix.net/twitter-0a0a0a.png' alt='Black Twitter logo.' width={56} height={45}/></a>
+              <a className={styles.twitLogoCont} target="_blank">
+                <Image src='https://tmb.imgix.net/twitter-0a0a0a.png' alt='Black Twitter logo.' width={56} height={45}/>
+              </a>
             </Link>
           </div>
         </div>
