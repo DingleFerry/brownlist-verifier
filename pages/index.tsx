@@ -80,7 +80,7 @@ const Home: NextPage = () => {
       (document.getElementById('clideo') as HTMLElement).textContent = clideo;
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
     }
-};
+  };
 
 
   return (
@@ -95,7 +95,9 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.logo}>
             <Link href="">
-              <Image src='https://bafkreihjag3e6uz3ykuzjfsu6qlvyejznug5maz3z2hha3a2ufo5xhxjxi.ipfs.nftstorage.link' alt='Black asshole logo.' width={90} height={90}/>
+              <a>
+                <Image src='https://bafkreihjag3e6uz3ykuzjfsu6qlvyejznug5maz3z2hha3a2ufo5xhxjxi.ipfs.nftstorage.link' alt='Black asshole logo.' width={90} height={90}/>
+              </a>
             </Link>
           </div>
           <div className={styles.social}>
