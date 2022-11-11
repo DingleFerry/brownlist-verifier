@@ -13,7 +13,7 @@ const Nonsense: NextPage = () => {
     <div className={styles.container}>
       <main className={styles.main}>
 
-      {/* <div className={styles.mainNav}>
+      <div className={styles.mainNav}>
           <div className={styles.pageLinks}>
             <Link href="">
               <a><h3 className={styles.pageLink}>Nonsense</h3></a>
@@ -29,9 +29,9 @@ const Nonsense: NextPage = () => {
               <a className={styles.twitLogoCont} target="_blank"><Image src='https://tmb.imgix.net/twitter-0a0a0a.png' alt='Black Twitter logo.' width={56} height={45}/></a>
             </Link>
           </div>
-        </div> */}
+        </div>
 
-        <div className={styles.mainNav}>
+        {/* <div className={styles.mainNav}>
           <div className={styles.pageLinks}>
             <Link href="">
               <a><h3 className={styles.pageLink}>Nonsense</h3></a>
@@ -49,7 +49,7 @@ const Nonsense: NextPage = () => {
               </a>
             </Link>
           </div>
-        </div>
+        </div> */}
 
         <div className={styles.sectCont}>
           <div className={styles.sect1}>
