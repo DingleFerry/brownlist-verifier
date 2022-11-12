@@ -58,7 +58,6 @@ const Nonsense: NextPage = () => {
         <div className={styles.sectCont}>
           <div className={styles.sect1}>
             <h1 className={styles.busModel}>Business Model:<br></br>Make Dope <span className={styles.busModelShit}>Shit.</span></h1>
-            <h1 className={styles.busModelMobile}>Business<br></br>Model:<br></br>Make Dope <span className={styles.busModelShit}>Shit.</span></h1>
           </div>
 
           <div className={styles.sect2}>

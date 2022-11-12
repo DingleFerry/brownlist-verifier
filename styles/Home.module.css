@@ -363,12 +363,14 @@
 
 
 @media (max-width: 900px) {
-  .busModelMobile{
-    display: block;
-  }
-  
   .busModel{
-    display: none;
+    font-size: 72px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .busModel{
+    font-size: 60px !important;
   }
 }
 
