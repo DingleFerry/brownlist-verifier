@@ -134,12 +134,13 @@ const Home: NextPage = () => {
 
             <div className={styles.buttons1}>
               <button onClick={checkList} className={styles.mainButton}>Which list am I on?</button>
-              <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button>
+              {/* <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button> */}
+              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button" data-text="Sorry if I blinded you MF, my official @BMAssholesNFT Gold Status is just too damn shiny!! twitter.com/BMAssholesNFT/status/1591485324286656512/photo/1" data-url="https://brownlist-verifier.vercel.app/" data-hashtags="#BMA #MakeMemesNotWar #KissMyAss" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
             </div>
 
             <div className={styles.buttons2}>
               <button onClick={checkList} className={styles.mainButton}>Which list am I on?</button><br></br>
-              <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button>
+              {/* <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button> */}
             </div>
           </>
         ) : (
