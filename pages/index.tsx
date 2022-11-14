@@ -20,12 +20,30 @@ const Home: NextPage = () => {
   const connect = useMetamask();
   const disconnect = useDisconnect();
 
+  // const hidePlaceholder = async () => {
+  //   const connectToStart = (document.getElementById('connectToStart') as HTMLElement);
+  //   const connectBtn = (document.getElementById('Home_connectBtn__q4_OB') as HTMLElement);
+    
+  //   connectToStart.classList.remove('Home_connectToStart__L19x5');
+  //   connectToStart.classList.add('Home_displayNone__dFRW_');
+
+  //   if (connectBtn == connectBtn){
+  //     const messageText = (document.getElementById('status') as HTMLElement);
+  //     console.log(messageText);
+  //   }
+  // };
+
+  // function connectBtnClick() {
+  //   useMetamask();
+  //   hidePlaceholder();
+  // }
+
   const bList = brownList.brownList;
   const gList = goldList.goldList;
   const pList = platinumList.platinumList;
 
 
-  const message = "Connected! Click to verify status.";
+  const message = "Click to verify status.";
   const mistake = "";
   const clideo = "";
 
@@ -34,10 +52,21 @@ const Home: NextPage = () => {
   let pListTotal = pList.length;
   let totalMFs = bListTotal + gListTotal + pListTotal;
 
+
   const checkList = async () => {
   const arr: string[] = bList;
   const arr1: string[] = gList;
   const arr2: string[] = pList;
+
+
+  // const swapMessage = async () => {
+  //   connectToStart.classList.remove('Home_connectToStart__L19x5');
+  //   connectToStart.classList.add('Home_displayNone__dFRW_');
+
+  //   message.classList.remove('Home_displayNone__dFRW_');
+  //   message.classList.add('Home_message__qpB0D');
+  // }
+
 
   const queryBtn = (document.getElementById('queryBtn') as HTMLElement);
   const queryBtnMobile = (document.getElementById('queryBtnMobile') as HTMLElement);
@@ -45,7 +74,7 @@ const Home: NextPage = () => {
   const tweetBtnBrown = (document.getElementById('tweetBtnBrown') as HTMLElement);
   const tweetBtnGold = (document.getElementById('tweetBtnGold') as HTMLElement);
   const tweetBtnPlat = (document.getElementById('tweetBtnPlat') as HTMLElement);
-  
+
 
   const str = address?.toString();
 
@@ -116,7 +145,7 @@ const Home: NextPage = () => {
 
       tweetBtnPlat.classList.remove('Home_displayNone__dFRW_');
       tweetBtnPlat.classList.add('Home_tweetBtnPlat__lexI5');
-    } else {
+    } else {    
       const message = "Unfortunately, you are not currently on The Brownlist. So go make memes while there's still time!";
       const clideo = "If you don't know how, search for “meme maker” to get the ball rolling.";
       const mistake = "If you believe this to be incorrect, stay calm MF and reach out to us on Twitter.";
@@ -177,6 +206,8 @@ const Home: NextPage = () => {
           </div>
         </div>
 
+        {/* <p className={styles.connectToStart} id="connectToStart">Connect your wallet to start.</p> */}
+
         {address ? (
           <>
             <p id="status" className={styles.message}>{message}</p>
@@ -201,7 +232,7 @@ const Home: NextPage = () => {
             </div>
           </>
         ) : (
-          <button onClick={connect} className={styles.mainButton} id={styles.connectBtn}>Connect Wallet</button>
+          <button onClick={connect} className={styles.connectBtn} id={styles.connectBtn}>Connect Wallet</button>
         )}
       </main>
     </div>
