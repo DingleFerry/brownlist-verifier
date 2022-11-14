@@ -215,6 +215,7 @@
 .mainButton{
   background: #B842A0;
   display: block;
+  margin-top: 10px;
 }
 
 .altButton{
@@ -235,6 +236,11 @@
 .tweetBtnPlat{
   background: #0a0a0a;
   display: block;
+}
+
+.tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .tweetAnc{

@@ -180,20 +180,19 @@ const Home: NextPage = () => {
         {address ? (
           <>
             <p id="status" className={styles.message}>{message}</p>
-            <p id="clideo" className={styles.clideo}>{clideo}</p>
+            <div>
+              <script async src="https://platform.twitter.com/widgets.js"></script>
+              <button className={styles.displayNone} id="tweetBtnBrown"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Smell%20that?!%20That's%20the%20smell%20of%20my%20official%20@BMAssholesNFT%20Brownlist%20spot!%20A%20dynasty%20is%20being%20born%20and%20I'm%20not%20missing%20out!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/mVupmqcjiK%0DCheck%20your%20status%20now:%20https://brownlist-verifier.vercel.app/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
+              <button className={styles.displayNone} id="tweetBtnGold"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Sorry%20if%20I%20blinded%20you%20MF,%20my%20official%20@BMAssholesNFT%20Gold%20Status%20is%20just%20too%20damn%20shiny!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/mVupmqcjiK%0DCheck%20your%20status%20now:%20https://brownlist-verifier.vercel.app/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
+              <button className={styles.displayNone} id="tweetBtnPlat"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/mVupmqcjiK%0DCheck%20your%20status%20now:%20https://brownlist-verifier.vercel.app/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
+            </div>
+            <p id="clideo" className={styles.displayNone}>{clideo}</p>
             <p id="mistake" className={styles.displayNone}>{mistake}</p>
 
             <div className={styles.buttons1}>
               <button onClick={checkList} className={styles.mainButton} id="queryBtn">Which list am I on?</button>
               {/* <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button> */}
               {/* <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button" data-text="Sorry if I blinded you MF, my official @BMAssholesNFT Gold Status is just too damn shiny!! twitter.com/BMAssholesNFT/status/1591485324286656512/photo/1" data-url="https://brownlist-verifier.vercel.app/" data-hashtags="#BMA #MakeMemesNotWar #KissMyAss" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script> */}
-            </div>
-            
-            <div>
-              <script async src="https://platform.twitter.com/widgets.js"></script>
-              <button className={styles.displayNone} id="tweetBtnBrown"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Smell%20that?!%20That's%20the%20smell%20of%20my%20official%20@BMAssholesNFT%20Brownlist%20spot!%20A%20dynasty%20is%20being%20born%20and%20I'm%20not%20missing%20out!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/mVupmqcjiK%0DCheck%20your%20status%20now:%20https://brownlist-verifier.vercel.app/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
-              <button className={styles.displayNone} id="tweetBtnGold"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Sorry%20if%20I%20blinded%20you%20MF,%20my%20official%20@BMAssholesNFT%20Gold%20Status%20is%20just%20too%20damn%20shiny!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/mVupmqcjiK%0DCheck%20your%20status%20now:%20https://brownlist-verifier.vercel.app/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
-              <button className={styles.displayNone} id="tweetBtnPlat"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/mVupmqcjiK%0DCheck%20your%20status%20now:%20https://brownlist-verifier.vercel.app/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
             </div>
 
             <div className={styles.buttons2}>
