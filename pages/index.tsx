@@ -163,16 +163,18 @@ const Home: NextPage = () => {
         </div>
 
         <h1 className={styles.total}>{totalMFs} MFs strong!</h1>
-        <div className={styles.counter1}>
-          <h1 className={styles.brownCounter}>Brown: {bListTotal}
-            <span className={styles.goldCounter}> Gold: {gListTotal}</span>
-            <span className={styles.platCounter}> Platinum: {pListTotal}</span>
-          </h1>
-        </div>
-        <div className={styles.counter2}>
-          <h1 className={styles.counter} id={styles.platCounter}> Platinum: {pListTotal}</h1>
-          <h1 className={styles.counter} id={styles.goldCounter}> Gold: {gListTotal}</h1>
-          <h1 className={styles.counter} id={styles.brownCounter}>Brown: {bListTotal}</h1>
+        <div className={styles.sect1}>
+          <div className={styles.counter1}>
+            <h1 className={styles.brownCounter}>Brown: {bListTotal}
+              <span className={styles.goldCounter}> Gold: {gListTotal}</span>
+              <span className={styles.platCounter}> Platinum: {pListTotal}</span>
+            </h1>
+          </div>
+          <div className={styles.counter2}>
+            <h1 className={styles.counter} id={styles.platCounter}>{pListTotal}</h1>
+            <h1 className={styles.counter} id={styles.goldCounter}>{gListTotal}</h1>
+            <h1 className={styles.counter} id={styles.brownCounter}>{bListTotal}</h1>
+          </div>
         </div>
 
         {address ? (
