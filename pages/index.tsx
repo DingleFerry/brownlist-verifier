@@ -214,11 +214,14 @@ const Home: NextPage = () => {
       twitterHandle
     }
 
+    // var myHeaders = new Headers();
+    // myHeaders.append('Content-Type', 'application/json');
+
     const response = await fetch('/api/submit', {
       method: 'POST',
       mode: 'cors',
+      cache: 'default',
       headers: {
-        'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(form)
