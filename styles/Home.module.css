@@ -428,6 +428,26 @@ input.resultFormInput, input.resultFormInput:focus{
   background-color: #0a0a0a;
 }
 
+/* ################################################################################################################ */
+/* GOOGLE FORM */
+/* iframe.l{
+  appearance: none;
+  background: #995c3d !important;
+  width: 600px;
+  height: 600px;
+}
+
+.sc-jdhwqr, .iwDLnD, .isAccountBox, .showNavigationBar, .sc-fkJVfC, .hTaiGO{
+  display: none;
+  height: 0px !important;
+}*/
+
+.formCont{
+  position: absolute;
+  bottom: -293px;
+  left: 0;
+} 
+
 /* ################################################################################################################# */
 /* NONSENSE */
 

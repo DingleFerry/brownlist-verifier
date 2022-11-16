@@ -11,6 +11,8 @@ import goldList from "../public/goldList.json";
 import platinumList from "../public/platinumList.json";
 import { stringify } from 'querystring';
 
+import JotformEmbed from 'react-jotform-embed';
+
 // import logoBMA from '../public/bma-logo-black.png';
 // import logoTwit from '../public/twitter-logo-black.png';
 
@@ -272,6 +274,8 @@ const Home: NextPage = () => {
   //   e.target.setCustomValidity('')
   // }
 
+  // (document.getElementById('jotFormEmbed') as HTMLElement).innerHTML = ''
+
 
   return (
     <div className={styles.container}>
@@ -366,9 +370,18 @@ const Home: NextPage = () => {
 
         <div id="formCont" className={styles.formCont}>
 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlZaq3kRAUk1IGlbnNWvDkf-X4gzPWjTEiaQLnm5F1F6Ht_A/viewform?embedded=true" width="640" height="542">Loading…</iframe>
+        {/* <script type="text/javascript" src="https://form.jotform.com/jsform/223194906055053"></script> */}
 
-            <div id="homeFormMobile">
+        {/* <iframe className={styles.iFrameForm} src="https://docs.google.com/forms/d/e/1FAIpQLSdlZaq3kRAUk1IGlbnNWvDkf-X4gzPWjTEiaQLnm5F1F6Ht_A/viewform?embedded=true" width="640" height="542">Loading…</iframe> */}
+        {/* <iframe className={styles.iFrameForm} id="JotFormIFrame-223195665935164" title="App" src="https://www.jotform.com/app/223195665935164?appEmbedded=1"></iframe> */}
+        {/* <script type="text/javascript" src="https://form.jotform.com/jsform/223194906055053"></script> */}
+        
+        {/* <h1 className={styles.formTitle}>Not on The Brownlist?</h1>
+                  <p className={styles.formInst}>Fill out the form below:</p> */}
+        <div id="jotFormEmbed"><JotformEmbed src="https://form.jotformeu.com/223194906055053" /></div>
+          
+
+            {/* <div id="homeFormMobile">
               <div className={styles.homeFormMobile}>
                 <form onSubmit={handleSubmit}>
                   <h1 className={styles.formTitle}>Not on The Brownlist?</h1>
@@ -445,7 +458,7 @@ const Home: NextPage = () => {
                   <button type="submit" className={styles.resultSubmitBtn}>Submit</button>
                 </form>
               </div>
-            </div>
+            </div> */}
           
         </div>
         
