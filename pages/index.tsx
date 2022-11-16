@@ -182,6 +182,8 @@ const Home: NextPage = () => {
       (document.getElementById('messageBreak') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('messageBreak') as HTMLElement).classList.add('Home_displayBlock__4805r');
 
+      (document.getElementById('homeFormMobile') as HTMLElement).classList.add('Home_displayNone__dFRW_');
+
       queryBtn.classList.remove('Home_mainButton__dUc5h');
       queryBtn.classList.add('Home_displayNone__dFRW_');
       queryBtnMobile.classList.remove('Home_mainButton__dUc5h');

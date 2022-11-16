@@ -395,6 +395,7 @@ input.formInput, input.formInput:focus, input.resultFormInput, input.resultFormI
   background: none;
   border: none !important;
   margin-left: 5px;
+  text-align: left;
 }
 
 input.formInput, input.formInput:focus, input.formInput:valid{
@@ -572,12 +573,6 @@ input.resultFormInput, input.resultFormInput:focus{
     padding: 0px 40px;
   }
 
-  input.formInput, input.formInput:focus, input.resultFormInput, input.resultFormInput:focus{
-    margin-top: 20px;
-    text-align: center;
-    font-size: 16px;
-  }
-
   .homeForm{
     display: none;
   }
@@ -599,12 +594,19 @@ input.resultFormInput, input.resultFormInput:focus{
   .busModel{
     font-size: 60px !important;
   }
+
   .total{
     font-size: 36px !important;
   }
 }
 
 @media (max-width: 485px) {
+  input.formInput, input.formInput:focus, input.resultFormInput, input.resultFormInput:focus{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+
   .formUnderline, .resultFormUnderline{
     width: 360px;
   }
