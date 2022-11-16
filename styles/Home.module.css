@@ -347,7 +347,6 @@
   display: none;
   color: #0a0a0a !important;
   background: #995c3d;
-  margin-top: 20px;
 }
 
 .resultForm{
@@ -524,6 +523,10 @@ input.resultFormInput, input.resultFormInput:focus{
     margin-left: 0px;
     margin-top: 20px;
     margin-bottom: 40px;
+  }
+
+  .connectBtn{
+    margin-bottom: 20px;
   }
 
   .counter, .total{
