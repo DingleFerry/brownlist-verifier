@@ -366,6 +366,8 @@ const Home: NextPage = () => {
 
         <div id="formCont" className={styles.formCont}>
 
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlZaq3kRAUk1IGlbnNWvDkf-X4gzPWjTEiaQLnm5F1F6Ht_A/viewform?embedded=true" width="640" height="542">Loading…</iframe>
+
             <div id="homeFormMobile">
               <div className={styles.homeFormMobile}>
                 <form onSubmit={handleSubmit}>
