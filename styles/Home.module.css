@@ -601,6 +601,11 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 @media (max-width: 485px) {
+  .certTrophyCont{
+    width: 360px;
+    height: 360px;
+  }
+
   input.formInput, input.formInput:focus, input.resultFormInput, input.resultFormInput:focus{
     margin-top: 20px;
     text-align: center;

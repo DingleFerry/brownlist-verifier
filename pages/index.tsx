@@ -316,7 +316,7 @@ const Home: NextPage = () => {
         {address ? (
           <>
             <div className={styles.mainCont}>
-              <div id="vertSpacer80" className={styles.vertSpacer80}></div>
+              {/* <div id="vertSpacer80" className={styles.vertSpacer80}></div> */}
               <p id="status" className={styles.message}>{message}</p><br id="messageBreak" className={styles.displayNone}></br>
 
               <div>
