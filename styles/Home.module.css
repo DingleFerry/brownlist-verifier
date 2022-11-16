@@ -565,6 +565,7 @@ input.resultFormInput, input.resultFormInput:focus{
   input.formInput, input.formInput:focus, input.resultFormInput, input.resultFormInput:focus{
     margin-top: 20px;
     text-align: center;
+    font-size: 16px;
   }
 }
 
@@ -591,7 +592,7 @@ input.resultFormInput, input.resultFormInput:focus{
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .formUnderline, .resultFormUnderline{
     width: 300px;
   }
