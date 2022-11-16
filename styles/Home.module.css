@@ -327,7 +327,7 @@
   border-radius: 20px;
 }
 
-.homeForm, .resultForm{
+.homeForm, .resultForm, .homeFormMobile{
   font-family: cooper-black-std, serif;
   width: 100vw;
   padding-bottom: 40px;
@@ -341,6 +341,12 @@
   position: absolute;
   bottom: -293px;
   left: 0;
+}
+
+.homeFormMobile{
+  display: none;
+  color: #0a0a0a !important;
+  background: #995c3d;
 }
 
 .resultForm{
@@ -566,6 +572,14 @@ input.resultFormInput, input.resultFormInput:focus{
     margin-top: 20px;
     text-align: center;
     font-size: 16px;
+  }
+
+  .homeForm{
+    display: none;
+  }
+
+  .homeFormMobile{
+    display: block;
   }
 }
 

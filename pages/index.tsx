@@ -360,6 +360,33 @@ const Home: NextPage = () => {
 
         <div id="formCont" className={styles.formCont}>
 
+            <div id="homeFormMobile">
+              <div className={styles.homeFormMobile}>
+                <form onSubmit={handleSubmit}>
+                  <h1 className={styles.formTitle}>Not on The Brownlist?</h1>
+                  <p className={styles.formInst}>Fill out the form below:</p>
+                  <label className={styles.formLabel} htmlFor="walletAdd" id={styles.walletAddInput}>Wallet Address</label>
+                  <input className={styles.formInput} value={walletAdd} onChange={e => setWalletAdd(e.target.value)}
+                    type="text"
+                    id="walletAdd"
+                    name="walletAdd"
+                    required
+                    minLength={42}
+                    maxLength={43}
+                    onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Please try again. Wallet Addresses must be 42 characters long and start with 0x.')}
+                  />
+                  <div className={styles.formUnderline}></div>
+                  <br></br>
+                  <label className={styles.formLabel} htmlFor="twitterHandle">Twitter Handle</label>
+                  <input className={styles.formInput} value={twitterHandle} onChange={e => setTwitterHandle(e.target.value)}
+                  type="text" id="twitterHandle" name="twitterHandle" required />
+                  <div className={styles.formUnderline}></div>
+                  <br></br>
+                  <button type="submit" className={styles.submitBtn}>Submit</button>
+                </form>
+              </div>
+            </div>
+
             <div className={styles.displayBlock} id="homeForm">
               <div className={styles.homeForm}>
                 <form onSubmit={handleSubmit}>
