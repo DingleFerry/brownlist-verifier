@@ -365,7 +365,7 @@ const Home: NextPage = () => {
                 <form onSubmit={handleSubmit}>
                   <h1 className={styles.formTitle}>Not on The Brownlist?</h1>
                   <p className={styles.formInst}>Fill out the form below:</p>
-                  <label className={styles.formLabel} htmlFor="walletAdd">Wallet Address</label>
+                  <label className={styles.formLabel} htmlFor="walletAdd" id={styles.walletAddInput}>Wallet Address</label>
                   <input className={styles.formInput} value={walletAdd} onChange={e => setWalletAdd(e.target.value)}
                     type="text"
                     id="walletAdd"
@@ -390,7 +390,7 @@ const Home: NextPage = () => {
             <div id="resultForm" className={styles.displayNone}>
               <div className={styles.resultForm}>
                 <form onSubmit={handleSubmit}>
-                  <label className={styles.resultFormLabel} htmlFor="walletAdd">Wallet Address</label>
+                  <label className={styles.resultFormLabel} htmlFor="walletAdd" id={styles.walletAddInput}>Wallet Address</label>
                   <input className={styles.resultFormInput} value={walletAdd} onChange={e => setWalletAdd(e.target.value)}
                     type="text"
                     id="walletAdd"
