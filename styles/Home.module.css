@@ -404,7 +404,7 @@ input.formInput, input.formInput:focus, input.formInput:valid{
 
 input.resultFormInput, input.resultFormInput:focus{
   caret-color: #0a0a0a;
-  color: #0a0a0a;
+  color: #0a0a0a !important;
 }
 
 #walletAddInput{
