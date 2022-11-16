@@ -319,13 +319,13 @@ const Home: NextPage = () => {
 
               <div>
                 <div id="certTrophyBrown" className={styles.displayNone}>
-                  <Image className={styles.trophyImage} src='https://tmb.imgix.net/certified-brown1.png/' alt='Brown swirl certification trophy.' width={1200} height={1200} />
+                  <Image className={styles.trophyImage} src='https://tmb.imgix.net/certified-brown1.png/' alt='Brown swirl certification trophy.' width={2069} height={2069} />
                 </div>
                 <div id="certTrophyGold" className={styles.displayNone}>
-                  <Image className={styles.trophyImage} src='https://tmb.imgix.net/certified-gold.png/' alt='Gold swirl certification trophy.' width={1200} height={1200} />
+                  <Image className={styles.trophyImage} src='https://tmb.imgix.net/certified-gold.png/' alt='Gold swirl certification trophy.' width={2069} height={2069} />
                 </div>
                 <div id="certTrophyPlat" className={styles.displayNone}>
-                  <Image className={styles.trophyImage} src='https://tmb.imgix.net/certified-plat.png/' alt='Platinum swirl certification trophy.' width={1200} height={1200} />
+                  <Image className={styles.trophyImage} src='https://tmb.imgix.net/certified-plat.png/' alt='Platinum swirl certification trophy.' width={2069} height={2069} />
                 </div>
               </div>
 
