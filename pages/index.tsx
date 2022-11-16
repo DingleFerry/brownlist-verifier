@@ -216,6 +216,7 @@ const Home: NextPage = () => {
 
     const response = await fetch('/api/submit', {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
