@@ -450,6 +450,8 @@ input.resultFormInput, input.resultFormInput:focus{
 
 .jotFormEmbed{
   width: 100vw;
+  background: #995c3d;
+  padding-bottom: 40px;
 }
 
 /* ################################################################################################################# */
