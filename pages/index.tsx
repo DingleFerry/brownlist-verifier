@@ -380,7 +380,7 @@ const Home: NextPage = () => {
         
         {/* <h1 className={styles.formTitle}>Not on The Brownlist?</h1>
                   <p className={styles.formInst}>Fill out the form below:</p> */}
-        <div id="jotFormEmbed"><JotformEmbed src="https://form.jotformeu.com/223194906055053" /></div>
+        <div className={styles.jotFormEmbed}><JotformEmbed src="https://form.jotformeu.com/223194906055053" /></div>
           
 
             {/* <div id="homeFormMobile">

@@ -448,6 +448,10 @@ input.resultFormInput, input.resultFormInput:focus{
   left: 0;
 } 
 
+.jotFormEmbed{
+  width: 100vw;
+}
+
 /* ################################################################################################################# */
 /* NONSENSE */
 
