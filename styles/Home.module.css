@@ -321,10 +321,13 @@
   display: block;
   margin: auto;
   margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(10, 10, 10, .33);
 }
 
 .trophyImage{
   border-radius: 20px;
+  /* box-shadow: 0px 0px 20px #0a0a0a; */
 }
 
 .homeForm, .resultForm, .homeFormMobile{
@@ -442,16 +445,18 @@ input.resultFormInput, input.resultFormInput:focus{
   height: 0px !important;
 }*/
 
-.formCont{
-  position: absolute;
-  bottom: -293px;
-  left: 0;
-} 
-
-.jotFormEmbed{
+.jotFormEmbedBrown{
   width: 100vw;
   background: #995c3d;
   padding-bottom: 40px;
+  position: absolute;
+  bottom: -420px;
+  left: 0;
+}
+
+.jotFormEmbedBlack{
+  width: 100vw;
+  background: #f5f5f5;
 }
 
 /* ################################################################################################################# */

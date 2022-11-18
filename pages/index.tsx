@@ -82,6 +82,9 @@ const Home: NextPage = () => {
   const tweetBtnGold = (document.getElementById('tweetBtnGold') as HTMLElement);
   const tweetBtnPlat = (document.getElementById('tweetBtnPlat') as HTMLElement);
 
+  const jotFormBlack = (document.getElementById('jotFormBlack') as HTMLElement);
+  const jotFormBlackElement = (document.getElementById('jotFormBlackElement') as HTMLElement);
+
 
   const str = address?.toString();
 
@@ -103,8 +106,8 @@ const Home: NextPage = () => {
       const message = "Congrats! You're on the Brown List!";
       const mistake = "If you believe this to be incorrect, stay calm MF and reach out to us on Twitter.";
 
-      (document.getElementById('vertSpacer80') as HTMLElement).classList.remove('Home_vertSpacer80__SkJjf');
-      (document.getElementById('vertSpacer80') as HTMLElement).classList.add('Home_displayNone__dFRW_');
+      // (document.getElementById('vertSpacer80') as HTMLElement).classList.remove('Home_vertSpacer80__SkJjf');
+      // (document.getElementById('vertSpacer80') as HTMLElement).classList.add('Home_displayNone__dFRW_');
 
       (document.getElementById('mistake') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('mistake') as HTMLElement).classList.add('Home_mistake__3n8wi');
@@ -186,7 +189,7 @@ const Home: NextPage = () => {
       (document.getElementById('messageBreak') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('messageBreak') as HTMLElement).classList.add('Home_displayBlock__4805r');
 
-      (document.getElementById('homeFormMobile') as HTMLElement).classList.add('Home_displayNone__dFRW_');
+      // (document.getElementById('homeFormMobile') as HTMLElement).classList.add('Home_displayNone__dFRW_');
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
       queryBtn.classList.add('Home_displayNone__dFRW_');
@@ -195,13 +198,23 @@ const Home: NextPage = () => {
 
       setWalletAdd(str as string);
 
+      (document.getElementById('jotFormBrown') as HTMLElement).classList.remove('Home_jotFormEmbedBrown__qZyZ0');
+      (document.getElementById('jotFormBrown') as HTMLElement).classList.add('Home_displayNone__dFRW_');
+
+      // jotFormBlackElement.setAttribute('src', 'https://form.jotformeu.com/223216860314146?walletAddress='+str);
+      
+      jotFormBlack.classList.remove('Home_displayNone__dFRW_');
+      jotFormBlack.classList.add('Home_jotFormEmbedBlack___bmS2');
+
+      console.log(jotFormBlackElement)
+
       // (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
       // (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_formCont__U0yV2');
 
-      (document.getElementById('homeForm') as HTMLElement).classList.remove('Home_displayBlock__4805r');
-      (document.getElementById('homeForm') as HTMLElement).classList.add('Home_displayNone__dFRW_');
-      (document.getElementById('resultForm') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
-      (document.getElementById('resultForm') as HTMLElement).classList.add('Home_displayBlock__4805r');
+      // (document.getElementById('homeForm') as HTMLElement).classList.remove('Home_displayBlock__4805r');
+      // (document.getElementById('homeForm') as HTMLElement).classList.add('Home_displayNone__dFRW_');
+      // (document.getElementById('resultForm') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
+      // (document.getElementById('resultForm') as HTMLElement).classList.add('Home_displayBlock__4805r');
     }
   };
 
@@ -370,8 +383,6 @@ const Home: NextPage = () => {
           </div>
         )}
 
-        <div id="formCont" className={styles.formCont}>
-
         {/* <script type="text/javascript" src="https://form.jotform.com/jsform/223194906055053"></script> */}
 
         {/* <iframe className={styles.iFrameForm} src="https://docs.google.com/forms/d/e/1FAIpQLSdlZaq3kRAUk1IGlbnNWvDkf-X4gzPWjTEiaQLnm5F1F6Ht_A/viewform?embedded=true" width="640" height="542">Loading…</iframe> */}
@@ -380,7 +391,11 @@ const Home: NextPage = () => {
         
         {/* <h1 className={styles.formTitle}>Not on The Brownlist?</h1>
                   <p className={styles.formInst}>Fill out the form below:</p> */}
-        <div className={styles.jotFormEmbed}><JotformEmbed src="https://form.jotformeu.com/223194906055053" /></div>
+        
+        <div id ="formCont">
+          <div id="jotFormBrown" className={styles.jotFormEmbedBrown}><JotformEmbed id='jotFormBlackElement' src="https://form.jotformeu.com/223194906055053" /></div>
+          <div id="jotFormBlack" className={styles.displayNone}><JotformEmbed src="https://form.jotformeu.com/223216860314146" /></div>
+        </div>
           
 
             {/* <div id="homeFormMobile">
@@ -461,8 +476,6 @@ const Home: NextPage = () => {
                 </form>
               </div>
             </div> */}
-          
-        </div>
         
 
       </main>
