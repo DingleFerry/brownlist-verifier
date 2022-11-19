@@ -338,9 +338,9 @@ const Home: NextPage = () => {
             </h1>
           </div>
           <div className={styles.counter2}>
-            <h1 className={styles.counter} id={styles.platCounter}>{pListTotal}</h1>
-            <h1 className={styles.counter} id={styles.goldCounter}>{gListTotal}</h1>
             <h1 className={styles.counter} id={styles.brownCounter}>{bListTotal}</h1>
+            <h1 className={styles.counter} id={styles.goldCounter}>{gListTotal}</h1>
+            <h1 className={styles.counter} id={styles.platCounter}>{pListTotal}</h1>
           </div>
         </div>
 
