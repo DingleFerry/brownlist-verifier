@@ -84,6 +84,8 @@ const Home: NextPage = () => {
 
   const jotFormBlack = (document.getElementById('jotFormBlack') as HTMLElement);
   const jotFormBlackElement = (document.getElementById('jotFormBlackElement') as HTMLElement);
+  
+  const homeQuests = (document.getElementById('homeQuests') as HTMLElement);
 
 
   const str = address?.toString();
@@ -129,6 +131,8 @@ const Home: NextPage = () => {
       (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_formCont__U0yV2');
       (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
 
+      homeQuests.classList.add('Home_displayNone__dFRW_');
+
 
     } else if (found1 !== undefined){
       const message = "We like your style MF, you're on the Gold List!";
@@ -154,6 +158,8 @@ const Home: NextPage = () => {
       (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_formCont__U0yV2');
       (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
 
+      homeQuests.classList.add('Home_displayNone__dFRW_');
+
 
     } else if (found2 !== undefined){
       const message = "Oh wow, look at the MF'n Big Shot on Platinum over here!!";
@@ -174,6 +180,8 @@ const Home: NextPage = () => {
 
       (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_formCont__U0yV2');
       (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
+
+      homeQuests.classList.add('Home_displayNone__dFRW_');
 
 
     } else {    
@@ -205,6 +213,8 @@ const Home: NextPage = () => {
       
       jotFormBlack.classList.remove('Home_jotFormEmbedBlackPre__hHWQR');
       jotFormBlack.classList.add('Home_jotFormEmbedBlack___bmS2');
+
+      homeQuests.classList.add('Home_displayNone__dFRW_');
 
       // console.log(jotFormBlackElement)
 
@@ -389,8 +399,12 @@ const Home: NextPage = () => {
         {/* <iframe className={styles.iFrameForm} id="JotFormIFrame-223195665935164" title="App" src="https://www.jotform.com/app/223195665935164?appEmbedded=1"></iframe> */}
         {/* <script type="text/javascript" src="https://form.jotform.com/jsform/223194906055053"></script> */}
         
-        {/* <h1 className={styles.formTitle}>Not on The Brownlist?</h1>
-                  <p className={styles.formInst}>Fill out the form below:</p> */}
+        {/*  */}
+        
+        <div id='homeQuests' className={styles.homeQuestCont}>
+          <h1 className={styles.formTitle}>Not on The Brownlist??</h1>
+          <p className={styles.formInst}>Fill out the form below:</p>
+        </div>
         
         <div id ="formCont">
           {/* <div id="jotFormBrown" className={styles.jotFormEmbedBrown}><JotformEmbed id='jotFormBlackElement' src="https://form.jotformeu.com/223194906055053" /></div> */}
