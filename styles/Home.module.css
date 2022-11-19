@@ -237,7 +237,6 @@
 .mainCont{
   width: 100vw;
   background: #f5f5f5;
-  padding-bottom: 40px;
 }
 
 .mainButton{
@@ -342,7 +341,7 @@
   color: #f5f5f5;
   background: #995c3d;
   position: absolute;
-  bottom: -293px;
+  bottom: -300px;
   left: 0;
 }
 
@@ -445,10 +444,9 @@ input.resultFormInput, input.resultFormInput:focus{
   height: 0px !important;
 }*/
 
-.jotFormEmbedBrown{
+.jotFormEmbedBlackPre{
   width: 100vw;
-  background: #995c3d;
-  padding-bottom: 40px;
+  background: #f5f5f5;
   position: absolute;
   bottom: -300px;
   left: 0;

@@ -198,15 +198,15 @@ const Home: NextPage = () => {
 
       setWalletAdd(str as string);
 
-      (document.getElementById('jotFormBrown') as HTMLElement).classList.remove('Home_jotFormEmbedBrown__qZyZ0');
-      (document.getElementById('jotFormBrown') as HTMLElement).classList.add('Home_displayNone__dFRW_');
+      // (document.getElementById('jotFormBrown') as HTMLElement).classList.remove('Home_jotFormEmbedBrown__qZyZ0');
+      // (document.getElementById('jotFormBrown') as HTMLElement).classList.add('Home_displayNone__dFRW_');
 
       // jotFormBlackElement.setAttribute('src', 'https://form.jotformeu.com/223216860314146?walletAddress='+str);
       
-      jotFormBlack.classList.remove('Home_displayNone__dFRW_');
+      jotFormBlack.classList.remove('Home_jotFormEmbedBlackPre__hHWQR');
       jotFormBlack.classList.add('Home_jotFormEmbedBlack___bmS2');
 
-      console.log(jotFormBlackElement)
+      // console.log(jotFormBlackElement)
 
       // (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
       // (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_formCont__U0yV2');
@@ -393,8 +393,8 @@ const Home: NextPage = () => {
                   <p className={styles.formInst}>Fill out the form below:</p> */}
         
         <div id ="formCont">
-          <div id="jotFormBrown" className={styles.jotFormEmbedBrown}><JotformEmbed id='jotFormBlackElement' src="https://form.jotformeu.com/223194906055053" /></div>
-          <div id="jotFormBlack" className={styles.displayNone}><JotformEmbed src="https://form.jotformeu.com/223216860314146" /></div>
+          {/* <div id="jotFormBrown" className={styles.jotFormEmbedBrown}><JotformEmbed id='jotFormBlackElement' src="https://form.jotformeu.com/223194906055053" /></div> */}
+          <div id="jotFormBlack" className={styles.jotFormEmbedBlackPre}><JotformEmbed src="https://form.jotformeu.com/223216860314146" /></div>
         </div>
           
 
