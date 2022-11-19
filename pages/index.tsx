@@ -87,6 +87,8 @@ const Home: NextPage = () => {
   
   const homeQuests = (document.getElementById('homeQuests') as HTMLElement);
 
+  const counterCont = (document.getElementById('counterCont') as HTMLElement);
+
 
   const str = address?.toString();
 
@@ -132,7 +134,7 @@ const Home: NextPage = () => {
       (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
 
       homeQuests.classList.add('Home_displayNone__dFRW_');
-
+      counterCont.classList.add('Home_displayNone__dFRW_');
 
     } else if (found1 !== undefined){
       const message = "We like your style MF, you're on the Gold List!";
@@ -159,7 +161,7 @@ const Home: NextPage = () => {
       (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
 
       homeQuests.classList.add('Home_displayNone__dFRW_');
-
+      counterCont.classList.add('Home_displayNone__dFRW_');
 
     } else if (found2 !== undefined){
       const message = "Oh wow, look at the MF'n Big Shot on Platinum over here!!";
@@ -182,7 +184,7 @@ const Home: NextPage = () => {
       (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
 
       homeQuests.classList.add('Home_displayNone__dFRW_');
-
+      counterCont.classList.add('Home_displayNone__dFRW_');
 
     } else {    
       const message = "The connected address is not on The Brownlist. Submit the form below to request placement:";
@@ -215,7 +217,8 @@ const Home: NextPage = () => {
       jotFormBlack.classList.add('Home_jotFormEmbedBlack___bmS2');
 
       homeQuests.classList.add('Home_displayNone__dFRW_');
-
+      counterCont.classList.add('Home_displayNone__dFRW_');
+      
       // console.log(jotFormBlackElement)
 
       // (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
@@ -330,7 +333,7 @@ const Home: NextPage = () => {
 
         <h1 className={styles.total}>{totalMFs} MFs strong!</h1>
 
-        <div className={styles.counterCont}>
+        <div id='counterCont' className={styles.counterCont}>
           <div className={styles.counter1}>
             <h1 className={styles.brownCounter}>Brown: {bListTotal}
               <span className={styles.goldCounter}> Gold: {gListTotal}</span>
