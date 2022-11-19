@@ -90,6 +90,10 @@ const Home: NextPage = () => {
   const totalMFs = (document.getElementById('totalMFs') as HTMLElement);
   const counterCont = (document.getElementById('counterCont') as HTMLElement);
 
+  const status = (document.getElementById('status') as HTMLElement);
+  const statusMobile = (document.getElementById('statusMobile') as HTMLElement);
+
+
 
   // const counterAway = [
   //   {transform: 'translateY(0)'},
@@ -125,7 +129,8 @@ const Home: NextPage = () => {
       (document.getElementById('mistake') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('mistake') as HTMLElement).classList.add('Home_mistake__3n8wi');
 
-      (document.getElementById('status') as HTMLElement).textContent = message;
+      status.textContent = message;
+      statusMobile.textContent = message;
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
@@ -155,7 +160,8 @@ const Home: NextPage = () => {
       (document.getElementById('mistake') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('mistake') as HTMLElement).classList.add('Home_mistake__3n8wi');
 
-      (document.getElementById('status') as HTMLElement).textContent = message;
+      status.textContent = message;
+      statusMobile.textContent = message;
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
@@ -179,9 +185,11 @@ const Home: NextPage = () => {
       totalMFs.classList.add('Home_totalGold__JWfRU');
 
     } else if (found2 !== undefined){
-      const message = "Oh wow, look at the MF'n Big Shot on Platinum over here!!";
+      const message = "Oh wow, look at the MF'n big shot on Platinum over here!!";
       const mistake = "";
-      (document.getElementById('status') as HTMLElement).textContent = message;
+
+      status.textContent = message;
+      statusMobile.textContent = message;
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
@@ -211,7 +219,8 @@ const Home: NextPage = () => {
       (document.getElementById('mistake') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('mistake') as HTMLElement).classList.add('Home_mistake__3n8wi');
 
-      (document.getElementById('status') as HTMLElement).textContent = message;
+      status.textContent = message;
+      statusMobile.textContent = message;
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
       (document.getElementById('messageBreak') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
@@ -371,7 +380,7 @@ const Home: NextPage = () => {
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
               <a className={styles.twitLogoCont} target="_blank">
-                <Image src='https://tmb.imgix.net/twitter-0a0a0a.png/' alt='Black Twitter logo' width={56} height={45} />
+                <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
               </a>
             </Link>
           </div>
@@ -412,6 +421,8 @@ const Home: NextPage = () => {
                   <Image className={styles.trophyImage} src='https://tmb.imgix.net/certified-plat.png/' alt='Platinum swirl certification trophy.' width={2069} height={2069} />
                 </div>
               </div>
+
+              <p id="statusMobile" className={styles.messageMobile}>{message}</p>
 
               <div>
                 <script async src="https://platform.twitter.com/widgets.js"></script>
