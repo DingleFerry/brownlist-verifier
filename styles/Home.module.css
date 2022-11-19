@@ -617,6 +617,10 @@ input.resultFormInput, input.resultFormInput:focus{
   .homeFormMobile{
     display: block;
   }
+
+  .homeQuestCont{
+    display: none;
+  }
 }
 
 
