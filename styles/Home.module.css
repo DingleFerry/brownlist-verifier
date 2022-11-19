@@ -88,7 +88,7 @@
 }
 
 .main{
-  background: #995c3d;
+  background: #f5f5f5;
 }
 
 .pageLinks{
@@ -165,14 +165,30 @@
   padding-bottom: 20px;
 }
 
-.total{
-  background: #B842A0;
+.total, .totalGold, .totalBrown, .totalPlat{
   color: #f5f5f5 !important;
   font-family: cooper-black-std;
   font-size: 56px;
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 0;
+  width: 100vw;
+}
+
+.total{
+  background: #B842A0;
+}
+
+.totalBrown{
+  background: #995c3d;
+}
+
+.totalGold{
+  background: #D68E22;
+}
+
+.totalPlat{
+  background: #0a0a0a;
 }
 
 .counterCont{

@@ -87,7 +87,16 @@ const Home: NextPage = () => {
   
   const homeQuests = (document.getElementById('homeQuests') as HTMLElement);
 
+  const totalMFs = (document.getElementById('totalMFs') as HTMLElement);
   const counterCont = (document.getElementById('counterCont') as HTMLElement);
+
+
+  // const counterAway = [
+  //   {transform: 'translateY(0)'},
+  //   {transform: 'translateY(-100px)'}
+  // ];
+  // const counterAwayTiming = {duration: 500, iterations: 1, timingFunction: 'ease,'};
+  // counterCont.animate(counterAway, counterAwayTiming)
 
 
   const str = address?.toString();
@@ -136,6 +145,9 @@ const Home: NextPage = () => {
       homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
 
+      totalMFs.classList.remove('Home_total__212AA');
+      totalMFs.classList.add('Home_totalBrown__51Xiu');
+
     } else if (found1 !== undefined){
       const message = "We like your style MF, you're on the Gold List!";
       const mistake = "If you believe this to be incorrect, stay calm MF and reach out to us on Twitter.";
@@ -163,6 +175,9 @@ const Home: NextPage = () => {
       homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
 
+      totalMFs.classList.remove('Home_total__212AA');
+      totalMFs.classList.add('Home_totalGold__JWfRU');
+
     } else if (found2 !== undefined){
       const message = "Oh wow, look at the MF'n Big Shot on Platinum over here!!";
       const mistake = "";
@@ -185,6 +200,9 @@ const Home: NextPage = () => {
 
       homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
+
+      totalMFs.classList.remove('Home_total__212AA');
+      totalMFs.classList.add('Home_totalPlat__psvtb');
 
     } else {    
       const message = "The connected address is not on The Brownlist. Submit the form below to request placement:";
@@ -218,7 +236,7 @@ const Home: NextPage = () => {
 
       homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
-      
+
       // console.log(jotFormBlackElement)
 
       // (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
@@ -297,6 +315,34 @@ const Home: NextPage = () => {
     console.log(form)
   }
 
+  // const animateCounter = async() => {
+  //   const counterCont = (document.getElementById('counterCont') as HTMLElement);
+  //   const counterAway = [
+  //     {transform: 'translateY(0)'},
+  //     {transform: 'translateY(-100px)'}
+  //   ];
+  //   const counterAwayTiming = {duration: 500, iterations: 1, timingFunction: 'ease,'};
+  
+  //   counterCont.addEventListener('click', () => {
+  //     counterCont.animate(counterAway, counterAwayTiming)
+  //     // console.log('click')
+  //   });
+
+  //   setTimeout(function () {
+  //     checkList();
+  //   }, 500) 
+  // }
+
+  // const animateThenShow = async() => {
+  //   animateCounter();
+  //   checkList();
+  // }
+
+
+  // const connectAndCheck = async () => {
+  //   connect().finally(checkList);
+  // }
+
   // const walletAddInput = document.getElementById('walletAdd') as HTMLFormElement;
   // walletAddInput.oninvalid = function(e) {
   //   e.target.setCustomValidity('')
@@ -331,7 +377,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <h1 className={styles.total}>{totalMFs} MFs strong!</h1>
+        <h1 id='totalMFs' className={styles.total}>{totalMFs} MFs strong!</h1>
 
         <div id='counterCont' className={styles.counterCont}>
           <div className={styles.counter1}>
