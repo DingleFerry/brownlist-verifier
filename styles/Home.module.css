@@ -715,8 +715,12 @@ input.resultFormInput, input.resultFormInput:focus{
     left: 0;
   }
 
-  .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
+  .tweetBtnBrown, .tweetBtnGold{
     margin-bottom: 0px;
+  }
+
+  .tweetBtnPlat{
+    margin-bottom: 20px;
   }
 
   .formInst{
