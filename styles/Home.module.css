@@ -675,6 +675,12 @@ input.resultFormInput, input.resultFormInput:focus{
     margin-left: 5vw;
   }
 
+  .jotFormEmbedBlack{
+    width: 100vw;
+    background: #f5f5f5;
+    margin-left: 5vw;
+  }
+
   .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
     margin-bottom: 0px;
   }
