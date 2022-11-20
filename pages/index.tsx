@@ -95,6 +95,11 @@ const Home: NextPage = () => {
 
   const mainCont = (document.getElementById('mainCont') as HTMLElement);
 
+  const newForm = (document.getElementById('newForm') as HTMLElement);
+
+
+  newForm.setAttribute("src", "https://form.jotform.com/223236300932042?walletAddress=0xfffffff")
+
 
 
   // const counterAway = [
@@ -261,14 +266,17 @@ const Home: NextPage = () => {
 
       // jotFormBlackElement.setAttribute('src', 'https://form.jotformeu.com/223216860314146?walletAddress='+str);
       
-      jotFormBlack.classList.remove('Home_jotFormEmbedBlackPre__hHWQR');
-      jotFormBlack.classList.add('Home_jotFormEmbedBlack___bmS2');
+      // jotFormBlack.classList.remove('Home_jotFormEmbedBlackPre__hHWQR');
+      // jotFormBlack.classList.add('Home_jotFormEmbedBlack___bmS2');
 
       homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
 
       mainCont.classList.remove('Home_mainCont__eFoHJ');
       mainCont.classList.add('Home_mainContPadTop__Oc5a6');
+
+      newForm.classList.remove('Home_newForm__ijaKq');
+      newForm.classList.add('Home_newFormRes__wINKP');
 
       // console.log(jotFormBlackElement)
 
@@ -497,7 +505,8 @@ const Home: NextPage = () => {
         
         <div id ="formCont">
           {/* <div id="jotFormBrown" className={styles.jotFormEmbedBrown}><JotformEmbed id='jotFormBlackElement' src="https://form.jotformeu.com/223194906055053" /></div> */}
-          <div id="jotFormBlack" className={styles.jotFormEmbedBlackPre}><JotformEmbed src="https://form.jotformeu.com/223216860314146" /></div>
+          {/* <div id="jotFormBlack" className={styles.jotFormEmbedBlackPre}><JotformEmbed src="https://form.jotformeu.com/223216860314146" /></div> */}
+          <div id='newForm' className={styles.newForm}><JotformEmbed src="https://form.jotform.com/223236300932042" /></div>
         </div>
           
 

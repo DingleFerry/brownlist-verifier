@@ -371,6 +371,7 @@
   width: 100vw;
   position: absolute;
   bottom: 0px;
+  z-index: 1000;
 }
 
 .homeForm, .resultForm, .homeFormMobile{
@@ -578,6 +579,17 @@ input.resultFormInput, input.resultFormInput:focus{
   font-size: 32px;
 }
 
+.newForm{
+  width: 100vw;
+  position: absolute;
+  bottom: -400px;
+  left: 0;
+}
+
+.newFormRes{
+  width: 100vw;
+}
+
 /* ########################################################## */
 
 @media (max-width: 1200px) {
@@ -778,6 +790,10 @@ input.resultFormInput, input.resultFormInput:focus{
   .mainCont{
     margin-top: calc(50vh - 239.5px);
   }
+  
+  .newForm, .newFormRes{
+    bottom: -540px;
+  }
 }
 
 @media (max-width: 485px) {
@@ -802,6 +818,10 @@ input.resultFormInput, input.resultFormInput:focus{
 
   .formTitle{
     font-size: 28px;
+  }
+
+  .newForm, .newFormRes{
+    height: 440px;
   }
 }
 
