@@ -601,17 +601,19 @@ input.resultFormInput, input.resultFormInput:focus{
     margin: auto;
   }
 
-  .message, .messageMobile{
+  .messageMobile{
     color: #0a0a0a;
     font-family: cooper-black-std;
     font-size: 36px !important;
-    padding-top: 20px;
+    /* padding-bottom: 20px; */
     width: 90vw;
     margin: auto;
   }
 
   .mistake{
     font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 0px;
   }
 
   .busModel{
@@ -660,6 +662,7 @@ input.resultFormInput, input.resultFormInput:focus{
 
   .certTrophyCont{
     margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   .jotFormEmbedBlackPre{
@@ -670,6 +673,10 @@ input.resultFormInput, input.resultFormInput:focus{
     bottom: -400px;
     left: 0;
     margin-left: 5vw;
+  }
+
+  .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
+    margin-bottom: 0px;
   }
 }
 

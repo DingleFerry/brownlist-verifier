@@ -223,8 +223,8 @@ const Home: NextPage = () => {
       statusMobile.textContent = message;
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
-      (document.getElementById('messageBreak') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
-      (document.getElementById('messageBreak') as HTMLElement).classList.add('Home_displayBlock__4805r');
+      // (document.getElementById('messageBreak') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
+      // (document.getElementById('messageBreak') as HTMLElement).classList.add('Home_displayBlock__4805r');
 
       // (document.getElementById('homeFormMobile') as HTMLElement).classList.add('Home_displayNone__dFRW_');
 
@@ -408,7 +408,8 @@ const Home: NextPage = () => {
           <>
             <div className={styles.mainCont}>
               {/* <div id="vertSpacer80" className={styles.vertSpacer80}></div> */}
-              <p id="status" className={styles.message}>{message}</p><br id="messageBreak" className={styles.displayNone}></br>
+              <p id="status" className={styles.message}>{message}</p>
+              <br id="messageBreak" className={styles.displayNone}></br>
 
               <div>
                 <div id="certTrophyBrown" className={styles.displayNone}>
