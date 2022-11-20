@@ -93,6 +93,8 @@ const Home: NextPage = () => {
   const status = (document.getElementById('status') as HTMLElement);
   const statusMobile = (document.getElementById('statusMobile') as HTMLElement);
 
+  const mainCont = (document.getElementById('mainCont') as HTMLElement);
+
 
 
   // const counterAway = [
@@ -256,6 +258,9 @@ const Home: NextPage = () => {
       homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
 
+      mainCont.classList.remove('Home_mainCont__eFoHJ');
+      mainCont.classList.add('Home_mainContPadTop__Oc5a6');
+
       // console.log(jotFormBlackElement)
 
       // (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
@@ -416,7 +421,7 @@ const Home: NextPage = () => {
 
         {address ? (
           <>
-            <div className={styles.mainCont}>
+            <div id="mainCont" className={styles.mainCont}>
               {/* <div id="vertSpacer80" className={styles.vertSpacer80}></div> */}
               <p id="status" className={styles.message}>{message}</p>
               <br id="messageBreak" className={styles.displayNone}></br>
