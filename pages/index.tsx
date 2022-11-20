@@ -228,6 +228,8 @@ const Home: NextPage = () => {
 
       // (document.getElementById('homeFormMobile') as HTMLElement).classList.add('Home_displayNone__dFRW_');
 
+      // adfksjdf
+
       queryBtn.classList.remove('Home_mainButton__dUc5h');
       queryBtn.classList.add('Home_displayNone__dFRW_');
       queryBtnMobile.classList.remove('Home_mainButton__dUc5h');
