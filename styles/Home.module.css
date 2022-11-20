@@ -679,6 +679,8 @@ input.resultFormInput, input.resultFormInput:focus{
     width: 100vw;
     background: #f5f5f5;
     margin-left: 5vw;
+    position: absolute;
+    left: 0;
   }
 
   .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
