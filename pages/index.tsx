@@ -139,8 +139,8 @@ const Home: NextPage = () => {
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
       queryBtn.classList.add('Home_displayNone__dFRW_');
-      queryBtnMobile.classList.remove('Home_mainButton__dUc5h');
-      queryBtnMobile.classList.add('Home_displayNone__dFRW_');
+      // queryBtnMobile.classList.remove('Home_mainButton__dUc5h');
+      // queryBtnMobile.classList.add('Home_displayNone__dFRW_');
 
       tweetBtnBrown.classList.remove('Home_displayNone__dFRW_');
       tweetBtnBrown.classList.add('Home_tweetBtnBrown__l7wc1');
@@ -157,6 +157,9 @@ const Home: NextPage = () => {
       totalMFs.classList.remove('Home_total__212AA');
       totalMFs.classList.add('Home_totalBrown__51Xiu');
 
+      mainCont.classList.remove('Home_mainCont__eFoHJ');
+      mainCont.classList.add('Home_mainContPostReveal__EA8rR');
+
     } else if (found1 !== undefined){
       const message = "We like your style MF, you're on the Gold List!";
       const mistake = "If you believe this is incorrect, stay calm MF and reach out to us on Twitter.";
@@ -172,8 +175,8 @@ const Home: NextPage = () => {
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
       queryBtn.classList.add('Home_displayNone__dFRW_');
-      queryBtnMobile.classList.remove('Home_mainButton__dUc5h');
-      queryBtnMobile.classList.add('Home_displayNone__dFRW_');
+      // queryBtnMobile.classList.remove('Home_mainButton__dUc5h');
+      // queryBtnMobile.classList.add('Home_displayNone__dFRW_');
 
       tweetBtnGold.classList.remove('Home_displayNone__dFRW_');
       tweetBtnGold.classList.add('Home_tweetBtnGold__3mlX3');
@@ -190,6 +193,9 @@ const Home: NextPage = () => {
       totalMFs.classList.remove('Home_total__212AA');
       totalMFs.classList.add('Home_totalGold__JWfRU');
 
+      mainCont.classList.remove('Home_mainCont__eFoHJ');
+      mainCont.classList.add('Home_mainContPostReveal__EA8rR');
+
     } else if (found2 !== undefined){
       const message = "Oh wow, look at the MF'n big shot on Platinum over here!!";
       const mistake = "";
@@ -202,8 +208,8 @@ const Home: NextPage = () => {
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
       queryBtn.classList.add('Home_displayNone__dFRW_');
-      queryBtnMobile.classList.remove('Home_mainButton__dUc5h');
-      queryBtnMobile.classList.add('Home_displayNone__dFRW_');
+      // queryBtnMobile.classList.remove('Home_mainButton__dUc5h');
+      // queryBtnMobile.classList.add('Home_displayNone__dFRW_');
 
       tweetBtnPlat.classList.remove('Home_displayNone__dFRW_');
       tweetBtnPlat.classList.add('Home_tweetBtnPlat__lexI5');
@@ -219,6 +225,9 @@ const Home: NextPage = () => {
 
       totalMFs.classList.remove('Home_total__212AA');
       totalMFs.classList.add('Home_totalPlat__psvtb');
+
+      mainCont.classList.remove('Home_mainCont__eFoHJ');
+      mainCont.classList.add('Home_mainContPostReveal__EA8rR');
 
     } else {    
       const message = "The connected address is not on The Brownlist. Submit the form below to request placement:";
@@ -242,8 +251,8 @@ const Home: NextPage = () => {
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
       queryBtn.classList.add('Home_displayNone__dFRW_');
-      queryBtnMobile.classList.remove('Home_mainButton__dUc5h');
-      queryBtnMobile.classList.add('Home_displayNone__dFRW_');
+      // queryBtnMobile.classList.remove('Home_mainButton__dUc5h');
+      // queryBtnMobile.classList.add('Home_displayNone__dFRW_');
 
       setWalletAdd(str as string);
 
@@ -453,17 +462,17 @@ const Home: NextPage = () => {
 
               <p id="mistake" className={styles.displayNone}>{mistake}</p>
 
-              <div className={styles.buttons1}>
+              <div className={styles.buttonsCont}>
                 <button onClick={checkList} className={styles.mainButton} id="queryBtn">Which list am I on?</button>
                 {/* <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button> */}
                 {/* <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button" data-text="Sorry if I blinded you MF, my official @BMAssholesNFT Gold Status is just too damn shiny!! twitter.com/BMAssholesNFT/status/1591485324286656512/photo/1" data-url="https://brownlist-verifier.vercel.app/" data-hashtags="#BMA #MakeMemesNotWar #KissMyAss" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script> */}
               </div>
 
-              <div className={styles.buttons2}>
+              {/* <div className={styles.buttons2}>
                 <button onClick={checkList} className={styles.mainButton} id="queryBtnMobile">Which list am I on?</button>
-                {/* <br></br> */}
-                {/* <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button> */}
-              </div>
+                <br></br>
+                <button onClick={disconnect} className={styles.altButton} id="disconnect">Disconnect Wallet</button>
+              </div> */}
             </div>
           </>
         ) : (
