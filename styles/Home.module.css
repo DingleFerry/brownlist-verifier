@@ -111,7 +111,7 @@
 
 .logo{
   margin: auto;
-  transform: translateX(-39.08px);
+  transform: translateX(-10.9px);
   margin-top: 5px;
   transition: all;
   transition-duration: 200ms;
@@ -135,7 +135,7 @@
 }
 
 .logo:hover{
-  transform: scale(1.1) translateX(-35.08px);
+  transform: scale(1.1) translateX(-9.9px);
 }
 
 .social:hover{
@@ -595,7 +595,7 @@ input.resultFormInput, input.resultFormInput:focus{
     margin-bottom: 20px;
   }
 
-  .counter, .total{
+  .counter, .total, .totalBrown, .totalGold, .totalPlat{
     font-size: 40px;
     align-items: center;
     margin: auto;

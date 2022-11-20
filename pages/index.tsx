@@ -367,7 +367,7 @@ const Home: NextPage = () => {
         <div className={styles.mainNav}>
           <div className={styles.pageLinks}>
             <Link href="/nonsense">
-              <a><h3 className={styles.pageLink}>Nonsense</h3></a>
+              <a><h3 className={styles.pageLink}>BS</h3></a>
             </Link>
           </div>
           <div className={styles.logo}>
