@@ -724,12 +724,20 @@ input.resultFormInput, input.resultFormInput:focus{
   }
 
   .homeQuestCont{
-    display: none;
+    bottom: -120px;
+  }
+
+  .jotFormEmbedBlackPre{
+    width: 95vw;
+    position: absolute;
+    bottom: -520px;
+    left: 0;
+    margin-left: 2.5vw;
   }
 
   .messageMobilePad0, .mistake{
-    width: 95vw;
-    max-width: 95vw;
+    width: 95vw !important;
+    max-width: 95vw !important;
     margin-left: 2.5vw;
   }
 
