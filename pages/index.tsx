@@ -121,7 +121,7 @@ const Home: NextPage = () => {
 
     if (found !== undefined) {
       const message = "Congrats! You're on the Brown List!";
-      const mistake = "If you believe this to be incorrect, stay calm MF and reach out to us on Twitter.";
+      const mistake = "If you believe this is incorrect, stay calm MF and reach out to us on Twitter.";
 
       // (document.getElementById('vertSpacer80') as HTMLElement).classList.remove('Home_vertSpacer80__SkJjf');
       // (document.getElementById('vertSpacer80') as HTMLElement).classList.add('Home_displayNone__dFRW_');
@@ -131,6 +131,8 @@ const Home: NextPage = () => {
 
       status.textContent = message;
       statusMobile.textContent = message;
+      statusMobile.classList.remove('Home_messageMobile__5C61x');
+      statusMobile.classList.add('Home_messageMobilePad0__yKtcW');
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
@@ -155,13 +157,15 @@ const Home: NextPage = () => {
 
     } else if (found1 !== undefined){
       const message = "We like your style MF, you're on the Gold List!";
-      const mistake = "If you believe this to be incorrect, stay calm MF and reach out to us on Twitter.";
+      const mistake = "If you believe this is incorrect, stay calm MF and reach out to us on Twitter.";
 
       (document.getElementById('mistake') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('mistake') as HTMLElement).classList.add('Home_mistake__3n8wi');
 
       status.textContent = message;
       statusMobile.textContent = message;
+      statusMobile.classList.remove('Home_messageMobile__5C61x');
+      statusMobile.classList.add('Home_messageMobilePad0__yKtcW');
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
@@ -190,6 +194,8 @@ const Home: NextPage = () => {
 
       status.textContent = message;
       statusMobile.textContent = message;
+      statusMobile.classList.remove('Home_messageMobile__5C61x');
+      statusMobile.classList.add('Home_messageMobilePad0__yKtcW');
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
       queryBtn.classList.remove('Home_mainButton__dUc5h');
@@ -214,13 +220,15 @@ const Home: NextPage = () => {
 
     } else {    
       const message = "The connected address is not on The Brownlist. Submit the form below to request placement:";
-      const mistake = "If you believe this to be incorrect, stay calm MF and reach out to us on Twitter.";
+      const mistake = "If you believe this is incorrect, stay calm MF and reach out to us on Twitter.";
 
       (document.getElementById('mistake') as HTMLElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('mistake') as HTMLElement).classList.add('Home_mistake__3n8wi');
 
       status.textContent = message;
       statusMobile.textContent = message;
+      statusMobile.classList.remove('Home_messageMobile__5C61x');
+      statusMobile.classList.add('Home_messageMobilePad0__yKtcW');
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
       // (document.getElementById('messageBreak') as HTMLElement).classList.remove('Home_displayNone__dFRW_');

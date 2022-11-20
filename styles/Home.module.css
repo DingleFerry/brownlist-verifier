@@ -154,7 +154,7 @@
   color: #0a0a0a;
   font-family: cooper-black-std;
   font-size: 60px;
-  padding-top: 10px;
+  padding-top: 20px;
   width: 60vw;
   text-align: center;
   margin: auto !important;
@@ -348,6 +348,7 @@
   display: block;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(10, 10, 10, .33);
 }
@@ -561,9 +562,17 @@ input.resultFormInput, input.resultFormInput:focus{
   margin: 0px;
 }
 
+.messageMobilePad0{
+  display: none;
+}
+
 /* ########################################################## */
 
 @media (max-width: 1200px) {
+  .mainCont{
+    padding-bottom: 40px;
+  }
+
   .counter1, .buttons1{
     display: none;
   }
@@ -610,6 +619,17 @@ input.resultFormInput, input.resultFormInput:focus{
     margin: auto;
   }
 
+  .messageMobilePad0{
+    color: #0a0a0a;
+    font-family: cooper-black-std;
+    font-size: 36px !important;
+    /* padding-bottom: 20px; */
+    width: 90vw;
+    margin: auto;
+    padding-top: 0px;
+    display: block;
+  }
+
   .mistake{
     font-size: 18px;
     padding-top: 20px;
@@ -648,10 +668,6 @@ input.resultFormInput, input.resultFormInput:focus{
     display: block;
   }
 
-  .homeQuestCont{
-    display: none;
-  }
-
   .message{
     display: none;
   }
@@ -661,22 +677,23 @@ input.resultFormInput, input.resultFormInput:focus{
   }
 
   .certTrophyCont{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
   .jotFormEmbedBlackPre{
-    height: 500px;
+    height: 400px;
     width: 90vw;
     background: #f5f5f5;
     position: absolute;
-    bottom: -500px;
+    bottom: -400px;
     left: 0;
     margin-left: 5vw;
   }
 
   .jotFormEmbedBlack{
     width: 100vw;
+    height: 400px;
     background: #f5f5f5;
     position: absolute;
     left: 0;
@@ -705,6 +722,16 @@ input.resultFormInput, input.resultFormInput:focus{
   .total{
     font-size: 36px !important;
   }
+
+  .homeQuestCont{
+    display: none;
+  }
+
+  .messageMobilePad0, .mistake{
+    width: 95vw;
+    max-width: 95vw;
+    margin-left: 2.5vw;
+  }
 }
 
 @media (max-width: 485px) {
@@ -727,6 +754,11 @@ input.resultFormInput, input.resultFormInput:focus{
 @media (max-width: 380px) {
   .formUnderline, .resultFormUnderline{
     width: 300px;
+  }
+
+  .certTrophyCont{
+    width: 300px;
+    height: 300px;
   }
 }
 
