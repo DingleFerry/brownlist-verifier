@@ -339,6 +339,10 @@ const Home: NextPage = () => {
     console.log(form)
   }
 
+  const reload = async() => {
+    location.reload();
+  }
+
   // const animateCounter = async() => {
   //   const counterCont = (document.getElementById('counterCont') as HTMLElement);
   //   const counterAway = [
@@ -385,7 +389,7 @@ const Home: NextPage = () => {
               <a><h3 className={styles.pageLink}>BS</h3></a>
             </Link>
           </div>
-          <div className={styles.logo}>
+          <div className={styles.logo} onClick={reload}>
             <Link href="">
               <a>
                 <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={90} height={90} />
