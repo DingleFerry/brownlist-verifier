@@ -732,6 +732,11 @@ input.resultFormInput, input.resultFormInput:focus{
     max-width: 95vw;
     margin-left: 2.5vw;
   }
+
+  .certTrophyCont{
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
 }
 
 @media (max-width: 485px) {
