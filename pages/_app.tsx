@@ -10,12 +10,6 @@ import { useEffect } from "react";
 const activeChainId = ChainId.Mainnet;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  
-  return (
-    <ThirdwebProvider desiredChainId={activeChainId}>
-      <Component {...pageProps} />
-    </ThirdwebProvider>
-  );
 
   const router = useRouter();
 
@@ -28,8 +22,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+  
+  return (
+    <ThirdwebProvider desiredChainId={activeChainId}>
+      <Component {...pageProps} />
+    </ThirdwebProvider>
+  );
 
-  return <Component {...pageProps} />;
+ 
+
+  // return <Component {...pageProps} />;
 }
 
 export default MyApp;
