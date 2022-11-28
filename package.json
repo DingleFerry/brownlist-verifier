@@ -1,5 +1,5 @@
 {
-  "name": "brownlist-verifier",
+  "name": "brownlist-verifier-public",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,12 +13,11 @@
   "dependencies": {
     "@thirdweb-dev/react": "^3",
     "@thirdweb-dev/sdk": "^3",
+    "@walletconnect/sign-client": "^2.1.4",
     "ethers": "^5.6.8",
-    "googleapis": "^109.0.1",
     "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-jotform-embed": "^1.1.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.12",

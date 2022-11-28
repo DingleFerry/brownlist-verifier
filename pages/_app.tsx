@@ -6,8 +6,11 @@ import { useRouter } from "next/router";
 import * as gtag from "../utils/gtag";
 import { useEffect } from "react";
 
-// This is the chainId your dApp will work on.
+import Head from 'next/head';
+
+
 const activeChainId = ChainId.Mainnet;
+
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -25,32 +28,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   return (
     <ThirdwebProvider desiredChainId={activeChainId}>
+      <Head>
+        <title>Bear Market Assholes</title>
+      </Head>
+      
       <Component {...pageProps} />
     </ThirdwebProvider>
   );
-
- 
-
-  // return <Component {...pageProps} />;
 }
 
+
 export default MyApp;
-
-
-// const App = ({ Component, pageProps }: AppProps) => {
-//   const router = useRouter();
-
-//   useEffect(() => {
-//     const handleRouteChange = (url: URL) => {
-//       gtag.pageview(url);
-//     };
-//     router.events.on("routeChangeComplete", handleRouteChange);
-//     return () => {
-//       router.events.off("routeChangeComplete", handleRouteChange);
-//     };
-//   }, [router.events]);
-
-//   return <Component {...pageProps} />;
-// };
-
-// export default App;

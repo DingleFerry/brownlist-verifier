@@ -1,9 +1,6 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
 import Link from 'next/link';
 import Image from 'next/image'
-// import logo from '../public/black-logo.png';
-// import twitter from '../public/twitter-0a0a0a.png';
 import styles from "../styles/Home.module.css";
 
 
@@ -22,38 +19,18 @@ const Nonsense: NextPage = () => {
           <div className={styles.logo}>
             <Link href="/">
               <a>
-                <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo.' width={90} height={90}/>
+                <Image src='https://brownlist.imgix.net/black-logo.png/' alt='Black BMA logo.' width={90} height={90}/>
               </a>
             </Link>
           </div>
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
               <a className={styles.twitLogoCont} target="_blank">
-              <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+              <Image src='https://brownlist.imgix.net/twitter-white-black.png/' alt='Black Twitter logo' width={45} height={45} />
               </a>
             </Link>
           </div>
         </div>
-
-        {/* <div className={styles.mainNav}>
-          <div className={styles.pageLinks}>
-            <Link href="">
-              <a><h3 className={styles.pageLink}>Nonsense</h3></a>
-            </Link>
-          </div>
-          <div className={styles.logo}>
-            <Link href="/../">
-              <Image src='https://bafkreihjag3e6uz3ykuzjfsu6qlvyejznug5maz3z2hha3a2ufo5xhxjxi.ipfs.nftstorage.link/' alt='Black asshole logo.' width={90} height={90}/>
-            </Link>
-          </div>
-          <div className={styles.social}>
-            <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
-              <a className={styles.twitLogoCont} target="_blank">
-                <Image src='https://bafkreid5yasqlpflxg2fq7irzs5mgisvq7waskc5t2tf7nlrkqtaeaj3wm.ipfs.nftstorage.link/' alt='Black Twitter logo.' width={56} height={45}/>
-              </a>
-            </Link>
-          </div>
-        </div> */}
 
         <div className={styles.sectCont}>
           <div className={styles.sect1}>
