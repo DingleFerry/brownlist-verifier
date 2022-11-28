@@ -110,17 +110,17 @@
 }
 
 .logo{
-  margin: auto;
-  transform: translateX(-10.9px);
-  margin-top: 5px;
   transition: all;
   transition-duration: 200ms;
+  position: absolute;
+  left: calc(50vw - 45px);
+  top: 5px;
 }
 
 .social{
-  float: right;
-  margin-top: 27.5px;
-  margin-right: 20px;
+  position: absolute;
+  right: 20px;
+  top: 27.5px;
   transition: all;
   transition-duration: 200ms;
 }
@@ -552,6 +552,40 @@ input.resultFormInput, input.resultFormInput:focus{
 
 
 
+/* ################################################################################################################# */
+/* BMA Cup */
+.listsCont{
+  width: 40vw;
+  margin: auto;
+}
+
+.winListOL, .loseListOL{
+  text-align: left;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.winListOL li, .loseListOL li{
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+.usersTotal{
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -647,7 +681,20 @@ input.resultFormInput, input.resultFormInput:focus{
   border-width: 0px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* ########################################################## */
+/* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
   .mainCont{

@@ -224,6 +224,11 @@ const Home: NextPage = () => {
               <a><h3 className={styles.pageLink}>BS</h3></a>
             </Link>
           </div>
+          <div className={styles.pageLinks}>
+            <Link href="/bma-cup">
+              <a><h3 className={styles.pageLink}>BMA Cup</h3></a>
+            </Link>
+          </div>
           <div className={styles.logo} onClick={reload}>
             <Link href="">
               <a>
@@ -319,14 +324,14 @@ const Home: NextPage = () => {
           <Image className={styles.trophyImage} src='https://brownlist.imgix.net/trophies-mosaic.gif/' alt='Platinum swirl certification trophy.' width={800} height={800} />
         </div>
         
-        <div id='homeQuests' className={styles.homeQuestCont}>
+        {/* <div id='homeQuests' className={styles.homeQuestCont}>
           <h1 className={styles.formTitle}>Not on The Brownlist??</h1>
           <p className={styles.formInst}>Fill out the form below:</p>
         </div>
         
         <div id ="formCont">
           <iframe id='newForm' className={styles.newForm} title="Jotform Embed" src={jotFormURL}></iframe>
-        </div>
+        </div> */}
         
 
       </main>
