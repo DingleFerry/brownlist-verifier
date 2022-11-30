@@ -94,9 +94,16 @@ const bmaCup: NextPage = () => {
         </div>
 
         <div id="hamMenu" className={styles.hamMenuDropdown}>
+            <div className={styles.hamSocial}>
+                <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+                    <a className={styles.twitLogoCont} target="_blank">
+                    <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    </a>
+                </Link>
+            </div>
             <div className={styles.closeBtn} onClick={hideHamMenu}>
                 <Link href="">
-                    <Image src='https://tmb.imgix.net/close-btn-f5f5f5.png/' alt='X button' width={40} height={40} />
+                    <Image src='https://tmb.imgix.net/close-btn-f5f5f5.png/' alt='X button' width={45} height={45} />
                 </Link>
             </div>
             <div className={styles.hamLinks}>
@@ -119,13 +126,13 @@ const bmaCup: NextPage = () => {
                         </Link>
                     </li>
                 </ul>
-                <div className={styles.hamTwitLogo}>
+                {/* <div className={styles.hamTwitLogo}>
                     <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
                         <a className={styles.hamTwitLogoCont} target="_blank">
                         <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
                         </a>
                     </Link>
-                </div>
+                </div> */}
             </div>
         </div>
 
