@@ -842,7 +842,7 @@ input.resultFormInput, input.resultFormInput:focus{
 
 @media (max-width: 390px){
   .cupTitleCont{
-    height: 40px;
+    height: 48px;
   }
   .cupTitle{
     font-size: 24px;
