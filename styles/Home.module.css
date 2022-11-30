@@ -134,7 +134,7 @@
 
 .hamSocial{
   position: absolute;
-  right: 17.5px;
+  left: 20px;
   top: 17.5px;
   transition: all;
   transition-duration: 200ms;
@@ -157,12 +157,77 @@
   transition: all;
   transition-duration: 200ms;
   position: absolute;
-  left: 10px;
+  left: calc(50vw - 30px);
   top: 10px;
 }
 
 .social:hover{
   transform: scale(1.1);
+}
+
+.hamMenu{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: all;
+  transition-duration: 200ms;
+}
+
+.closeBtn{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: all;
+  transition-duration: 200ms;
+  z-index: 100000;
+}
+
+.hamMenuDropdown{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -100vh;
+  background: #0a0a0a;
+  z-index: 10000;
+}
+
+.hamMenuDropdownActive{
+  position: fixed;
+  top: 0px;
+}
+
+.hamLinks{
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh)
+}
+
+.hamLinksUL{
+  position: absolute;
+  top: calc(50vh - 83px);
+  left: calc(50vw - 83.24px);
+  list-style-type: none;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.hamTwitLogo{
+  position: absolute;
+  bottom: 24px;
+  left: calc(50vw - 22.5px)
+}
+
+.hamLinksUL li{
+  width: fit-content;
+  background: #f5f5f5;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+
+.hamLink{
+  margin: 0px;
+  color: #0a0a0a;
 }
 
 .vertSpacer80{
@@ -612,7 +677,7 @@ input.resultFormInput, input.resultFormInput:focus{
 .winListCont{
   width: 60vw;
   margin: auto;
-  padding: 30px 40px 0px;
+  padding: 40px 40px 20px;
 }
 
 .winListCont h1, .loseListCont h1{
@@ -667,7 +732,7 @@ input.resultFormInput, input.resultFormInput:focus{
   line-height: 60px;
 }
 
-.winListOL li:nth-child(even){
+.winListOL li:nth-child(odd){
   background: #ddd;
 }
 
@@ -680,12 +745,12 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 .winListOL{
-  margin: 10px 0px 20px;
+  margin: 0px;
   font-size: 48px;
 }
 
 .loseListOL{
-  margin: 20px 0px;
+  margin: 0px;
   font-size: 36px;
 }
 
@@ -721,10 +786,17 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 .pointDef{
+  width: 60vw;
+  color: #0a0a0a;
   font-family: poppins;
   font-weight: 400;
   font-size: 20px;
-  margin: 0px;
+  margin: 20px auto;
+}
+
+.worldLi{
+  background: #0a0a0a !important;
+  color: #f5f5f5 !important;
 }
 
 
@@ -751,7 +823,7 @@ input.resultFormInput, input.resultFormInput:focus{
     display: none
   }
   .winListCont{
-    padding: 10px 20px 0px;
+    padding: 20px 20px 10px;
   }
   .loseListCont{
     padding-left: 20px;
@@ -767,6 +839,7 @@ input.resultFormInput, input.resultFormInput:focus{
     font-size: 32px;
   }
   .pointDef{
+    width: 68vw;
     font-size: 18px;
   }
 
@@ -804,6 +877,7 @@ input.resultFormInput, input.resultFormInput:focus{
     font-size: 28px;
   }
   .pointDef{
+    width: 88vw;
     font-size: 16px;
   }
 }
@@ -822,7 +896,6 @@ input.resultFormInput, input.resultFormInput:focus{
     padding: 20px 20px 10px;
   } */
   .winListOL{
-    margin: 0px;
     font-size: 24px;
   }
   .totalSums h1{
@@ -832,7 +905,6 @@ input.resultFormInput, input.resultFormInput:focus{
     padding: 0px 20px 40px;
   }
   .loseListOL{
-    margin: 0px;
     font-size: 20px;
   }
   .pointDef{

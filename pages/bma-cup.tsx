@@ -12,6 +12,21 @@ const pointTotals = [280,94,43,31,29,17,16,15,14,11,11,9,6,6,5,5,5,5,5,5,4,4,4,3
 const totalsSum = pointTotals.reduce((partialSum, a) => partialSum + a, 0);
 
 
+const showHamMenu = async() => {
+    const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+    hamMenu.classList.add('Home_hamMenuDropdownActive__iT_P6')
+}
+
+const hideHamMenu = async() => {
+    const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+    hamMenu.classList.remove('Home_hamMenuDropdownActive__iT_P6')
+}
+
+const reload = async() => {
+    location.reload();
+}
+
+
 const bmaCup: NextPage = () => {
   return (
     <>
@@ -57,55 +72,100 @@ const bmaCup: NextPage = () => {
                 <a><h3 className={styles.pageLink}>Swirled Cup</h3></a>
             </Link>
             </div> */}
-            <div className={styles.hamLogo}>
-            <Link href="/">
-                <a>
-                <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={60} height={60} />
-                </a>
-            </Link>
-            </div>
             <div className={styles.hamSocial}>
-            <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
-                <a className={styles.twitLogoCont} target="_blank">
-                <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
-                </a>
-            </Link>
+                <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+                    <a className={styles.twitLogoCont} target="_blank">
+                    <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    </a>
+                </Link>
+            </div>
+            <div className={styles.hamLogo}>
+                <Link href="/">
+                    <a>
+                    <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={60} height={60} />
+                    </a>
+                </Link>
+            </div>
+            <div className={styles.hamMenu} onClick={showHamMenu}>
+                <Link href="">
+                    <Image src='https://tmb.imgix.net/hamburger-1.png/' alt='Black Twitter logo' width={40} height={40} />
+                </Link>
+            </div>
+        </div>
+
+        <div id="hamMenu" className={styles.hamMenuDropdown}>
+            <div className={styles.closeBtn} onClick={hideHamMenu}>
+                <Link href="">
+                    <Image src='https://tmb.imgix.net/close-btn-f5f5f5.png/' alt='X button' width={40} height={40} />
+                </Link>
+            </div>
+            <div className={styles.hamLinks}>
+                <div className={styles.hamLogo}>
+                    <Link href="/" target="_blank">
+                        <a>
+                        <Image src='https://tmb.imgix.net/bma-f5f5f5-trans.png/' alt='White BMA logo' width={60} height={60} />
+                        </a>
+                    </Link>
+                </div>
+                <ul className={styles.hamLinksUL}>
+                    <li>
+                        <Link href="/nonsense">
+                            <a><h3 className={styles.hamLink}>Nonsense</h3></a>
+                        </Link>
+                    </li>
+                    <li onClick={reload}>
+                        <Link href="">
+                            <a><h3 className={styles.hamLink}>Swirled Cup</h3></a>
+                        </Link>
+                    </li>
+                </ul>
+                <div className={styles.hamTwitLogo}>
+                    <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+                        <a className={styles.hamTwitLogoCont} target="_blank">
+                        <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                        </a>
+                    </Link>
+                </div>
             </div>
         </div>
 
 
         <div className={styles.cupTitleCont}>
-            <h1 className={styles.cupTitle}>Swirled Cup Standings</h1>
+            <h1 className={styles.cupTitle}>Swirled Cup Leaderboard</h1>
         </div>
 
 
         <div className={styles.listsCont}>
 
-            <div className={styles.totalSums}>
+            {/* <div className={styles.totalSums}>
                 <h1>Current Point Total: {totalsSum}</h1>
                 <p className={styles.pointDef}>1 point = 1 unique user from that country</p>
-            </div>
+            </div> */}
 
             <div className={styles.winListCont}>
-                <h1>Leaders</h1>
+                {/* <h1>Leaders</h1> */}
                 <ol className={styles.winListOL}>
+                    <li className={styles.worldLi}>
+                        <Image src='https://tmb.imgix.net/world.png/' alt='1st Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <span className={styles.countryName}> World</span><span className={styles.usersTotal}>{totalsSum}</span>
+                    </li>
                     <li>
-                        <Image src='https://tmb.imgix.net/us-1.png/' alt='1st Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://tmb.imgix.net/united-states.png/' alt='1st Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[0]}</span><span className={styles.usersTotal}>{pointTotals[0]}</span>
                     </li>
                     <li>
-                        <Image src='https://tmb.imgix.net/nig-1.png/' alt='2nd Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://tmb.imgix.net/nigeria-1.png/' alt='2nd Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[1]}</span><span className={styles.usersTotal}>{pointTotals[1]}</span></li>
                     <li>
-                        <Image src='https://tmb.imgix.net/uk-1.png/' alt='3rd Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://tmb.imgix.net/united-kingdom-1.png/' alt='3rd Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[2]}</span><span className={styles.usersTotal}>{pointTotals[2]}</span>
                     </li>
                     <li>
-                        <Image src='https://tmb.imgix.net/indo-2.png/' alt='4th Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://tmb.imgix.net/indonesia.png/' alt='4th Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[3]}</span><span className={styles.usersTotal}>{pointTotals[3]}</span>
                     </li>
                     <li>
-                        <Image src='https://tmb.imgix.net/can-1.png/' alt='5th Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://tmb.imgix.net/canada.png/' alt='5th Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[4]}</span><span className={styles.usersTotal}>{pointTotals[4]}</span>
 
                     </li>
@@ -157,6 +217,10 @@ const bmaCup: NextPage = () => {
                         {/* <li>44. {countries[43]}<span className={styles.usersTotal}>{pointTotals[43]}</span></li> */}
                     </ol>
                 </div>
+            </div>
+
+            <div className={styles.cupInstruct}>
+                <p className={styles.pointDef}>Each point represents a unique user of this website from that part of the world.<br></br>Point distribution will end on December 31st, 2022.</p>
             </div>
 
         </div>
