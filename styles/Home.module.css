@@ -716,20 +716,19 @@ input.resultFormInput, input.resultFormInput:focus{
   color: #0a0a0a;
   text-decoration: none;
   display: block;
-  padding: 0px 10px;
   border-radius: 20px;
 }
 
 .winListOL li{
   height: 82px;
   line-height: 72px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 20px 5px 15px;
 }
 
 .loseListOL li{
   height: 60px;
   line-height: 60px;
+  padding: 0px 20px;
 }
 
 .winListOL li:nth-child(odd){
