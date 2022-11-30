@@ -64,7 +64,7 @@ const bmaCup: NextPage = () => {
                 </a>
             </Link>
             </div>
-            <div className={styles.social}>
+            <div className={styles.hamSocial}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
                 <a className={styles.twitLogoCont} target="_blank">
                 <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />

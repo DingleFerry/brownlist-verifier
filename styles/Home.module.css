@@ -132,6 +132,14 @@
   transition-duration: 200ms;
 }
 
+.hamSocial{
+  position: absolute;
+  right: 17.5px;
+  top: 17.5px;
+  transition: all;
+  transition-duration: 200ms;
+}
+
 .pageLink, .logo, .social, .hamLogo{
   cursor: pointer;
 }
@@ -141,7 +149,7 @@
   transition-duration: 200ms;
 }
 
-.logo:hover, .hamLogo{
+.logo:hover{
   transform: scale(1.1);
 }
 
@@ -739,8 +747,17 @@ input.resultFormInput, input.resultFormInput:focus{
   .cupTitle{
     font-size: 48px;
   }
+  .winListCont h1, .loseListCont h1{
+    display: none
+  }
+  .winListCont{
+    padding: 10px 20px;
+  }
   .winListOL, .totalSums h1{
     font-size: 36px;
+  }
+  .loseListSect{
+    padding-top: 20px;
   }
   .loseListOL{
     font-size: 32px;
@@ -797,9 +814,9 @@ input.resultFormInput, input.resultFormInput:focus{
   .winListCont h1, .loseListCont h1{
     font-size: 24px;
   }
-  .winListCont{
+  /* .winListCont{
     padding: 20px 20px 10px;
-  }
+  } */
   .winListOL{
     margin: 0px;
     font-size: 24px;
