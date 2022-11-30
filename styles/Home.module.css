@@ -125,17 +125,25 @@
   transition-duration: 200ms;
 }
 
-.pageLink, .logo, .social{
+.pageLink, .logo, .social, .hamLogo{
   cursor: pointer;
 }
 
-.logo, .social{
+.logo, .social, .hamLogo{
   transition: transform;
   transition-duration: 200ms;
 }
 
-.logo:hover{
-  transform: scale(1.1) translateX(-9.9px);
+.logo:hover, .hamLogo{
+  transform: scale(1.1);
+}
+
+.hamLogo{
+  transition: all;
+  transition-duration: 200ms;
+  position: absolute;
+  left: 20px;
+  top: 10px;
 }
 
 .social:hover{
@@ -542,6 +550,22 @@ input.resultFormInput, input.resultFormInput:focus{
 
 
 
+.hamNav{
+  height: 100px;
+  width: 100vw;
+  background: #f5f5f5;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -555,29 +579,286 @@ input.resultFormInput, input.resultFormInput:focus{
 /* ################################################################################################################# */
 /* BMA Cup */
 .listsCont{
-  width: 40vw;
+  width: 100vw;
+}
+
+.loseListSect{
+  width: 100vw;
+  background: #ddd;
+  padding-top: 30px;
+}
+
+.totalSums{
+  width: 100vw;
+  height: 100px;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.totalSums h1{
   margin: auto;
+  font-size: 48px;
+}
+
+.winListCont{
+  width: 60vw;
+  margin: auto;
+  padding: 30px 40px 0px;
+}
+
+.winListCont h1, .loseListCont h1{
+  color: #0a0a0a !important;
+  margin: 0px !important;
+  font-size: 36px;
+}
+
+.winListCont h1, .loseListCont h1{
+  width: min-content;
+  margin: auto !important;
+  padding: 10px 20px;
+  background: #ddd;
+  border-radius: 20px;
+}
+
+.loseListCont h1{
+  /* width: 280px; */
+  background: #f5f5f5;
+}
+
+.loseListCont{
+  width: 60vw;
+  margin: auto;
+  padding: 0px 40px 40px;
 }
 
 .winListOL, .loseListOL{
   text-align: left;
   list-style-type: none;
-  padding-left: 0px;
+  text-decoration: none;
+  padding: 0px;
 }
 
 .winListOL li, .loseListOL li{
   color: #0a0a0a;
   text-decoration: none;
+  display: block;
+  padding: 0px 10px;
+  border-radius: 20px;
+}
+
+.winListOL li{
+  height: 82px;
+  line-height: 72px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.loseListOL li{
+  height: 60px;
+  line-height: 60px;
+}
+
+.winListOL li:nth-child(even){
+  background: #ddd;
+}
+
+.loseListOL li:nth-child(even){
+  background: #f5f5f5;
+}
+
+.winListOL li span, .loseListOL li span{
+  overflow: visible !important;
+}
+
+.winListOL{
+  margin: 10px 0px 20px;
+  font-size: 48px;
+}
+
+.loseListOL{
+  margin: 20px 0px;
+  font-size: 36px;
 }
 
 .usersTotal{
   float: right;
+  /* margin-top: 2px; */
+}
+
+.countryName{
+  vertical-align: top !important;
+}
+
+.countryImg{
+  /* margin-top: 6px !important;
+  overflow: show; */
+  height: 72px !important;
+  margin: 6px 0px !important;
+  display: block;
+}
+
+.cupTitleCont{
+  width: 100vw;
+  height: 100px;
+  background: #2556b8;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.cupTitle{
+  color: #f5f5f5;
+  font-size: 60px;
+  margin: 0px;
+}
+
+.pointDef{
+  font-family: poppins;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0px;
 }
 
 
 
 
 
+@media (max-width: 1200px){
+  .winListCont, .loseListCont{
+    width: 90vw;
+  }
+}
+
+@media (max-width: 900px){
+  .cupTitleCont{
+    height: 80px;
+  }
+  .totalSums{
+    height: 100px;
+  }
+  .cupTitle{
+    font-size: 48px;
+  }
+  .winListOL, .totalSums h1{
+    font-size: 36px;
+  }
+  .loseListOL{
+    font-size: 32px;
+  }
+  .pointDef{
+    font-size: 18px;
+  }
+
+  .mainNav{
+    display: none;
+  }
+  .hamNav{
+    display: block;
+  }
+}
+
+@media (max-width: 650px){
+  .winListCont, .loseListCont{
+    width: 100vw;
+  }
+  .cupTitleCont{
+    height: 60px;
+  }
+  .totalSums{
+    height: 80px;
+  }
+  .cupTitle{
+    font-size: 36px;
+  }
+  .winListCont h1, .loseListCont h1{
+    font-size: 32px;
+  }
+  .winListOL{
+    font-size: 36px;
+  }
+  .totalSums h1{
+    font-size: 32px;
+  }
+  .loseListOL{
+    font-size: 28px;
+  }
+  .pointDef{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px){
+  .totalSums{
+    height: 72px;
+  }
+  .cupTitle{
+    font-size: 28px;
+  }
+  .winListCont h1, .loseListCont h1{
+    font-size: 24px;
+  }
+  .winListCont{
+    padding: 20px 20px 10px;
+  }
+  .winListOL{
+    margin: 0px;
+    font-size: 24px;
+  }
+  .totalSums h1{
+    font-size: 28px;
+  }
+  .loseListCont{
+    padding: 0px 20px 40px;
+  }
+  .loseListOL{
+    margin: 0px;
+    font-size: 20px;
+  }
+  .pointDef{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 390px){
+  .cupTitleCont{
+    height: 40px;
+  }
+  .cupTitle{
+    font-size: 24px;
+  }
+  .totalSums{
+    height: 60px;
+  }
+  .totalSums h1{
+    font-size: 20px;
+  }
+  .pointDef{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px){
+  .cupTitleCont{
+    height: 32px;
+  }
+  .cupTitle{
+    font-size: 20px;
+  }
+  .totalSums{
+    height: 48px;
+  }
+  .totalSums h1{
+    font-size: 18px;
+  }
+  .loseListOL{
+    font-size: 16px;
+  }
+  .pointDef{
+    font-size: 10px;
+  }
+}
 
 
 

@@ -11,13 +11,16 @@
     "deploy": "next build && next export && npx thirdweb@latest upload out"
   },
   "dependencies": {
+    "@google-analytics/data": "^3.1.1",
     "@thirdweb-dev/react": "^3",
     "@thirdweb-dev/sdk": "^3",
     "@walletconnect/sign-client": "^2.1.4",
     "ethers": "^5.6.8",
+    "google-auth-library": "^8.7.0",
     "next": "^12.1.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.12",
