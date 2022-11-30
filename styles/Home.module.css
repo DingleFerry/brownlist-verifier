@@ -82,6 +82,13 @@
   flex-wrap: nowrap;
 }
 
+.hamNav{
+  height: 80px;
+  width: 100vw;
+  background: #f5f5f5;
+  display: none;
+}
+
 .main h1, .main h2, .main h3, .main h4, .main h5, .main h6{
   font-family: cooper-black-std, serif;
   color: #0a0a0a;
@@ -142,8 +149,8 @@
   transition: all;
   transition-duration: 200ms;
   position: absolute;
-  left: 20px;
-  top: 10px;
+  left: 10px;
+  top: 0px;
 }
 
 .social:hover{
@@ -546,15 +553,6 @@ input.resultFormInput, input.resultFormInput:focus{
   width: 40px;
   height: 40px;
   background: none;
-}
-
-
-
-.hamNav{
-  height: 100px;
-  width: 100vw;
-  background: #f5f5f5;
-  display: none;
 }
 
 
