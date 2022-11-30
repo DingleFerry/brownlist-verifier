@@ -150,7 +150,7 @@
   transition-duration: 200ms;
   position: absolute;
   left: 10px;
-  top: 0px;
+  top: 10px;
 }
 
 .social:hover{

@@ -60,7 +60,7 @@ const bmaCup: NextPage = () => {
             <div className={styles.hamLogo}>
             <Link href="/">
                 <a>
-                <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={80} height={80} />
+                <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={60} height={60} />
                 </a>
             </Link>
             </div>
