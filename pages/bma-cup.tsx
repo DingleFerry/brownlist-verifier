@@ -125,6 +125,11 @@ const bmaCup: NextPage = () => {
                             <a><h3 className={styles.hamLink}>Swirled Cup</h3></a>
                         </Link>
                     </li>
+                    <li>
+                        <Link href="/">
+                            <a><h3 className={styles.hamLink}>Shiny Shit</h3></a>
+                        </Link>
+                    </li>
                 </ul>
                 {/* <div className={styles.hamTwitLogo}>
                     <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
