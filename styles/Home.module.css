@@ -66,14 +66,6 @@
 /* #################################################################### */
 /* HOME & GLOBAL */
 
-.displayNone{
-  display: none;
-}
-
-.displayBlock{
-  display: block;
-}
-
 .mainNav{
   height: 100px;
   width: 100vw;
@@ -98,7 +90,7 @@
   background: #f5f5f5;
 }
 
-.pageLinks{
+.pageLinkCont{
   margin-left: 20px;
 }
 
@@ -180,6 +172,7 @@
   transition: all;
   transition-duration: 200ms;
   z-index: 100000;
+  cursor: pointer;
 }
 
 .hamMenuDropdown{
@@ -198,13 +191,14 @@
 
 .hamLinks{
   position: absolute;
+  top: 80px;
   width: 100vw;
-  height: calc(100vh)
+  height: calc(100vh - 80px);
 }
 
 .hamLinksUL{
   position: absolute;
-  top: calc(50vh - 138.5px);
+  top: calc(50vh - 258.5px);
   left: calc(50vw - 101.125px);
   list-style-type: none;
   margin: 0px auto !important;
@@ -235,14 +229,18 @@
   height: 0px;
 }
 
-.message, .connectToStart, .messageMobile{
+.message, .connectToStart, .messageMobile, .lookBelow{
   color: #0a0a0a;
   font-family: cooper-black-std;
   font-size: 48px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   width: 60vw;
   text-align: center;
   margin: auto !important;
+}
+
+.message{
+  font-size: 32px;
 }
 
 .messageMobile{
@@ -349,8 +347,17 @@
   width: 100vw;
   background: #f5f5f5;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
+
+.connectInst{
+  margin: 0px auto 20px;
+}
+
+/* .connectInstMob{
+  font-size: 24px;
+} */
 
 .connectBtnsCont, .connectBtnsContMob{
   width: fit-content;
@@ -360,6 +367,10 @@
 .connectBtnsContMob{
   display: flex;
   flex-wrap: nowrap;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50vw - 146.305px);
+  /* 168.865 */
 }
 
 .mainCont, .mainContPadTop, .mainContPostReveal{
@@ -367,8 +378,29 @@
   background: none;
 }
 
-.mainContPostReveal{
-  margin-top: 10px;
+/* .mainCont, .mainContPostReveal{
+  margin-top: 20px;
+} */
+
+/* .lookBelow{
+  margin-top: 20px;
+} */
+
+.trophySpacer{
+  padding: 40px 0px 0px
+}
+
+.trophyGrid{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 40px;
+  justify-content: center;
+}
+
+.gridUnitCont{
+  margin: 0px;
 }
 
 .mainButton, .altButton, .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat, .connectBtnMM, .connectBtnWC, .connectBtnCB, .connectMMMob, .connectBtnWCMob, .connectBtnCBMob, .submitBtn, .resultSubmitBtn{
@@ -402,7 +434,7 @@
 .connectBtnMM{
   /* margin: auto; */
   background: #d6643c;
-  margin-top: 40px;
+  margin-top: 0px;
   color: #f5f5f5;
 }
 
@@ -412,17 +444,16 @@
   height: 40px;
 }
 
-.connectBtnCB{
-  /* margin: auto; */
+/* .connectBtnCB{
   background: #21a3a3;
   margin-top: 40px;
   color: #f5f5f5;
-}
+} */
 
 .connectBtnWC{
-  margin-left: 40px;
+  margin-left: 20px;
   background: #2556b8;
-  margin-top: 40px;
+  margin-top: 0px;
   color: #f5f5f5;
 }
 
@@ -447,8 +478,7 @@
 
 .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: #f5f5f5 !important;
 }
 
@@ -466,13 +496,19 @@
   color: #f5f5f5;
 }
 
+.certTrophySect{
+  width: 100vw;
+}
+
 .certTrophyCont{
   width: 400px;
   height: 400px;
+  max-width: 90vw;
+  max-height: 90vw;
   display: block;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(10, 10, 10, .33);
 }
@@ -480,6 +516,12 @@
 .trophyImage{
   border-radius: 20px;
   /* box-shadow: 0px 0px 20px #0a0a0a; */
+}
+
+.checkListCont{
+  width: 100vw;
+  position: absolute;
+  bottom: 40px;
 }
 
 .homeQuestCont{
@@ -809,7 +851,7 @@ input.resultFormInput, input.resultFormInput:focus{
   }
 }
 
-@media (max-width: 900px){
+@media (max-width: 960px){
   .cupTitleCont{
     height: 80px;
   }
@@ -849,6 +891,9 @@ input.resultFormInput, input.resultFormInput:focus{
   .hamNav{
     display: block;
   }
+  /* .checkListCont{
+    bottom: 20px;
+  } */
 }
 
 @media (max-width: 650px){
@@ -972,7 +1017,7 @@ input.resultFormInput, input.resultFormInput:focus{
 .sect1{
   background: #0a0a0a;
   top: 0;
-  padding-bottom: 20px !important;
+  padding: 20px !important;
 }
 
 .sect2{
@@ -1034,12 +1079,14 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 .newForm{
-  position: absolute;
+  /* position: absolute;
   bottom: -400px;
-  left: 0;
+  left: 0; */
+  display: none
 }
 
-.newForm, .newFormRes{
+.newFormRes{
+  display: block;
   width: 100vw;
   height: 400px;
   box-shadow: none;
@@ -1063,13 +1110,13 @@ input.resultFormInput, input.resultFormInput:focus{
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
-  .mainCont{
+  /* .mainCont{
     padding-bottom: 10px;
   }
 
   .mainContPadTop{
     padding-top: 20px;
-  }
+  } */
 
   .counter1{
     display: none;
@@ -1108,7 +1155,7 @@ input.resultFormInput, input.resultFormInput:focus{
   .messageMobile{
     color: #0a0a0a;
     font-family: cooper-black-std;
-    font-size: 36px !important;
+    font-size: 32px !important;
     /* padding-bottom: 20px; */
     width: 90vw;
     margin: auto;
@@ -1175,10 +1222,10 @@ input.resultFormInput, input.resultFormInput:focus{
     display: block;
   }
 
-  .certTrophyCont{
+  /* .certTrophyCont{
     margin-top: 20px;
     margin-bottom: 20px;
-  }
+  } */
 
   .jotFormEmbedBlackPre{
     height: 400px;
@@ -1197,13 +1244,9 @@ input.resultFormInput, input.resultFormInput:focus{
     left: 0;
   }
 
-  .tweetBtnBrown, .tweetBtnGold{
-    margin-bottom: 0px;
-  }
-
-  .tweetBtnPlat{
+  /*.tweetBtnPlat{
     margin-bottom: 40px;
-  }
+  } */
 
   .formInst{
     margin-bottom: 0px;
@@ -1213,9 +1256,9 @@ input.resultFormInput, input.resultFormInput:focus{
     bottom: -120px;
   }
 
-  .newForm, .newFormRes{
+  /* .newForm, .newFormRes{
     bottom: -540px;
-  }
+  } */
 
   .connectBtnsContMob{
     display: block;
@@ -1233,11 +1276,11 @@ input.resultFormInput, input.resultFormInput:focus{
       margin: auto;
     }
 
-    .connectBtnsContMob{
+    /* .connectBtnsContMob{
       position: absolute;
       bottom: 20px;
       left: calc(50vw - 50px);
-    }
+    } */
   }
 
   @media (min-width: 900px){
@@ -1256,7 +1299,7 @@ input.resultFormInput, input.resultFormInput:focus{
   }
 }
 
-@media (min-width: 1200px){
+/* @media (min-width: 1200px){
   @media (max-height: 780px){
     .homeQuestCont{
       position: relative;
@@ -1267,17 +1310,17 @@ input.resultFormInput, input.resultFormInput:focus{
       transform: translateY(-400px);
     }
   }
-}
+} */
 
 @media (max-width: 900px) {
   .busModel{
     font-size: 72px !important;
   }
 
-  .mainCont{
+  /* .mainCont{
     position: absolute;
     bottom: 40px;
-  }
+  } */
 
   .counterCont{
     display: none;
@@ -1288,12 +1331,10 @@ input.resultFormInput, input.resultFormInput:focus{
   .busModel{
     font-size: 60px !important;
   }
-
   .total, .totalBrown, .totalGold, .totalPlat{
     font-size: 32px !important;
     padding-top: 20px;
   }
-
   .jotFormEmbedBlackPre{
     width: 95vw;
     position: absolute;
@@ -1301,29 +1342,38 @@ input.resultFormInput, input.resultFormInput:focus{
     left: 0;
     margin-left: 2.5vw;
   }
-
   .messageMobilePad0, .mistake{
     width: 95vw !important;
     max-width: 95vw !important;
     margin-left: 2.5vw;
   }
-
-  .certTrophyCont{
+  /* .certTrophyCont{
     margin-top: 20px;
-    margin-bottom: 10px;
-  }
+    margin-bottom: 20px;
+  } */
+  /* .mainCont, .mainContPostReveal{
+    margin-top: 0px;
+  } */
+  /* .trophyGrid{
+    padding: 20px 20px 0px;
+    gap: 20px;
+  } */
+  /* .checkListCont{
+    bottom: 20px;
+  } */
 }
 
-@media (max-width: 540px){
+/* @media (max-width: 540px){
   .certTrophyCont{
     margin-top: 20px !important;
   }
-}
+} */
 
 @media (max-width: 485px) {
   .certTrophyCont{
     width: 360px;
     height: 360px;
+    /* max-height: 80vw; */
   }
 
   input.formInput, input.formInput:focus, input.resultFormInput, input.resultFormInput:focus{
@@ -1344,8 +1394,24 @@ input.resultFormInput, input.resultFormInput:focus{
     font-size: 28px;
   }
 
-  .newForm, .newFormRes{
+  /* .newForm, .newFormRes{
     height: 440px;
+  } */
+}
+
+@media(max-width: 440px){
+  .trophySpacer{
+    padding: 20px 0px 0px
+  }
+  .trophyGrid{
+    padding: 20px;
+    gap: 20px;
+  }
+  .checkListCont{
+    bottom: 20px;
+  }
+  .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
+    margin-bottom: 20px;
   }
 }
 
@@ -1353,10 +1419,16 @@ input.resultFormInput, input.resultFormInput:focus{
   .formUnderline, .resultFormUnderline{
     width: 300px;
   }
-
   .certTrophyCont{
     width: 300px;
     height: 300px;
+  }
+}
+
+@media (max-width: 380px) {
+  .certTrophyCont{
+    max-width: 80vw;
+    max-height: 80vw;
   }
 }
 
@@ -1377,21 +1449,21 @@ input.resultFormInput, input.resultFormInput:focus{
       left: calc(50vw - 109.42px);
     }
 
-    .connectBtnsContMob{
+    /* .connectBtnsContMob{
       position: absolute;
       bottom: 20px;
       left: calc(50vw - 50px);
-    }
+    } */
   
     .mainButton{
       position: absolute;
       bottom: 20px;
-      left: calc(50vw - 133.775px);
+      left: calc(50vw - 107.19px);
     }
   }
 }
 
-@media (min-height: 1100px){
+/* @media (min-height: 1100px){
   .certTrophyCont{
     width: 560px;
     height: 560px;
@@ -1406,17 +1478,16 @@ input.resultFormInput, input.resultFormInput:focus{
     height: 480px;
     max-width: 90vw;
     max-height: 90vw;
-    margin-top: 40px;
   }
-}
+} */
 
-@media (max-height: 900px){
+/* @media (max-height: 900px){
   .connectBtnMM, .connectBtnWC, .connectBtnCB, .connectBtnsContMob{
     margin-top: 20px;
   }
-}
+} */
 
-@media (max-height: 1069px){
+/* @media (max-height: 1069px){
   .homeQuestCont{
     bottom: -120px;
   }
@@ -1424,9 +1495,16 @@ input.resultFormInput, input.resultFormInput:focus{
   .newForm, .newFormRes{
     bottom: -540px;
   }
-}
+} */
 
 @media (max-height: 700px) {
+  .certTrophyCont{
+    width: 300px;
+    height: 300px;
+  }
+  .checkListCont{
+    bottom: 20px;
+  }
   @media (max-width: 1200px){
     .connectBtnMM, .connectBtnWC, .connectBtnCB{
       position: absolute;
@@ -1434,24 +1512,22 @@ input.resultFormInput, input.resultFormInput:focus{
       left: calc(50vw - 109.42px);
     }
 
-    .connectBtnsContMob{
+    /* .connectBtnsContMob{
       position: absolute;
       bottom: 20px;
       left: calc(50vw - 50px);
     }
-  
-    .mainButton{
-      position: absolute;
-      bottom: -20px;
-      left: calc(50vw - 133.775px)
-    }
+   */
+    /* .mainButton{
+      position: relative;
+    } */
   }
 }
 
 @media (max-height: 660px) {
-  .certTrophyCont{
-    width: 300px;
-    height: 300px;
+  .connectBtnsContMob, .connectBtnsCont{
+    position: relative;
+    left: 0px;
   }
 }
 
@@ -1470,3 +1546,13 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 /* ######################################################################################## */
+
+
+
+.displayNone{
+  display: none;
+}
+
+.displayBlock{
+  display: block;
+}

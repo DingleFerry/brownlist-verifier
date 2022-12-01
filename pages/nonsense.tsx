@@ -4,33 +4,141 @@ import Image from 'next/image'
 import styles from "../styles/Home.module.css";
 
 
+
 const Nonsense: NextPage = () => {
+
+  const showHamMenu = async() => {
+    const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+    hamMenu.classList.add('Home_hamMenuDropdownActive__iT_P6')
+  }
+  
+  const hideHamMenu = async() => {
+    const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+    hamMenu.classList.remove('Home_hamMenuDropdownActive__iT_P6')
+  }
+  
+  const reload = async() => {
+    location.reload();
+  }
+
   return (
     <>
     <div className={styles.container}>
       <main className={styles.main}>
 
-      <div className={styles.mainNav}>
-          <div className={styles.pageLinks}>
-            <Link href="">
-              <a><h3 className={styles.pageLink}>BS</h3></a>
-            </Link>
-          </div>
-          <div className={styles.logo}>
+        <div className={styles.mainNav}>
+          <div className={styles.pageLinkCont}>
             <Link href="/">
-              <a>
-                <Image src='https://brownlist.imgix.net/black-logo.png/' alt='Black BMA logo.' width={90} height={90}/>
-              </a>
+                <a><h3 className={styles.pageLink}>Shiny Shit</h3></a>
             </Link>
-          </div>
-          <div className={styles.social}>
+            </div>
+            <div className={styles.pageLinkCont}>
+            <Link href="/swirled-cup">
+                <a><h3 className={styles.pageLink}>Swirled Cup</h3></a>
+            </Link>
+            </div>
+            <div className={styles.pageLinkCont} onClick={reload}>
+            <Link href="/nonsense">
+                <a><h3 className={styles.pageLink}>BS</h3></a>
+            </Link>
+            </div>
+            <div className={styles.logo}>
+            <Link href="/">
+                <a>
+                <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={90} height={90} />
+                </a>
+            </Link>
+            </div>
+            <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
-              <a className={styles.twitLogoCont} target="_blank">
-              <Image src='https://brownlist.imgix.net/twitter-white-black.png/' alt='Black Twitter logo' width={45} height={45} />
-              </a>
+                <a className={styles.twitLogoCont} target="_blank">
+                <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                </a>
             </Link>
-          </div>
+            </div>
         </div>
+
+        <div className={styles.hamNav}>
+            {/* <div className={styles.pageLinkCont}>
+            <Link href="/nonsense">
+                <a><h3 className={styles.pageLink}>Nonsense</h3></a>
+            </Link>
+            </div>
+            <div className={styles.pageLinkCont}>
+            <Link href="">
+                <a><h3 className={styles.pageLink}>Swirled Cup</h3></a>
+            </Link>
+            </div> */}
+            <div className={styles.hamSocial}>
+                <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+                    <a className={styles.twitLogoCont} target="_blank">
+                    <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    </a>
+                </Link>
+            </div>
+            <div className={styles.hamLogo}>
+                <Link href="/">
+                    <a>
+                    <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={60} height={60} />
+                    </a>
+                </Link>
+            </div>
+            <div className={styles.hamMenu} onClick={showHamMenu}>
+                <Link href="">
+                    <Image src='https://tmb.imgix.net/hamburger-1.png/' alt='Black Twitter logo' width={40} height={40} />
+                </Link>
+            </div>
+        </div>
+
+        <div id="hamMenu" className={styles.hamMenuDropdown}>
+            <div className={styles.hamSocial}>
+              <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+                  <a className={styles.twitLogoCont} target="_blank">
+                  <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                  </a>
+              </Link>
+            </div>
+            <div className={styles.hamLogo}>
+              <Link href="/" target="_blank">
+                  <a>
+                  <Image src='https://tmb.imgix.net/bma-f5f5f5-trans.png/' alt='White BMA logo' width={60} height={60} />
+                  </a>
+              </Link>
+            </div>
+            <div className={styles.closeBtn} onClick={hideHamMenu}>
+              <Link href="">
+                  <Image src='https://tmb.imgix.net/close-btn-f5f5f5.png/' alt='X button' width={45} height={45} />
+              </Link>
+            </div>
+            <div className={styles.hamLinks}>
+                <ul className={styles.hamLinksUL}>
+                  <li>
+                      <Link href="/">
+                          <a><h3 className={styles.hamLink}>Shiny Shit</h3></a>
+                      </Link>
+                  </li>
+                  <li>
+                      <Link href="/swirled-cup">
+                          <a><h3 className={styles.hamLink}>Swirled Cup</h3></a>
+                      </Link>
+                  </li>
+                  <li onClick={reload}>
+                      <Link href="">
+                          <a><h3 className={styles.hamLink}>BS</h3></a>
+                      </Link>
+                  </li>
+                </ul>
+                {/* <div className={styles.hamTwitLogo}>
+                    <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+                        <a className={styles.hamTwitLogoCont} target="_blank">
+                        <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                        </a>
+                    </Link>
+                </div> */}
+            </div>
+        </div>
+
+
 
         <div className={styles.sectCont}>
           <div className={styles.sect1}>

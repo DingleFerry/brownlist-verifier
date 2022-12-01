@@ -9,11 +9,10 @@ import brownList from "../public/brownList.json";
 import goldList from "../public/goldList.json";
 import platinumList from "../public/platinumList.json";
 
-
 const Home: NextPage = () => {
   const address = useAddress();
   const connectMM = useMetamask();
-  const connectCB = useCoinbaseWallet();
+  // const connectCB = useCoinbaseWallet();
   const connectWC = useWalletConnect();
 
   const bList = brownList.brownList;
@@ -21,7 +20,7 @@ const Home: NextPage = () => {
   const pList = platinumList.platinumList;
 
 
-  const message = "Click to verify status.";
+  const message = "Connected!";
   const mistake = "";
 
   let bListTotal = bList.length;
@@ -36,22 +35,25 @@ const Home: NextPage = () => {
 
 
   const queryBtn = (document.getElementById('queryBtn') as HTMLElement);
-  const queryBtnMobile = (document.getElementById('queryBtnMobile') as HTMLElement);
+  // const queryBtnMobile = (document.getElementById('queryBtnMobile') as HTMLElement);
 
   const tweetBtnBrown = (document.getElementById('tweetBtnBrown') as HTMLElement);
   const tweetBtnGold = (document.getElementById('tweetBtnGold') as HTMLElement);
   const tweetBtnPlat = (document.getElementById('tweetBtnPlat') as HTMLElement);
 
-  const jotFormBlack = (document.getElementById('jotFormBlack') as HTMLElement);
-  const jotFormBlackElement = (document.getElementById('jotFormBlackElement') as HTMLElement);
-  const homeQuests = (document.getElementById('homeQuests') as HTMLElement);
+  // const jotFormBlack = (document.getElementById('jotFormBlack') as HTMLElement);
+  // const jotFormBlackElement = (document.getElementById('jotFormBlackElement') as HTMLElement);
+  // const homeQuests = (document.getElementById('homeQuests') as HTMLElement);
   const totalMFs = (document.getElementById('totalMFs') as HTMLElement);
   const counterCont = (document.getElementById('counterCont') as HTMLElement);
+  const shinyShitMsg = (document.getElementById('shinyShitMsg') as HTMLElement);
   const status = (document.getElementById('status') as HTMLElement);
   const statusMobile = (document.getElementById('statusMobile') as HTMLElement);
+  const lookBelow = (document.getElementById('lookBelow') as HTMLElement);
   const mainCont = (document.getElementById('mainCont') as HTMLElement);
   const newForm = (document.getElementById('newForm') as HTMLElement);
   const certTrophyMosaics = (document.getElementById('certTrophyMosaics') as HTMLElement);
+  const trophyGrid = (document.getElementById('trophyGrid') as HTMLElement);
 
   console.log(address);
 
@@ -78,9 +80,14 @@ const Home: NextPage = () => {
 
       status.textContent = message;
       statusMobile.textContent = message;
-      statusMobile.classList.remove('Home_messageMobile__5C61x');
-      statusMobile.classList.add('Home_messageMobilePad0__yKtcW');
+      // statusMobile.classList.remove('Home_messageMobile__5C61x');
+      statusMobile.classList.add('Home_displayNone__dFRW_');
+      status.classList.add('Home_displayNone__dFRW_');
+      // lookBelow.classList.remove('Home_displayNone__dFRW_');
+      // lookBelow.classList.add('Home_lookBelow__1MtoB');
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
+      trophyGrid.classList.remove('Home_trophySpacer__ZaQ9j');
+      trophyGrid.classList.add('Home_trophyGrid__kculm');
 
       certTrophyMosaics.classList.remove('Home_certTrophyCont__3hYjc');
       certTrophyMosaics.classList.add('Home_displayNone__dFRW_');
@@ -94,10 +101,10 @@ const Home: NextPage = () => {
       (document.getElementById('certTrophyBrown') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('certTrophyBrown') as HTMLImageElement).classList.add('Home_certTrophyCont__3hYjc');
       
-      (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_formCont__U0yV2');
-      (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
+      // (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_formCont__U0yV2');
+      // (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
 
-      homeQuests.classList.add('Home_displayNone__dFRW_');
+      // homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
 
       totalMFs.classList.remove('Home_total__212AA');
@@ -115,9 +122,14 @@ const Home: NextPage = () => {
 
       status.textContent = message;
       statusMobile.textContent = message;
-      statusMobile.classList.remove('Home_messageMobile__5C61x');
-      statusMobile.classList.add('Home_messageMobilePad0__yKtcW');
+      // statusMobile.classList.remove('Home_messageMobile__5C61x');
+      statusMobile.classList.add('Home_displayNone__dFRW_');
+      status.classList.add('Home_displayNone__dFRW_');
+      // lookBelow.classList.remove('Home_displayNone__dFRW_');
+      // lookBelow.classList.add('Home_lookBelow__1MtoB');
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
+      trophyGrid.classList.remove('Home_trophySpacer__ZaQ9j');
+      trophyGrid.classList.add('Home_trophyGrid__kculm');
 
       certTrophyMosaics.classList.remove('Home_certTrophyCont__3hYjc');
       certTrophyMosaics.classList.add('Home_displayNone__dFRW_');
@@ -131,10 +143,10 @@ const Home: NextPage = () => {
       (document.getElementById('certTrophyGold') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('certTrophyGold') as HTMLImageElement).classList.add('Home_certTrophyCont__3hYjc');
 
-      (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_formCont__U0yV2');
-      (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
+      // (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_formCont__U0yV2');
+      // (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
 
-      homeQuests.classList.add('Home_displayNone__dFRW_');
+      // homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
 
       totalMFs.classList.remove('Home_total__212AA');
@@ -149,9 +161,14 @@ const Home: NextPage = () => {
 
       status.textContent = message;
       statusMobile.textContent = message;
-      statusMobile.classList.remove('Home_messageMobile__5C61x');
-      statusMobile.classList.add('Home_messageMobilePad0__yKtcW');
+      // statusMobile.classList.remove('Home_messageMobile__5C61x');
+      statusMobile.classList.add('Home_displayNone__dFRW_');
+      status.classList.add('Home_displayNone__dFRW_');
+      // lookBelow.classList.remove('Home_displayNone__dFRW_');
+      // lookBelow.classList.add('Home_lookBelow__1MtoB');
       (document.getElementById('mistake') as HTMLElement).textContent = mistake;
+      trophyGrid.classList.remove('Home_trophySpacer__ZaQ9j');
+      trophyGrid.classList.add('Home_trophyGrid__kculm');
 
       certTrophyMosaics.classList.remove('Home_certTrophyCont__3hYjc');
       certTrophyMosaics.classList.add('Home_displayNone__dFRW_');
@@ -165,14 +182,22 @@ const Home: NextPage = () => {
       (document.getElementById('certTrophyPlat') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
       (document.getElementById('certTrophyPlat') as HTMLImageElement).classList.add('Home_certTrophyCont__3hYjc');
 
-      (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_formCont__U0yV2');
-      (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
+      (document.getElementById('certTrophyGold') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
+      (document.getElementById('certTrophyGold') as HTMLImageElement).classList.add('Home_certTrophyCont__3hYjc');
 
-      homeQuests.classList.add('Home_displayNone__dFRW_');
+      (document.getElementById('certTrophyBrown') as HTMLImageElement).classList.remove('Home_displayNone__dFRW_');
+      (document.getElementById('certTrophyBrown') as HTMLImageElement).classList.add('Home_certTrophyCont__3hYjc');
+
+      // (document.getElementById('formCont') as HTMLImageElement).classList.remove('Home_formCont__U0yV2');
+      // (document.getElementById('formCont') as HTMLImageElement).classList.add('Home_displayNone__dFRW_');
+
+      // homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
 
       totalMFs.classList.remove('Home_total__212AA');
-      totalMFs.classList.add('Home_totalPlat__psvtb');
+      totalMFs.classList.add('Home_displayNone__dFRW_');
+      shinyShitMsg.classList.remove('Home_displayNone__dFRW_');
+      shinyShitMsg.classList.add('Home_totalPlat__psvtb');
 
       mainCont.classList.remove('Home_mainCont__eFoHJ');
       mainCont.classList.add('Home_mainContPostReveal__EA8rR');
@@ -196,7 +221,7 @@ const Home: NextPage = () => {
       queryBtn.classList.remove('Home_mainButton__dUc5h');
       queryBtn.classList.add('Home_displayNone__dFRW_');
 
-      homeQuests.classList.add('Home_displayNone__dFRW_');
+      // homeQuests.classList.add('Home_displayNone__dFRW_');
       counterCont.classList.add('Home_displayNone__dFRW_');
 
       mainCont.classList.remove('Home_mainCont__eFoHJ');
@@ -211,7 +236,17 @@ const Home: NextPage = () => {
     location.reload();
   }
 
-  const jotFormURL = "https://form.jotform.com/223266588147061";
+  const showHamMenu = async() => {
+    const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+    hamMenu.classList.add('Home_hamMenuDropdownActive__iT_P6')
+}
+
+const hideHamMenu = async() => {
+    const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+    hamMenu.classList.remove('Home_hamMenuDropdownActive__iT_P6')
+}
+
+const jotFormURL = "https://form.jotform.com/223266588147061";
 
 
   return (
@@ -219,14 +254,19 @@ const Home: NextPage = () => {
       <main className={styles.main}>
 
         <div className={styles.mainNav}>
-          <div className={styles.pageLinks}>
-            <Link href="/nonsense">
-              <a><h3 className={styles.pageLink}>BS</h3></a>
+          <div className={styles.pageLinkCont} onClick={reload}>
+            <Link href="">
+                <a><h3 className={styles.pageLink}>Shiny Shit</h3></a>
             </Link>
           </div>
-          <div className={styles.pageLinks}>
-            <Link href="/bma-cup">
-              <a><h3 className={styles.pageLink}>BMA Cup</h3></a>
+          <div className={styles.pageLinkCont}>
+            <Link href="/swirled-cup">
+              <a><h3 className={styles.pageLink}>Swirled Cup</h3></a>
+            </Link>
+          </div>
+          <div className={styles.pageLinkCont}>
+            <Link href="/nonsense">
+              <a><h3 className={styles.pageLink}>BS</h3></a>
             </Link>
           </div>
           <div className={styles.logo} onClick={reload}>
@@ -245,7 +285,89 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <h1 id='totalMFs' className={styles.total}>{totalMFs} MFs strong!</h1>
+        <div className={styles.hamNav}>
+            {/* <div className={styles.pageLinkCont}>
+            <Link href="/nonsense">
+                <a><h3 className={styles.pageLink}>Nonsense</h3></a>
+            </Link>
+            </div>
+            <div className={styles.pageLinkCont}>
+            <Link href="">
+                <a><h3 className={styles.pageLink}>Swirled Cup</h3></a>
+            </Link>
+            </div> */}
+            <div className={styles.hamSocial}>
+                <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+                    <a className={styles.twitLogoCont} target="_blank">
+                    <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    </a>
+                </Link>
+            </div>
+            <div className={styles.hamLogo} onClick={reload}>
+                <Link href="">
+                    <a>
+                    <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={60} height={60} />
+                    </a>
+                </Link>
+            </div>
+            <div className={styles.hamMenu} onClick={showHamMenu}>
+                <Link href="">
+                    <Image src='https://tmb.imgix.net/hamburger-1.png/' alt='Black Twitter logo' width={40} height={40} />
+                </Link>
+            </div>
+        </div>
+
+        <div id="hamMenu" className={styles.hamMenuDropdown}>
+            <div className={styles.hamSocial}>
+                <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+                    <a className={styles.twitLogoCont} target="_blank">
+                    <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    </a>
+                </Link>
+            </div>
+            <div className={styles.hamLogo} onClick={reload}>
+                <Link href="/" target="_blank">
+                    <a>
+                    <Image src='https://tmb.imgix.net/bma-f5f5f5-trans.png/' alt='White BMA logo' width={60} height={60} />
+                    </a>
+                </Link>
+            </div>
+            <div className={styles.closeBtn} onClick={hideHamMenu}>
+                <Link href="">
+                    <Image src='https://tmb.imgix.net/close-btn-f5f5f5.png/' alt='X button' width={45} height={45} />
+                </Link>
+            </div>
+            <div className={styles.hamLinks}>
+                <ul className={styles.hamLinksUL}>
+                  <li onClick={reload}>
+                      <Link href="">
+                          <a><h3 className={styles.hamLink}>Shiny Shit</h3></a>
+                      </Link>
+                  </li>
+                  <li>
+                      <Link href="/swirled-cup">
+                          <a><h3 className={styles.hamLink}>Swirled Cup</h3></a>
+                      </Link>
+                  </li>
+                  <li>
+                      <Link href="/nonsense">
+                          <a><h3 className={styles.hamLink}>BS</h3></a>
+                      </Link>
+                  </li>
+                </ul>
+                {/* <div className={styles.hamTwitLogo}>
+                    <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
+                        <a className={styles.hamTwitLogoCont} target="_blank">
+                        <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                        </a>
+                    </Link>
+                </div> */}
+            </div>
+        </div>
+
+        <h1 id='totalMFs' className={styles.total}>{totalMFs} MFs Strong!</h1>
+
+        <h1 id='shinyShitMsg' className={styles.displayNone}>Your Shiny Shit</h1>
 
         <div id='counterCont' className={styles.counterCont}>
           <div className={styles.counter1}>
@@ -264,22 +386,28 @@ const Home: NextPage = () => {
         {address ? (
           <>
             <div id="mainCont" className={styles.mainCont}>
-              <p id="status" className={styles.message}>{message}</p>
-              <br id="messageBreak" className={styles.displayNone}></br>
+              {/* <p id="lookBelow" className={styles.displayNone}>Your trophy collection:</p> */}
+              {/* <br id="messageBreak" className={styles.displayNone}></br> */}
 
-              <div>
-                <div id="certTrophyBrown" className={styles.displayNone}>
-                  <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-brown.png/' alt='Brown swirl certification trophy.' width={2069} height={2069} />
+              <div id="trophyGrid" className={styles.trophySpacer}>
+                <div className={styles.gridUnitCont}>
+                  <div id="certTrophyPlat" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-plat.png/' alt='Platinum swirl certification trophy.' width={2069} height={2069} />
+                  </div>
                 </div>
-                <div id="certTrophyGold" className={styles.displayNone}>
-                  <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-gold.png/' alt='Gold swirl certification trophy.' width={2069} height={2069} />
+                <div className={styles.gridUnitCont}>
+                  <div id="certTrophyGold" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-gold.png/' alt='Gold swirl certification trophy.' width={2069} height={2069} />
+                  </div>
                 </div>
-                <div id="certTrophyPlat" className={styles.displayNone}>
-                  <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-plat.png/' alt='Platinum swirl certification trophy.' width={2069} height={2069} />
+                <div className={styles.gridUnitCont}>
+                  <div id="certTrophyBrown" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-brown.png/' alt='Brown swirl certification trophy.' width={2069} height={2069} />
+                  </div>
                 </div>
               </div>
 
-              <p id="statusMobile" className={styles.messageMobile}>{message}</p>
+              {/* <p id="statusMobile" className={styles.messageMobile}>{message}</p> */}
 
               <div>
                 <script async src="https://platform.twitter.com/widgets.js"></script>
@@ -290,15 +418,31 @@ const Home: NextPage = () => {
 
               <p id="mistake" className={styles.displayNone}>{mistake}</p>
 
-              <div className={styles.buttonsCont}>
-                <button onClick={checkList} className={styles.mainButton} id="queryBtn">Which list am I on?</button>
+              <div className={styles.certTrophySect}>
+                <div id="certTrophyMosaics" className={styles.certTrophyCont}>
+                  <Image className={styles.trophyImage} src='https://brownlist.imgix.net/trophies-mosaic.gif/' alt='Platinum swirl certification trophy.' width={800} height={800} />
+                </div>
+                <div className={styles.checkListCont}>
+                  <p id="status" className={styles.message}>{message}</p>
+                  <p id="statusMobile" className={styles.messageMobile}>{message}</p>
+                  <div className={styles.buttonsCont}>
+                    <button onClick={checkList} className={styles.mainButton} id="queryBtn">View Trophies</button>
+                  </div>
+                </div>
               </div>
+          
             </div>
           </>
         ) : (
           <div className={styles.connectCont}>
-            {/* <h1>Connect with:</h1> */}
+            <div className={styles.certTrophySect}>
+              <div id="certTrophyMosaics" className={styles.certTrophyCont}>
+                <Image className={styles.trophyImage} src='https://brownlist.imgix.net/trophies-mosaic.gif/' alt='Platinum swirl certification trophy.' width={800} height={800} />
+              </div>
+            </div>
+            
             <div className={styles.connectBtnsCont}>
+              <h1 className={styles.connectInst}>Connect to Begin</h1>
               <button onClick={connectMM} className={styles.connectBtnMM} id={styles.connectBtn}>MetaMask</button>
               <button onClick={connectWC} className={styles.connectBtnWC} id={styles.connectBtn}>WalletConnect</button>
               {/* <button onClick={connectCB} className={styles.connectBtnCB} id={styles.connectBtn}>CoinBase</button> */}
@@ -306,6 +450,7 @@ const Home: NextPage = () => {
 
             <div className={styles.connectBtnsContMob}>
               {/* <div><h1>Connect:</h1></div> */}
+              <h1 className={styles.connectInstMob}>Connect to Begin</h1>
               <button onClick={connectMM} className={styles.connectMMMob}>
                 <Image className={styles.connectMMMobImage} src='https://brownlist.imgix.net/metamask.png/' alt='MetaMask connect button' width={40} height={40} />
               </button>
@@ -318,20 +463,16 @@ const Home: NextPage = () => {
             </div>
           </div>
         )}
-
-        <div id="certTrophyMosaics" className={styles.certTrophyCont}>
-          {/* <div className={styles.ytCont}><iframe id="ytFrame" className={styles.ytFrame} width="560" height="720" src="https://www.youtube.com/embed/6LWQkuGY1qI?autoplay=1&mute=1&loop=1&enablejsapi=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div> */}
-          <Image className={styles.trophyImage} src='https://brownlist.imgix.net/trophies-mosaic.gif/' alt='Platinum swirl certification trophy.' width={800} height={800} />
-        </div>
+        
         
         {/* <div id='homeQuests' className={styles.homeQuestCont}>
           <h1 className={styles.formTitle}>Not on The Brownlist??</h1>
           <p className={styles.formInst}>Fill out the form below:</p>
-        </div>
-        
-        <div id ="formCont">
-          <iframe id='newForm' className={styles.newForm} title="Jotform Embed" src={jotFormURL}></iframe>
         </div> */}
+        
+        <div>
+          <iframe id='newForm' className={styles.newForm} title="Jotform Embed" src={jotFormURL}></iframe>
+        </div>
         
 
       </main>
