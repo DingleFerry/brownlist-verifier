@@ -511,7 +511,7 @@ const checkMics = async () => {
             </div>
             <div className={styles.modalMeta}>
               <h1>S.C. 1st Place</h1>
-              <p className={styles.modalPar}>Awarded to everyone that helped the USA take Platinum in the recent BMA Swirled Cup. Congrats you Mf'n champion!</p>
+              <p className={styles.modalPar}>Awarded to everyone that helped the USA take Platinum in the recent BMA Swirled Cup. Congrats you MF&#39;n champion!</p>
               <button>Tweet Trophy</button>
             </div>
           </div>
@@ -537,7 +537,7 @@ const checkMics = async () => {
             </div>
             <div className={styles.modalMeta}>
               <h1>Karaoke Star</h1>
-              <p className={styles.modalPar}>Awarded to every performer that makes it into a "Winner's Poll." Your talent impressed us all MF! Share this golden mic with pride!!</p>
+              <p className={styles.modalPar}>Awarded to every performer that makes it into a &#34;Winner&#39;s Poll.&#34; Your talent impressed us all MF! Share this golden mic with pride!!</p>
               <button>Tweet Trophy</button>
             </div>
           </div>
