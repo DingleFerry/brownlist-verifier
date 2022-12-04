@@ -1,4 +1,4 @@
-import { useAddress, useMetamask, useCoinbaseWallet, useWalletConnect } from '@thirdweb-dev/react';
+import { useAddress, useMetamask, useWalletConnect } from '@thirdweb-dev/react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';

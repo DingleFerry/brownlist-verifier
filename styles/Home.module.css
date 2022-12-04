@@ -1075,7 +1075,7 @@ input.resultFormInput, input.resultFormInput:focus{
   color: #0a0a0a;
   width: 90vw;
   max-width: 900px;
-  margin: 40px auto 0px;
+  margin: 20px auto 0px;
 }
 
 .formCont p{
