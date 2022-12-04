@@ -1647,8 +1647,9 @@ input.resultFormInput, input.resultFormInput:focus{
     font-size: 60px !important;
   }
   .total, .totalBrown, .totalGold, .totalPlat{
-    font-size: 32px !important;
-    padding-top: 20px;
+    font-size: 28px !important;
+    padding-top: 18px;
+    height: 72px;
   }
   /* .jotFormEmbedBlackPre{
     width: 95vw;
@@ -1663,9 +1664,9 @@ input.resultFormInput, input.resultFormInput:focus{
   .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
     margin-bottom: 0px;
   }
-  /* .certTrophyCont{
-    margin: 10px;
-  } */
+  .certTrophyCont{
+    margin: 20px 0px;
+  }
 }
 
 @media (max-width: 490px){
@@ -1736,9 +1737,14 @@ input.resultFormInput, input.resultFormInput:focus{
   /* .formUnderline, .resultFormUnderline{
     width: 300px;
   } */
-  .certtrophycont, .mosaicCont{
+  /* .certtrophycont, .mosaicCont{
     width: 300px;
     height: 300px;
+  } */
+  .total, .totalBrown, .totalGold, .totalPlat{
+    font-size: 24px !important;
+    padding-top: 14px;
+    height: 60px;
   }
 }
 
