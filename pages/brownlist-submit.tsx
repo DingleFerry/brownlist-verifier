@@ -29,7 +29,7 @@ import platinumList from "../public/platinumList.json";
 
 // const address = useAddress();
 
-const bmaCup: NextPage = () => {
+const BrownlistSubmit: NextPage = () => {
     const address = useAddress();
     console.log(address);
 
@@ -263,4 +263,4 @@ const bmaCup: NextPage = () => {
   );
 };
 
-export default bmaCup;
+export default BrownlistSubmit;
