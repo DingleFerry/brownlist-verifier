@@ -148,7 +148,7 @@ const bmaCup: NextPage = () => {
 
         <div className={styles.formCont}>
           <h1>The connected address is not on The Brownlist.</h1>
-          <p>Fill out the form below to request placement, though interviews are not guaranteed. If you really want a spot, don't wait for us to reach out, make memes, show up in the comments, attend Karaoke nights ... just do whatever it takes to<br></br>MAKE YOURSELF KNOWN.</p>
+          <p>Fill out the form below to request placement, though interviews are not guaranteed. If you really want a spot, don&#39;t wait for us to reach out, make memes, show up in the comments, attend Karaoke nights ... just do whatever it takes to<br></br>MAKE YOURSELF KNOWN.</p>
           <iframe id='newForm' className={styles.newForm} title="Jotform Embed" src={jotFormURL}></iframe>
         </div>
 
