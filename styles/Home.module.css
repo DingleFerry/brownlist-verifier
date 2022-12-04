@@ -220,7 +220,7 @@
 .hamLinksUL{
   position: absolute;
   top: calc(50vh - 258.5px);
-  left: calc(50vw - 101.125px);
+  left: calc(50vw - 111.455px);
   list-style-type: none;
   margin: 0px auto !important;
   padding: 0px;
@@ -467,7 +467,7 @@
   transform: scale(1.05);
 }
 
-.mainButton, .altButton, .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat, .connectBtnMM, .connectBtnWC, .connectBtnCB, .connectMMMob, .connectBtnWCMob, .connectBtnCBMob, .submitBtn, .resultSubmitBtn, .modalMeta button{
+.mainButton, .altButton, .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat, .connectBtnMM, .connectBtnWC, .connectBtnCB, .connectMMMob, .connectBtnWCMob, .connectBtnCBMob, .submitBtn, .resultSubmitBtn, .modalMeta button, .myTrophiesBlist{
   cursor: pointer;
   font-family: cooper-black-std !important;
   font-size: 22px;
@@ -479,15 +479,23 @@
   transition-timing-function: ease-out;
 }
 
-.mainButton:hover, .altButton:hover, .tweetBtnBrown:hover, .tweetBtnGold:hover, .tweetBtnPlat:hover, .connectBtnMM:hover, .connectBtnWC:hover, .connectBtnCB:hover, .connectMMMob:hover, .connectBtnWCMob:hover, .connectBtnCBMob:hover, .submitBtn:hover, .resultSubmitBtn:hover, .modalMeta button:hover{
+.mainButton:hover, .altButton:hover, .tweetBtnBrown:hover, .tweetBtnGold:hover, .tweetBtnPlat:hover, .connectBtnMM:hover, .connectBtnWC:hover, .connectBtnCB:hover, .connectMMMob:hover, .connectBtnWCMob:hover, .connectBtnCBMob:hover, .submitBtn:hover, .resultSubmitBtn:hover, .modalMeta button:hover, .myTrophiesBlist:hover{
   transform: scale(1.1);
 }
 
-.mainButton{
+.mainButton, .myTrophiesBlist{
   background: #B842A0;
   display: block;
   margin: auto;
   margin-top: 10px;
+}
+
+.myTrophiesBlist{
+  margin-top: 20px;
+}
+
+.myTrophiesBlist, .myTrophiesBlist Link, .myTrophiesBlist a{
+  color: #f5f5f5 !important;
 }
 
 .altButton{
@@ -1364,13 +1372,18 @@ input.resultFormInput, input.resultFormInput:focus{
   font-size: 32px;
 } */
 
-.newForm{
+.newForm, .newFormDisabled{
   display: block;
   width: 100vw;
   height: 400px;
   box-shadow: none;
   outline: none;
   border-width: 0px;
+}
+
+.newFormDisabled{
+  pointer-events: none;
+  opacity: .33;
 }
 
 

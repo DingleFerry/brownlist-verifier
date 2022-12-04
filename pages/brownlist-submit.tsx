@@ -1,29 +1,107 @@
-// import { useAddress, useMetamask, useCoinbaseWallet, useWalletConnect } from '@thirdweb-dev/react';
+import { useAddress, useMetamask, useCoinbaseWallet, useWalletConnect } from '@thirdweb-dev/react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from "../styles/Home.module.css";
 
+import brownList from "../public/brownList.json";
+import goldList from "../public/goldList.json";
+import platinumList from "../public/platinumList.json";
 
-const jotFormURL = "https://form.jotform.com/223266588147061";
+
+// const jotFormURL = "https://form.jotform.com/223266588147061";
 
 
-const showHamMenu = async() => {
-    const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
-    hamMenu.classList.add('Home_hamMenuDropdownActive__iT_P6')
-}
+// const showHamMenu = async() => {
+//     const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+//     hamMenu.classList.add('Home_hamMenuDropdownActive__iT_P6')
+// }
 
-const hideHamMenu = async() => {
-    const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
-    hamMenu.classList.remove('Home_hamMenuDropdownActive__iT_P6')
-}
+// const hideHamMenu = async() => {
+//     const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+//     hamMenu.classList.remove('Home_hamMenuDropdownActive__iT_P6')
+// }
 
-const reload = async() => {
-    location.reload();
-}
+// const reload = async() => {
+//     location.reload();
+// }
+
+// const address = useAddress();
 
 const bmaCup: NextPage = () => {
+    const jotFormURL = "https://form.jotform.com/223266588147061";
+
+
+    const showHamMenu = async() => {
+        const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+        hamMenu.classList.add('Home_hamMenuDropdownActive__iT_P6')
+    }
+
+    const hideHamMenu = async() => {
+        const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
+        hamMenu.classList.remove('Home_hamMenuDropdownActive__iT_P6')
+    }
+
+    const reload = async() => {
+        location.reload();
+    }
+
+    const address = useAddress();
+    console.log(address);
+
+    const bList = brownList.brownList;
+    const gList = goldList.goldList;
+    const pList = platinumList.platinumList;
+
+    const showBlistConnectMsg = async() => {
+        const arr: string[] = bList;
+        const arr1: string[] = gList;
+        const arr2: string[] = pList;
+
+        const str = address?.toString();
+
+        const brownHit = arr.find((element) => {
+        return element.toLocaleLowerCase() === str?.toLowerCase();
+        });
+
+        const goldHit = arr1.find((element) => {
+        return element.toLocaleLowerCase() === str?.toLowerCase();
+        });
+
+        const platHit = arr2.find((element) => {
+        return element.toLocaleLowerCase() === str?.toLowerCase();
+        });
+
+        const noBlistMsg = (document.getElementById('noBlistMsg') as HTMLElement);
+        const yesBlistMsg = (document.getElementById('yesBlistMsg') as HTMLElement);
+        const submitForm = (document.getElementById('newForm') as HTMLElement);
+
+        // noBlistMsg.classList.remove('Home_displayNone__dFRW_');
+
+        if (brownHit == undefined && goldHit == undefined && platHit == undefined){
+            noBlistMsg.classList.remove('Home_displayNone__dFRW_');
+        } else {
+            noBlistMsg.classList.add('Home_displayNone__dFRW_');
+            yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
+            submitForm.classList.remove('Home_newForm__ijaKq');
+            submitForm.classList.add('Home_newFormDisabled__wK_Qj');
+        };
+
+        // if (brownHit !== undefined || goldHit !== undefined || platHit !== undefined){
+        //     noBlistMsg.classList.add('Home_displayNone__dFRW_');
+        //     yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
+        //     submitForm.classList.remove('Home_newForm__ijaKq');
+        //     submitForm.classList.add('Home_newFormDisabled__wK_Qj');
+        // } else {
+        //     noBlistMsg.classList.remove('Home_displayNone__dFRW_');
+        // };
+    }
+
+    showBlistConnectMsg();
+
+
+
   return (
     <>
     <div className={styles.container}>
@@ -147,11 +225,18 @@ const bmaCup: NextPage = () => {
         </div>
 
         <div className={styles.formCont}>
-          <h1>The connected address is not on The Brownlist.</h1>
-          <p>Fill out the form below to request placement, though interviews are not guaranteed. If you really want a spot, don&#39;t wait for us to reach out, make memes, show up in the comments, attend Karaoke nights ... just do whatever it takes to<br></br>MAKE YOURSELF KNOWN.</p>
-          <iframe id='newForm' className={styles.newForm} title="Jotform Embed" src={jotFormURL}></iframe>
-        </div>
+            <div id="noBlistMsg" className={styles.displayNone}>
+                <h1>The connected address is not on The Brownlist.</h1>
+                <p>Fill out the form below to request placement, though interviews are not guaranteed. If you really want a spot, don&#39;t wait for us to reach out, make memes, show up in the comments, attend Karaoke nights ... just do whatever it takes to<br></br>MAKE YOURSELF KNOWN.</p>
+            </div>
+            <div id="yesBlistMsg">
+                <h1>The connected address IS currently on the Brownlist.</h1>
+                <p>The form below has been disabled. This form is strictly for MFs NOT on the Brownlist that would like to request placement. Instead, click here to view your trophies and verify your status:</p>
+                <button className={styles.myTrophiesBlist}><Link href="/"><a>My Trophies</a></Link></button>
+            </div>
 
+          <iframe id='newForm' className={styles.newFormDisabled} title="Jotform Embed" src={jotFormURL}></iframe>
+        </div>
 
     </div>
     </>
