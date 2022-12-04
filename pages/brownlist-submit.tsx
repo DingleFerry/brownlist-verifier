@@ -1,4 +1,4 @@
-import { useAddress, useMetamask, useCoinbaseWallet, useWalletConnect } from '@thirdweb-dev/react';
+import {useAddress} from '@thirdweb-dev/react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -30,8 +30,10 @@ import platinumList from "../public/platinumList.json";
 // const address = useAddress();
 
 const bmaCup: NextPage = () => {
-    const jotFormURL = "https://form.jotform.com/223266588147061";
+    const address = useAddress();
+    console.log(address);
 
+    const jotFormURL = "https://form.jotform.com/223266588147061";
 
     const showHamMenu = async() => {
         const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
@@ -46,9 +48,6 @@ const bmaCup: NextPage = () => {
     const reload = async() => {
         location.reload();
     }
-
-    const address = useAddress();
-    console.log(address);
 
     const bList = brownList.brownList;
     const gList = goldList.goldList;
@@ -77,28 +76,49 @@ const bmaCup: NextPage = () => {
         const yesBlistMsg = (document.getElementById('yesBlistMsg') as HTMLElement);
         const submitForm = (document.getElementById('newForm') as HTMLElement);
 
-        // noBlistMsg.classList.remove('Home_displayNone__dFRW_');
+        const blistMsgTitle = (document.getElementById('blistMsgTitle') as HTMLElement);
+        const blistMsgPar = (document.getElementById('blistMsgPar') as HTMLElement);
 
-        if (brownHit == undefined && goldHit == undefined && platHit == undefined){
-            noBlistMsg.classList.remove('Home_displayNone__dFRW_');
-        } else {
-            noBlistMsg.classList.add('Home_displayNone__dFRW_');
-            yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
-            submitForm.classList.remove('Home_newForm__ijaKq');
-            submitForm.classList.add('Home_newFormDisabled__wK_Qj');
-        };
+        // noBlistMsg.classList.remove('Home_displayNone__dFRW_');
 
         // if (brownHit !== undefined || goldHit !== undefined || platHit !== undefined){
         //     noBlistMsg.classList.add('Home_displayNone__dFRW_');
-        //     yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
+        // } else if (brownHit == undefined && goldHit == undefined && platHit == undefined){
+        //     yesBlistMsg.classList.add('Home_displayNone__dFRW_');
         //     submitForm.classList.remove('Home_newForm__ijaKq');
         //     submitForm.classList.add('Home_newFormDisabled__wK_Qj');
-        // } else {
-        //     noBlistMsg.classList.remove('Home_displayNone__dFRW_');
-        // };
+        // } else {};
+
+        // if (address == undefined) {
+        //     yesBlistMsg.classList.add('Home_displayNone__dFRW_');
+        // } else if (brownHit !== undefined) {
+        //     yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
+        //     noBlistMsg.classList.add('Home_displayNone__dFRW_');
+        //     submitForm.classList.remove('Home_newForm__ijaKq');
+        //     submitForm.classList.add('Home_newFormDisabled__wK_Qj');
+        // } else {};
+
+        // if on brownlist, goldlist, or platlist...
+        if (brownHit !== undefined || goldHit !== undefined || platHit !== undefined){
+            blistMsgTitle.innerHTML = "The connected address IS currently on the Brownlist.";
+            blistMsgPar.innerHTML = "The form below has been disabled. This form is for MFs NOT on the Brownlist that would like to request placement."
+            // noBlistMsg.classList.add('Home_displayNone__dFRW_');
+            // yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
+            submitForm.classList.remove('Home_newForm__ijaKq');
+            submitForm.classList.add('Home_newFormDisabled__wK_Qj');
+        } else {
+            // noBlistMsg.classList.remove('Home_displayNone__dFRW_');
+        };
     }
 
     showBlistConnectMsg();
+
+    // window.onbeforeunload = function(e) {
+    //     const noBlistMsg = (document.getElementById('noBlistMsg') as HTMLElement);
+    //     const yesBlistMsg = (document.getElementById('yesBlistMsg') as HTMLElement);
+    //     yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
+    //     noBlistMsg.classList.remove('Home_displayNone__dFRW_');
+    // }
 
 
 
@@ -225,17 +245,17 @@ const bmaCup: NextPage = () => {
         </div>
 
         <div className={styles.formCont}>
-            <div id="noBlistMsg" className={styles.displayNone}>
-                <h1>The connected address is not on The Brownlist.</h1>
-                <p>Fill out the form below to request placement, though interviews are not guaranteed. If you really want a spot, don&#39;t wait for us to reach out, make memes, show up in the comments, attend Karaoke nights ... just do whatever it takes to<br></br>MAKE YOURSELF KNOWN.</p>
+            <div id="noBlistMsg">
+                <h1 id="blistMsgTitle">The connected address is not on The Brownlist.</h1>
+                <p id="blistMsgPar">Fill out the form below to request placement, though interviews are not guaranteed. If you really want a spot, don&#39;t wait for us to reach out, make memes, show up in the comments, attend Karaoke nights ... just do whatever it takes to<br></br>MAKE YOURSELF KNOWN.</p>
             </div>
-            <div id="yesBlistMsg">
+            {/* <div id="yesBlistMsg">
                 <h1>The connected address IS currently on the Brownlist.</h1>
                 <p>The form below has been disabled. This form is strictly for MFs NOT on the Brownlist that would like to request placement. Instead, click here to view your trophies and verify your status:</p>
                 <button className={styles.myTrophiesBlist}><Link href="/"><a>My Trophies</a></Link></button>
-            </div>
+            </div> */}
 
-          <iframe id='newForm' className={styles.newFormDisabled} title="Jotform Embed" src={jotFormURL}></iframe>
+          <iframe id='newForm' className={styles.newForm} title="Jotform Embed" src={jotFormURL}></iframe>
         </div>
 
     </div>
