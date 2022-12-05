@@ -539,7 +539,7 @@ const checkMics = async () => {
               <Image className={styles.modalImg} src='https://tmb.imgix.net/karaoke-singer-1.png/' alt='Black BMA logo' width={900} height={900} />
             </div>
             <div className={styles.modalMeta}>
-              <h1>Karaoke Star</h1>
+              <h1>Karaoke Stunner</h1>
               <p className={styles.modalPar}>Awarded to every performer that makes it into a &#34;Winner&#39;s Poll.&#34; Your talent impressed us all MF! Share this golden mic with pride!!</p>
               <button>Tweet Trophy</button>
             </div>
