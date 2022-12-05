@@ -425,10 +425,14 @@
   margin: 30px auto;
 }
 
-.mainCont, .mainContPadTop, .mainContPostReveal{
+.mainCont, .mainContPadTop, .mainContPostReveal, .mainContForm{
   width: 100vw;
   background: none;
   padding: 40px 0px;
+}
+
+.mainContForm{
+  padding: 0px 0px;
 }
 
 .mainContPostReveal{

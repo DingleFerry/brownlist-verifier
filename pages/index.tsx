@@ -55,6 +55,7 @@ const Home: NextPage = () => {
   const lookBelow = (document.getElementById('lookBelow') as HTMLElement);
   const mainCont = (document.getElementById('mainCont') as HTMLElement);
   // const newForm = (document.getElementById('newForm') as HTMLElement);
+  const resultForm = (document.getElementById('resultForm') as HTMLElement);
   const certTrophyMosaics = (document.getElementById('certTrophyMosaics') as HTMLElement);
   const trophyGrid = (document.getElementById('trophyGrid') as HTMLElement);
   const certTrophyPlat = (document.getElementById('certTrophyPlat') as HTMLImageElement);
@@ -185,24 +186,24 @@ const Home: NextPage = () => {
       // statusMobile.classList.add('Home_messageMobilePad0__yKtcW');
       // (document.getElementById('mistake') as HTMLElement).textContent = mistake;
 
-      // mainCont.classList.remove('Home_mainCont__eFoHJ');
-      // mainCont.classList.add('Home_mainContPadTop__Oc5a6');
+      mainCont.classList.remove('Home_mainCont__eFoHJ');
+      mainCont.classList.add('Home_mainContForm__NPSuz');
 
-      // certTrophyMosaics.classList.remove('Home_certTrophyCont__3hYjc');
-      // certTrophyMosaics.classList.add('Home_displayNone__dFRW_');
+      certTrophyMosaics.classList.remove('Home_certTrophyCont__3hYjc');
+      certTrophyMosaics.classList.add('Home_displayNone__dFRW_');
 
-      // checkListCont.classList.add('Home_displayNone__dFRW_');
-      // queryBtn.classList.remove('Home_mainButton__dUc5h');
-      // queryBtn.classList.add('Home_displayNone__dFRW_');
+      checkListCont.classList.add('Home_displayNone__dFRW_');
+      queryBtn.classList.remove('Home_mainButton__dUc5h');
+      queryBtn.classList.add('Home_displayNone__dFRW_');
 
       // homeQuests.classList.add('Home_displayNone__dFRW_');
       // counterCont.classList.add('Home_displayNone__dFRW_');
 
-      // newForm.classList.remove('Home_displayNone__dFRW_');
-      // newForm.classList.add('Home_newForm__ijaKq');
+      resultForm.classList.remove('Home_displayNone__dFRW_');
+      resultForm.classList.add('Home_displayBlock__4805r');
 
 
-      location.href = "/brownlist-submit"
+      // location.href = "/brownlist-submit"
     }
 };
 
@@ -382,6 +383,8 @@ const checkMics = async () => {
     const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
     hamMenu.classList.remove('Home_hamMenuDropdownActive__iT_P6')
   }
+
+  const jotFormURL = "https://form.jotform.com/223266588147061";
 
 
   return (
@@ -750,6 +753,14 @@ const checkMics = async () => {
           <h1 className={styles.formTitle}>Not on The Brownlist??</h1>
           <p className={styles.formInst}>Fill out the form below:</p>
         </div> */}
+
+        <div className={styles.formCont}>
+          <div id="resultForm" className={styles.displayNone}>
+            <h1>The connected address is not on The Brownlist.</h1>
+            <p >Fill out the form below to request placement, though interviews are not guaranteed. If you really want a spot, don&#39;t wait for us to reach out, make memes, show up in the comments, attend Karaoke nights ... just do whatever it takes to MAKE YOURSELF KNOWN.</p>
+            <iframe className={styles.newForm} title="Jotform Embed" src={jotFormURL}></iframe>
+          </div>
+        </div>
 
         <div id="pageDetails" className={styles.pageDetails}>
           <p id="trophyDetails" className={styles.displayNone}>Click on any trophy to learn more.<br></br>If you believe a trophy is missing from your collection, stay calm MF and DM us on Twitter.<br></br><br></br>Note: final mint numbers correlating to swirl status will not be cummulative. For example, if Platinum yields 3 mints, Gold yields 2, and Brown yields an unguaranteed 1 ... you do not get 6 mints for having all three trophies in your collection, you get 3 mints for having platinum status. Again, these numbers are NOT final.</p>
