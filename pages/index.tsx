@@ -64,6 +64,13 @@ const Home: NextPage = () => {
   const pageDetails = (document.getElementById('pageDetails') as HTMLElement);
   const trophyDetails = (document.getElementById('trophyDetails') as HTMLElement);
   const checkListCont = (document.getElementById('checkListCont') as HTMLElement);
+  const trophyGridMob = (document.getElementById('trophyGridMob') as HTMLElement);
+  const platSwirlMob = (document.getElementById('platSwirlMob') as HTMLElement);
+  const goldSwirlMob = (document.getElementById('goldSwirlMob') as HTMLElement);
+  const brownSwirlMob = (document.getElementById('brownSwirlMob') as HTMLElement);
+  
+  const scWorld = (document.getElementById('scWorld') as HTMLElement);
+  const scWorldMob = (document.getElementById('scWorldMob') as HTMLElement);
 
   const listTotals = (document.getElementById('listTotals') as HTMLElement);
   const listTotalsMob = (document.getElementById('listTotalsMob') as HTMLElement);
@@ -146,6 +153,8 @@ const Home: NextPage = () => {
       
       trophyGrid.classList.remove('Home_displayNone__dFRW_');
       trophyGrid.classList.add('Home_trophyGrid__kculm');
+      trophyGridMob.classList.remove('Home_displayNone__dFRW_');
+      trophyGridMob.classList.add('Home_trophyGridMob__vIgID');
       
       tweetBtnPlat.classList.remove('Home_displayNone__dFRW_');
       tweetBtnPlat.classList.add('Home_tweetBtnPlat__lexI5');
@@ -156,6 +165,18 @@ const Home: NextPage = () => {
       certTrophyGold.classList.add('Home_certTrophyCont__3hYjc');
       certTrophyBrown.classList.remove('Home_displayNone__dFRW_');
       certTrophyBrown.classList.add('Home_certTrophyCont__3hYjc');
+
+      scWorld.classList.remove('Home_displayNone__dFRW_');
+      scWorld.classList.add('Home_certTrophyCont__3hYjc');
+
+      scWorldMob.classList.remove('Home_displayNone__dFRW_');
+      scWorldMob.classList.add('Home_gridUnitContMobWorld__QNzwn');
+      brownSwirlMob.classList.remove('Home_displayNone__dFRW_');
+      brownSwirlMob.classList.add('Home_certTrophyContMob__p0lqd');
+      goldSwirlMob.classList.remove('Home_displayNone__dFRW_');
+      goldSwirlMob.classList.add('Home_certTrophyContMob__p0lqd');
+      platSwirlMob.classList.remove('Home_displayNone__dFRW_');
+      platSwirlMob.classList.add('Home_certTrophyContMob__p0lqd');
       
       trophyDetails.classList.remove('Home_displayNone__dFRW_');
       trophyDetails.classList.add('Home_trophyDetails__frLPK');
@@ -215,6 +236,9 @@ const checkMics = async () => {
   const brownMic = (document.getElementById('brownMic') as HTMLElement);
   const goldMic = (document.getElementById('goldMic') as HTMLElement);
   const platMic = (document.getElementById('platMic') as HTMLElement);
+  const brownMicMob = (document.getElementById('brownMicMob') as HTMLElement);
+  const goldMicMob = (document.getElementById('goldMicMob') as HTMLElement);
+  const platMicMob = (document.getElementById('platMicMob') as HTMLElement);
 
   const arr: string[] = brownMicList;
   const arr1: string[] = goldMicList;
@@ -253,6 +277,12 @@ const checkMics = async () => {
       goldMic.classList.add('Home_certTrophyCont__3hYjc');
       platMic.classList.remove('Home_displayNone__dFRW_');
       platMic.classList.add('Home_certTrophyCont__3hYjc');
+      brownMicMob.classList.remove('Home_displayNone__dFRW_');
+      brownMicMob.classList.add('Home_certTrophyContMob__p0lqd');
+      goldMicMob.classList.remove('Home_displayNone__dFRW_');
+      goldMicMob.classList.add('Home_certTrophyContMob__p0lqd');
+      platMicMob.classList.remove('Home_displayNone__dFRW_');
+      platMicMob.classList.add('Home_certTrophyContMob__p0lqd');
     } 
     else {    
     }
@@ -261,12 +291,15 @@ const checkMics = async () => {
   const checkLocation = async() => {
     const ipinfoWrapper = new IPinfoWrapper("5689eeab9ca86e");
     const scUSA = (document.getElementById('scUSA') as HTMLElement);
+    const scUSAMob = (document.getElementById('scUSAMob') as HTMLElement);
 
     ipinfoWrapper.lookupIp("1.1.1.1").then((response: IPinfo) => {
         const country = response.country;
         if (country === "United States") {
           scUSA.classList.remove('Home_displayNone__dFRW_');
           scUSA.classList.add('Home_certTrophyCont__3hYjc');
+          scUSAMob.classList.remove('Home_displayNone__dFRW_');
+          scUSAMob.classList.add('Home_certTrophyContMob__p0lqd');
           console.log("show US trophy")
         } else if (country === "Nigeria") {
           console.log("show Nigerian trophy")
@@ -370,6 +403,18 @@ const checkMics = async () => {
     modal6.classList.add('Home_displayNone__dFRW_');
   }
 
+  const popModal7 = async() => {
+    const modal7 = (document.getElementById('modalCont7') as HTMLElement);
+    modal7.classList.remove('Home_displayNone__dFRW_');
+    modal7.classList.add('Home_modalCont__SFakS');
+  }
+
+  const closeModal7 = async() => {
+    const modal7 = (document.getElementById('modalCont7') as HTMLElement);
+    modal7.classList.remove('Home_modalCont__SFakS');
+    modal7.classList.add('Home_displayNone__dFRW_');
+  }
+
   const reload = async() => {
     location.reload();
   }
@@ -395,41 +440,48 @@ const checkMics = async () => {
         {/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV */}
         {/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV */}
         <div className={styles.mainNav}>
-          <div className={styles.pageLinkCont}>
-            <Link href="/brownlist-submit">
-              <a><h3 className={styles.pageLink}>Submit for BL</h3></a>
-            </Link>
-          </div>
-          <div className={styles.pageLinkCont}>
-            <Link href="/swirled-cup">
-              <a><h3 className={styles.pageLink}>Swirled Cup</h3></a>
-            </Link>
-          </div>
-          <div className={styles.pageLinkCont} onClick={reload}>
-            <Link href="">
-                <a><h3 className={styles.pageLinkPink}>My Trophies</h3></a>
-            </Link>
-          </div>
-          <div className={styles.pageLinkCont}>
-            <Link href="/nonsense">
-              <a><h3 className={styles.pageLink}>BS</h3></a>
-            </Link>
-          </div>
-          <div className={styles.logo} onClick={reload}>
+
+        <div className={styles.logo} onClick={reload}>
             <Link href="">
               <a>
                 <Image src='https://brownlist.imgix.net/black-logo.png/' alt='Black BMA logo' width={90} height={90} />
               </a>
             </Link>
           </div>
+
+          <div className={styles.pageLinksCont}>
+            <div className={styles.pageLinkCont}>
+              <Link href="/nonsense">
+                <a><h3 className={styles.pageLink}>BS</h3></a>
+              </Link>
+            </div>
+            <div className={styles.pageLinkCont}>
+              <Link href="/swirled-cup">
+                <a><h3 className={styles.pageLink}>Swirled Cup</h3></a>
+              </Link>
+            </div>
+            <div className={styles.pageLinkCont}>
+              <Link href="/brownlist-submit">
+                <a><h3 className={styles.pageLink}>Submit for BL</h3></a>
+              </Link>
+            </div>
+            <div className={styles.pageLinkCont} onClick={reload}>
+              <Link href="">
+                  <a><h3 className={styles.pageLinkPink}>My Trophies</h3></a>
+              </Link>
+            </div>
+          </div>
+
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
-              <a className={styles.twitLogoCont} target="_blank">
+              <a target="_blank">
                 <Image src='https://brownlist.imgix.net/twitter-white-black.png/' alt='Black Twitter logo' width={45} height={45} />
               </a>
             </Link>
           </div>
+
         </div>
+
 
         <div className={styles.hamNav}>
             <div className={styles.hamSocial}>
@@ -475,6 +527,11 @@ const checkMics = async () => {
             </div>
             <div className={styles.hamLinks}>
                 <ul className={styles.hamLinksUL}>
+                  <li className={styles.hamLinkPinkLI} onClick={reload}>
+                      <Link href="">
+                          <a><h3 className={styles.hamLinkPink}>My Trophies</h3></a>
+                      </Link>
+                  </li>
                   <li>
                       <Link href="/brownlist-submit">
                           <a><h3 className={styles.hamLink}>Submit for BL</h3></a>
@@ -483,11 +540,6 @@ const checkMics = async () => {
                   <li>
                       <Link href="/swirled-cup">
                           <a><h3 className={styles.hamLink}>Swirled Cup</h3></a>
-                      </Link>
-                  </li>
-                  <li className={styles.hamLinkPinkLI} onClick={reload}>
-                      <Link href="">
-                          <a><h3 className={styles.hamLinkPink}>My Trophies</h3></a>
                       </Link>
                   </li>
                   <li>
@@ -507,6 +559,19 @@ const checkMics = async () => {
 
         {/* MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS */}
         {/* MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS */}
+        <div id='modalCont7' className={styles.displayNone} onClick={closeModal7}>
+          <div className={styles.modalCard7}>
+            <div className={styles.modalImgCont}>
+              <Image className={styles.modalImg} src='https://tmb.imgix.net/swirled-cup-world-2.png/' alt='Black BMA logo' width={900} height={900} />
+            </div>
+            <div className={styles.modalMeta}>
+              <h1>S.C. 1st Place</h1>
+              <p className={styles.modalPar}>Awarded to everyone that helped the USA take Platinum in the recent BMA Swirled Cup. Congrats you MF&#39;n champion!</p>
+              <button>Share Trophy</button>
+            </div>
+          </div>
+        </div>
+        
         <div id='modalCont6' className={styles.displayNone} onClick={closeModal6}>
           <div className={styles.modalCard6}>
             <div className={styles.modalImgCont}>
@@ -515,7 +580,7 @@ const checkMics = async () => {
             <div className={styles.modalMeta}>
               <h1>S.C. 1st Place</h1>
               <p className={styles.modalPar}>Awarded to everyone that helped the USA take Platinum in the recent BMA Swirled Cup. Congrats you MF&#39;n champion!</p>
-              <button>Tweet Trophy</button>
+              <button>Share Trophy</button>
             </div>
           </div>
         </div>
@@ -528,7 +593,7 @@ const checkMics = async () => {
             <div className={styles.modalMeta}>
               <h1>Karaoke Star</h1>
               <p className={styles.modalPar}>Awarded to a select few, hand-picked by the community for positively melting faces at a BMA Karaoke night! Easily one of the most coveted trophies in the entire world!!</p>
-              <button>Tweet Trophy</button>
+              <button>Share Trophy</button>
             </div>
           </div>
         </div>
@@ -541,7 +606,7 @@ const checkMics = async () => {
             <div className={styles.modalMeta}>
               <h1>Karaoke Stunner</h1>
               <p className={styles.modalPar}>Awarded to every performer that makes it into a &#34;Winner&#39;s Poll.&#34; Your talent impressed us all MF! Share this golden mic with pride!!</p>
-              <button>Tweet Trophy</button>
+              <button>Share Trophy</button>
             </div>
           </div>
         </div>
@@ -554,7 +619,7 @@ const checkMics = async () => {
             <div className={styles.modalMeta}>
               <h1>Karaoke Singer</h1>
               <p className={styles.modalPar}>Awarded to anyone courageous enough to sing, rap, or otherwise entertain at a BMA Karaoke Night. This is no easy feat, MF! Seriously impressive!!</p>
-              <button>Tweet Trophy</button>
+              <button>Share Trophy</button>
             </div>
           </div>
         </div>
@@ -567,7 +632,7 @@ const checkMics = async () => {
             <div className={styles.modalMeta}>
               <h1>Certified Platinum</h1>
               <p className={styles.modalPar}>Awarded to anyone officially on the Platinumlist. You know why this is here ... congrats, MF! We build this dynasty together!!</p>
-              <button>Tweet Trophy</button>
+              <button>Share Trophy</button>
             </div>
           </div>
         </div>
@@ -580,7 +645,7 @@ const checkMics = async () => {
             <div className={styles.modalMeta}>
               <h1>Certified Gold</h1>
               <p className={styles.modalPar}>Awarded to anyone officially on the Goldlist. We like your style MF and want to see you shine! Get ready for Mint Day!!</p>
-              <button>Tweet Trophy</button>
+              <button>Share Trophy</button>
             </div>
           </div>
         </div>
@@ -593,7 +658,7 @@ const checkMics = async () => {
             <div className={styles.modalMeta}>
               <h1>Certified Brown</h1>
               <p className={styles.modalPar}>Awarded to anyone officially on the Brownlist. Note: being on the Brownlist does not guarantee you a mint. Only Gold & Platinum MFs have guaranteed mints.</p>
-              <button>Tweet Trophy</button>
+              <button>Share Trophy</button>
             </div>
           </div>
         </div>
@@ -657,6 +722,11 @@ const checkMics = async () => {
               </div>
 
               <div id="trophyGrid" className={styles.displayNone}>
+                <div className={styles.gridUnitCont} onClick={popModal7}>
+                  <div id="scWorld" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://tmb.imgix.net/swirled-cup-world-2.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                </div>
                 <div className={styles.gridUnitCont} onClick={popModal6}>
                   <div id="scUSA" className={styles.displayNone}>
                     <Image className={styles.trophyImage} src='https://tmb.imgix.net/swirled-cup-usa.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
@@ -692,6 +762,128 @@ const checkMics = async () => {
                     <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-brown.png/' alt='Brown swirl certification trophy.' width={1200} height={1200} />
                   </div>
                 </div>
+              </div>
+
+              <div id="trophyGridMob" className={styles.displayNone}> {/* trophyGridMob */}
+
+                <div id="scWorldMob" className={styles.gridUnitContMobWorld}>
+                  <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
+                    <Image className={styles.trophyImageMob} src='https://tmb.imgix.net/swirled-cup-world-2.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                  <div className={styles.modalMetaMobWorld}>
+                    <h1>S.C. Player</h1>
+                    <p className={styles.modalParMob}>Awarded to every player of the BMA Swirled Cup. For true MFs only. LFG team World!!</p>
+                    <button>Share Trophy</button>
+                  </div>
+                </div>
+
+                <div className={styles.gridUnitContMobUSA}>
+                  <div id="scUSAMob" className={styles.displayNone}> {/* certTrophyContMob */}
+                    <Image className={styles.trophyImageMob} src='https://tmb.imgix.net/swirled-cup-usa.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                  <div className={styles.modalMetaMobUSA}>
+                    <h1>S.C. 1st Place</h1>
+                    <p className={styles.modalParMob}>Awarded to everyone that helped the USA take Platinum in the recent BMA Swirled Cup. Congrats you MF&#39;n champion!</p>
+                    <button>Share Trophy</button>
+                  </div>
+                </div>
+
+                <div className={styles.gridUnitContMobPlat}>
+                  <div id="platMicMob" className={styles.displayNone}> {/* certTrophyContMob */}
+                    <Image className={styles.trophyImageMob} src='https://tmb.imgix.net/karaoke-plat.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                  <div className={styles.modalMetaMobPlat}>
+                    <h1>Karaoke Star</h1>
+                    <p className={styles.modalParMob}>Awarded to a select few for positively melting faces at a BMA Karaoke night! Easily one of the most coveted trophies in the entire world!!</p>
+                    <button>Share Trophy</button>
+                  </div>
+                </div>
+
+                <div className={styles.gridUnitContMobGold}>
+                  <div id="goldMicMob" className={styles.displayNone}> {/* certTrophyContMob */}
+                    <Image className={styles.trophyImageMob} src='https://tmb.imgix.net/karaoke-singer-1.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                  <div className={styles.modalMetaMobGold}>
+                    <h1>Karaoke Singer</h1>
+                    <p className={styles.modalParMob}>Awarded to anyone courageous enough to sing, rap, or otherwise entertain at a BMA Karaoke Night. This is no easy feat, MF! Seriously impressive!!</p>
+                    <button>Share Trophy</button>
+                  </div>
+                </div>
+
+                <div className={styles.gridUnitContMobBrown}>
+                  <div id="brownMicMob" className={styles.displayNone}> {/* certTrophyContMob */}
+                    <Image className={styles.trophyImageMob} src='https://tmb.imgix.net/karaoke-attendee.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                  <div className={styles.modalMetaMobBrown}>
+                    <h1>Karaoke Singer</h1>
+                    <p className={styles.modalParMob}>Awarded to anyone courageous enough to sing, rap, or otherwise entertain at a BMA Karaoke Night. This is no easy feat, MF! Seriously impressive!!</p>
+                    <button>Share Trophy</button>
+                  </div>
+                </div>
+
+                <div className={styles.gridUnitContMobPlat}>
+                  <div id="platSwirlMob" className={styles.displayNone}> {/* certTrophyContMob */}
+                    <Image className={styles.trophyImageMob} src='https://brownlist.imgix.net/cert-plat.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                  <div className={styles.modalMetaMobPlat}>
+                    <h1>Certified Platinum</h1>
+                    <p className={styles.modalParMob}>Awarded to anyone officially on the Platinumlist. You know why this is here ... congrats, MF! Let's build this dynasty together!!</p>
+                    <button>Share Trophy</button>
+                  </div>
+                </div>
+
+                <div className={styles.gridUnitContMobGold}>
+                  <div id="goldSwirlMob" className={styles.displayNone}> {/* certTrophyContMob */}
+                    <Image className={styles.trophyImageMob} src='https://brownlist.imgix.net/cert-gold.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                  <div className={styles.modalMetaMobGold}>
+                    <h1>Certified Gold</h1>
+                    <p className={styles.modalParMob}>Awarded to anyone officially on the Goldlist. We like your style MF and want to see you shine! Get ready for Mint Day!!</p>
+                    <button>Share Trophy</button>
+                  </div>
+                </div>
+
+                <div className={styles.gridUnitContMobBrown}>
+                  <div id="brownSwirlMob" className={styles.displayNone}> {/* certTrophyContMob */}
+                    <Image className={styles.trophyImageMob} src='https://brownlist.imgix.net/cert-brown.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                  <div className={styles.modalMetaMobBrown}>
+                    <h1>Certified Brown</h1>
+                    <p className={styles.modalParMob}>Awarded to anyone officially on the Brownlist. Note: being on the Brownlist does not guarantee you a mint. Only Gold & Platinum MFs have guaranteed mints.</p>
+                    <button>Share Trophy</button>
+                  </div>
+                </div>
+
+                {/* <div className={styles.gridUnitContMob} onClick={popModal5}>
+                  <div id="platMicMob" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://tmb.imgix.net/karaoke-plat.png/' alt='Plat Karaoke Star Trophy' width={1200} height={1200} />
+                  </div>
+                </div>
+                <div className={styles.gridUnitContMob} onClick={popModal4}>
+                  <div id="goldMicMob" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://tmb.imgix.net/karaoke-singer-1.png/' alt='Gold Karaoke Singer Trophy' width={1200} height={1200} />
+                  </div>
+                </div>
+                <div className={styles.gridUnitContMob} onClick={popModal3}>
+                  <div id="brownMicMob" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://tmb.imgix.net/karaoke-attendee.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                  </div>
+                </div>
+                <div className={styles.gridUnitContMob} onClick={popModal2}>
+                  <div id="certTrophyPlatMob" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-plat.png/' alt='Platinum swirl certification trophy.' width={1200} height={1200} />
+                  </div>
+                </div>
+                <div className={styles.gridUnitContMob} onClick={popModal1}>
+                  <div id="certTrophyGoldMob" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-gold.png/' alt='Gold swirl certification trophy.' width={1200} height={1200} />
+                  </div>
+                </div>
+                <div className={styles.gridUnitContMob} onClick={popModal}>
+                  <div id="certTrophyBrownMob" className={styles.displayNone}>
+                    <Image className={styles.trophyImage} src='https://brownlist.imgix.net/cert-brown.png/' alt='Brown swirl certification trophy.' width={1200} height={1200} />
+                  </div>
+                </div> */}
               </div>
 
               {/* <p id="statusMobile" className={styles.messageMobile}>{message}</p> */}
@@ -757,7 +949,7 @@ const checkMics = async () => {
         <div className={styles.formCont}>
           <div id="resultForm" className={styles.displayNone}>
             <h1>The connected address is not on The Brownlist.</h1>
-            <p >Fill out the form below to request placement, though interviews are not guaranteed. If you really want a spot, don&#39;t wait for us to reach out, make memes, show up in the comments, attend Karaoke nights ... just do whatever it takes to MAKE YOURSELF KNOWN.</p>
+            <p>Fill out the form below to request placement, though interviews are not guaranteed. If you really want a spot, do not wait for us to reach out; make memes, show up in the comments, attend Karaoke nights ... just do whatever it takes to MAKE YOURSELF KNOWN.</p>
             <iframe className={styles.newForm} title="Jotform Embed" src={jotFormURL}></iframe>
           </div>
         </div>

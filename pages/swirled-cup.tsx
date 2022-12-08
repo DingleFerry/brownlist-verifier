@@ -36,40 +36,46 @@ const bmaCup: NextPage = () => {
         {/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV */}
         {/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV */}
         <div className={styles.mainNav}>
-          <div className={styles.pageLinkCont}>
-            <Link href="/brownlist-submit">
-              <a><h3 className={styles.pageLink}>Submit for BL</h3></a>
-            </Link>
-          </div>
-          <div className={styles.pageLinkCont} onClick={reload}>
-            <Link href="">
-              <a><h3 className={styles.pageLinkBlue}>Swirled Cup</h3></a>
-            </Link>
-          </div>
-          <div className={styles.pageLinkCont}>
-            <Link href="/">
-                <a><h3 className={styles.pageLink}>My Trophies</h3></a>
-            </Link>
-          </div>
-          <div className={styles.pageLinkCont}>
-            <Link href="/nonsense">
-              <a><h3 className={styles.pageLink}>BS</h3></a>
-            </Link>
-          </div>
-          <div className={styles.logo}>
+
+        <div className={styles.logo}>
             <Link href="/">
               <a>
                 <Image src='https://brownlist.imgix.net/black-logo.png/' alt='Black BMA logo' width={90} height={90} />
               </a>
             </Link>
           </div>
+
+          <div className={styles.pageLinksCont}>
+            <div className={styles.pageLinkCont}>
+              <Link href="/nonsense">
+                <a><h3 className={styles.pageLink}>BS</h3></a>
+              </Link>
+            </div>
+            <div className={styles.pageLinkCont} onClick={reload}>
+              <Link href="">
+                <a><h3 className={styles.pageLinkBlue}>Swirled Cup</h3></a>
+              </Link>
+            </div>
+            <div className={styles.pageLinkCont}>
+              <Link href="/brownlist-submit">
+                <a><h3 className={styles.pageLink}>Submit for BL</h3></a>
+              </Link>
+            </div>
+            <div className={styles.pageLinkCont}>
+              <Link href="/">
+                  <a><h3 className={styles.pageLink}>My Trophies</h3></a>
+              </Link>
+            </div>
+          </div>
+
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
-              <a className={styles.twitLogoCont} target="_blank">
+              <a target="_blank">
                 <Image src='https://brownlist.imgix.net/twitter-white-black.png/' alt='Black Twitter logo' width={45} height={45} />
               </a>
             </Link>
           </div>
+
         </div>
 
         <div className={styles.hamNav}>
@@ -116,6 +122,11 @@ const bmaCup: NextPage = () => {
             </div>
             <div className={styles.hamLinks}>
                 <ul className={styles.hamLinksUL}>
+                    <li className={styles.hamLink}>
+                      <Link href="/">
+                          <a><h3 className={styles.hamLink}>My Trophies</h3></a>
+                      </Link>
+                  </li>
                   <li>
                       <Link href="/brownlist-submit">
                           <a><h3 className={styles.hamLink}>Submit for BL</h3></a>
@@ -124,11 +135,6 @@ const bmaCup: NextPage = () => {
                   <li className={styles.hamLinkBlueLI} onClick={reload}>
                       <Link href="">
                           <a><h3 className={styles.hamLinkBlue}>Swirled Cup</h3></a>
-                      </Link>
-                  </li>
-                  <li className={styles.hamLink}>
-                      <Link href="/">
-                          <a><h3 className={styles.hamLink}>My Trophies</h3></a>
                       </Link>
                   </li>
                   <li>

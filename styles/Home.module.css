@@ -76,6 +76,16 @@
   background: #f5f5f5;
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.pageLinksCont{
+  height: 100px;
+  width: 100vw;
+  background: #f5f5f5;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
 }
 
 .hamNav{
@@ -98,17 +108,18 @@
   margin-left: 20px;
 }
 
-.pageLink, .pageLinkBrown, .pageLinkPink, .pageLinkBlue, .pageLinkGold{
-  margin-top: 33.5px;
+.pageLink, .pageLinkBrown, .pageLinkPink, .pageLinkBlue, .pageLinkGold, .pageLinkWhite{
+  margin-top: 30px;
   transition: all;
   transition-duration: 200ms;
   background: #0a0a0a;
   color: #f5f5f5 !important;
   border-radius: 100px;
   padding: 5px 20px;
+  font-size: 22px;
 }
 
-.pageLink:hover, .pageLinkBrown:hover, .pageLinkPink:hover, .pageLinkBlue:hover, .pageLinkGold:hover{
+.pageLink:hover, .pageLinkBrown:hover, .pageLinkPink:hover, .pageLinkBlue:hover, .pageLinkGold:hover, .pageLinkWhite:hover{
   transform: scale(1.1);
   cursor: pointer !important;
 }
@@ -129,20 +140,25 @@
   background: #D68E22;
 }
 
+.pageLinkWhite{
+  background: #f5f5f5;
+  color: #0a0a0a !important;
+  border: 4px solid #0a0a0a;
+  padding: 1px 16px;
+}
+
 .logo{
   transition: all;
   transition-duration: 200ms;
   position: absolute;
-  left: calc(50vw - 45px);
+  left: 15px;
   top: 5px;
 }
 
 .social{
-  position: absolute;
-  right: 20px;
-  top: 27.5px;
   transition: all;
   transition-duration: 200ms;
+  margin: 27.5px 20px 0px;
 }
 
 .hamSocial{
@@ -227,9 +243,6 @@
 }
 
 .hamTwitLogo{
-  position: absolute;
-  bottom: 24px;
-  left: calc(50vw - 22.5px)
 }
 
 .hamLinksUL li{
@@ -240,10 +253,10 @@
   margin: 40px auto;
 }
 
-.hamLink, .hamLinkPink, .hamLinkBrown, .hamLinkBlue, .hamLinkGold{
+.hamLink, .hamLinkPink, .hamLinkBrown, .hamLinkBlue, .hamLinkGold, .hamLinkWhite{
   margin: 0px;
   color: #0a0a0a;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .hamLinkPink, .hamLinkPinkLI{
@@ -264,6 +277,16 @@
 .hamLinkGold, .hamLinkGoldLI{
   background: #D68E22 !important;
   color: #f5f5f5 !important;
+}
+
+.hamLinkWhite, .hamLinkWhiteLI{
+  background: #0a0a0a !important;
+  color: #f5f5f5 !important;
+}
+
+.hamLinkWhiteLI{
+  border: 4px solid #f5f5f5;
+  padding: 1px 16px !important;
 }
 
 /* .vertSpacer80{
@@ -428,12 +451,12 @@
 .mainCont, .mainContPadTop, .mainContPostReveal, .mainContForm{
   width: 100vw;
   background: none;
-  padding: 40px 0px;
+  padding: 0px;
 }
 
-.mainContForm{
+/* .mainContForm{
   padding: 0px 0px;
-}
+} */
 
 .mainContPostReveal{
   min-height: calc(100vh - 220px);
@@ -460,6 +483,10 @@
   margin: 0px 40px;
 }
 
+.trophyGridMob{
+  display: none;
+}
+
 .gridUnitCont{
   margin: 0px;
   transition: all;
@@ -471,7 +498,7 @@
   transform: scale(1.05);
 }
 
-.mainButton, .altButton, .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat, .connectBtnMM, .connectBtnWC, .connectBtnCB, .connectMMMob, .connectBtnWCMob, .connectBtnCBMob, .submitBtn, .resultSubmitBtn, .modalMeta button, .myTrophiesBlist{
+.container button{
   cursor: pointer;
   font-family: cooper-black-std !important;
   font-size: 22px;
@@ -483,7 +510,7 @@
   transition-timing-function: ease-out;
 }
 
-.mainButton:hover, .altButton:hover, .tweetBtnBrown:hover, .tweetBtnGold:hover, .tweetBtnPlat:hover, .connectBtnMM:hover, .connectBtnWC:hover, .connectBtnCB:hover, .connectMMMob:hover, .connectBtnWCMob:hover, .connectBtnCBMob:hover, .submitBtn:hover, .resultSubmitBtn:hover, .modalMeta button:hover, .myTrophiesBlist:hover{
+.container button:hover{
   transform: scale(1.1);
 }
 
@@ -554,7 +581,7 @@
 
 .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
   margin: auto;
-  margin-bottom: 20px;
+  margin: 20px auto 0px;
   color: #f5f5f5 !important;
 }
 
@@ -579,7 +606,7 @@
   align-items: center; */
 }
 
-.certTrophyCont, .mosaicCont{
+.certTrophyCont, .mosaicCont, .certTrophyContMob{
   width: 400px;
   height: 400px;
   max-width: 90vw;
@@ -592,14 +619,23 @@
   box-shadow: 0px 0px 20px rgba(10, 10, 10, .33);
 }
 
-.mosaicCont{
+.certTrophyContMob{
   margin: auto;
+  box-shadow: none;
 }
 
-.trophyImage, .trophyMosaics{
+.mosaicCont{
+  margin: 40px auto 0px;
+}
+
+.trophyImage, .trophyMosaics, .trophyImageMob{
   border-radius: 20px;
   /* box-shadow: 0px 0px 20px #0a0a0a; */
 }
+
+/* .trophyMosaics{
+  margin-top: 20px;
+} */
 
 .trophyImage{
 cursor: pointer;
@@ -815,7 +851,7 @@ input.resultFormInput, input.resultFormInput:focus{
   z-index: 100000000;
 }
 
-.modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6{
+.modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6, .modalCard7{
   position: fixed;
   width: 90vw;
   max-width: 1200px;
@@ -867,6 +903,16 @@ input.resultFormInput, input.resultFormInput:focus{
   color: #254b99 !important;
 }
 
+.modalCard7, .modalCard7 h1, .modalCard7 p{
+  background: #2556b8 !important;
+  color: #f5f5f5 !important;
+}
+
+.modalCard7 button{
+  background: #f5f5f5 !important;
+  color: #b742a0 !important;
+}
+
 .modalImgCont{
   max-height: 720px;
   max-width: 720px;
@@ -900,6 +946,96 @@ input.resultFormInput, input.resultFormInput:focus{
   background-color: #0a0a0a;
   color: #f5f5f5;
   margin-top: 10px;
+}
+
+
+.gridUnitContMobBrown, .gridUnitContMobGold, .gridUnitContMobPlat, .gridUnitContMobUSA, .gridUnitContMobWorld{
+  width: 400px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 20px rgba(10, 10, 10, .33);
+  border-radius: 20px;
+  margin: 0px auto 40px;
+}
+
+.gridUnitContMobWorld, .gridUnitContMobWorld h1, .gridUnitContMobWorld p{
+  background: #2556b8 !important;
+  color: #f5f5f5 !important;
+}
+
+.gridUnitContMobWorld button{
+  background: #f5f5f5 !important;
+  color: #b742a0 !important;
+}
+
+.gridUnitContMobUSA, .gridUnitContMobUSA h1, .gridUnitContMobUSA p{
+  background: #C02E37 !important;
+  color: #f5f5f5 !important;
+}
+
+.gridUnitContMobUSA button{
+  background: #f5f5f5 !important;
+  color: #254b99 !important;
+}
+
+.gridUnitContMobPlat, .gridUnitContMobPlat h1, .gridUnitContMobPlat p{
+  background: #0a0a0a !important;
+  color: #f5f5f5 !important;
+}
+
+.gridUnitContMobPlat button{
+  background: #f5f5f5 !important;
+  color: #0a0a0a !important;
+}
+
+.gridUnitContMobGold, .gridUnitContMobGold h1, .gridUnitContMobGold p{
+  background: #D78E21 !important;
+  color: #f5f5f5 !important;
+}
+
+.gridUnitContMobGold button{
+  background: #f5f5f5 !important;
+  color: #3D2305 !important;
+}
+
+.gridUnitContMobBrown, .gridUnitContMobBrown h1, .gridUnitContMobBrown p{
+  background: #985B3C !important;
+  color: #f5f5f5 !important;
+}
+
+.gridUnitContMobBrown button{
+  background: #f5f5f5 !important;
+  color: #2F1F0F !important;
+}
+
+.modalMetaMobBrown, .modalMetaMobGold, .modalMetaMobPlat, .modalMetaMobUSA, .modalMetaMobWorld{
+  padding: 20px 40px;
+}
+
+.modalMetaMobBrown p, .modalMetaMobUSA p, .modalMetaMobGold p, .modalMetaMobPlat p, .modalMetaMobWorld p{
+  font-family: poppins;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.modalMetaMobBrown h1, .modalMetaMobGold h1, .modalMetaMobPlat h1, .modalMetaMobWorld h1{
+  margin: 0px;
+  color: #f5f5f5;
+}
+
+.modalMetaMobBrown p, .modalMetaMobGold p, .modalMetaMobPlat p, .modalMetaMobWorld p{
+  color: #f5f5f5;
+}
+
+.modalMetaMobUSA h1{
+  margin: 0px;
+  color: #0a0a0a;
+}
+
+.modalMetaMobUSA p{
+  color: #0a0a0a;
 }
 
 .pageDetails{
@@ -1404,32 +1540,22 @@ input.resultFormInput, input.resultFormInput:focus{
 /* ########################################################## */
 /* MEDIA QUERIES */
 @media (min-width: 1700px){
-  .trophyGrid{
-    width: calc(100vw - 400px);
-    margin: 0px 200px;
-  }
 }
 
 @media(max-width: 1440px){
-  .mainNav{
-    display: none;
-  }
-  .hamNav{
-    display: block;
-  }
   .mainContPostReveal{
     min-height: calc(100vh - 200px);
   }
 }
 
 @media (min-width: 1330px){
-  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6{
+  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6, .modalCard7{
     left: calc(50vw - 600px);
   }
 }
 
 @media (max-width: 1300px){
-  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6{
+  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6, .modalCard7{
     /* height: 600px; */
     top: calc(50vh - 300px);
   }
@@ -1440,7 +1566,7 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 @media (max-width: 1200px) {
-  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6{
+  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6, .modalCard7{
     /* height: 480px; */
     top: calc(50vh - 240px);
   }
@@ -1549,19 +1675,19 @@ input.resultFormInput, input.resultFormInput:focus{
       margin: auto;
     }
   }
-  @media (min-width: 900px){
+  /* @media (min-width: 900px){
     @media (max-height: 760px){
       .certtrophycont, .mosaicCont{
         width: 320px;
         height: 320px;
       }
     }
-    /* @media (max-height: 660px){
+    @media (max-height: 660px){
       .counterCont{
         display: none;
       }
-    } */
-  }
+    }
+  } */
 }
 
 @media (max-width: 1100px){
@@ -1575,7 +1701,7 @@ input.resultFormInput, input.resultFormInput:focus{
     font-size: 36px;
     padding-bottom: 6px;
   }
-  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6{
+  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6, .modalCard7{
     max-width: 560px;
     /* height: 90vh; */
     top: calc(5vh);
@@ -1595,7 +1721,7 @@ input.resultFormInput, input.resultFormInput:focus{
     margin-top: 0px;
   }
   @media (max-height: 900px){
-    .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6{
+    .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6, .modalCard7{
       max-width: 400px;
       /* height: 90vh; */
       top: 40px;
@@ -1613,11 +1739,36 @@ input.resultFormInput, input.resultFormInput:focus{
   }
 }
 
+@media (max-width: 980px){
+  .mainNav{
+    display: none;
+  }
+  .hamNav{
+    display: block;
+  }
+}
+
+@media (max-width: 960px){
+  .trophyGrid{
+    display: none;
+  }
+  .trophyGridMob{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
+    margin: 20px auto;
+  }
+}
+
 @media (max-width: 900px) {
   .busModel{
     font-size: 72px !important;
   }
-
+  /* .mainContPostReveal{
+    padding: 0px;
+  } */
   /* .mainCont{
     position: absolute;
     bottom: 40px;
@@ -1639,7 +1790,7 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 @media (max-width: 680px){
-  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6{
+  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6, .modalCard7{
     width: 90vw;
     max-width: 440px;
     /* height: 90vh; */
@@ -1675,31 +1826,28 @@ input.resultFormInput, input.resultFormInput:focus{
     left: 0;
     margin-left: 2.5vw;
   } */
-  .mainContPostReveal{
-    padding: 20px 0px;
-  }
-  .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
+  /* .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
     margin-bottom: 0px;
-  }
-  .certTrophyCont{
+  } */
+  /* .certTrophyCont{
     margin: 20px 0px;
-  }
+  } */
 }
 
 @media (max-width: 490px){
-  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6{
+  .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6, .modalCard7{
     left: 5vw;
   }
 }
 
-@media (max-width: 485px) {
+/* @media (max-width: 485px) {
   .certtrophycont, .mosaicCont{
     width: 360px;
     height: 360px;
-    /* max-height: 80vw; */
+    max-height: 80vw;
   }
 
-  /* input.formInput, input.formInput:focus, input.resultFormInput, input.resultFormInput:focus{
+  input.formInput, input.formInput:focus, input.resultFormInput, input.resultFormInput:focus{
     margin-top: 20px;
     text-align: center;
     font-size: 16px;
@@ -1707,41 +1855,41 @@ input.resultFormInput, input.resultFormInput:focus{
 
   .formUnderline, .resultFormUnderline{
     width: 360px;
-  } */
+  }
 
-  /* .mainCont{
+  .mainCont{
     margin-top: calc(50vh - 261.5px);
-  } */
+  }
 
-  /* .formTitle{
+  .formTitle{
     font-size: 28px;
-  } */
-}
+  }
+} */
 
 @media(max-width: 460px){
   /* .trophySpacer{
     padding: 20px 0px 0px
   } */
-  .trophyGrid{
+  /* .trophyGrid{
     width: calc(100vw - 40px);
     margin: 0px 20px;
     gap: 0px;
-  }
-  .certtrophycont{
+  } */
+  /* .certtrophycont{
     margin: 10px;
-  }
-  .checkListCont{
+  } */
+  /* .checkListCont{
     margin: 20px 0px;
-  }
+  } */
   /* .checkListCont{
     bottom: 20px;
   } */
   /* .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
     margin-bottom: 20px;
   } */
-  .mainCont{
+  /* .mainCont{
     padding: 20px 0px;
-  }
+  } */
 }
 
 @media(max-width: 420px){
@@ -1763,14 +1911,17 @@ input.resultFormInput, input.resultFormInput:focus{
     padding-top: 14px;
     height: 60px;
   }
+  .modalMetaMobUSA p, .modalMetaMobPlat p, .modalMetaMobWorld p{
+    font-size: 14px;
+  }
 }
 
-@media (max-width: 380px) {
+/* @media (max-width: 380px) {
   .certtrophycont, .mosaicCont{
     max-width: 80vw;
     max-height: 80vw;
   }
-}
+} */
 
 @media (min-height: 880px) {
   /* .modalCard{
@@ -1779,10 +1930,10 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 @media (max-height: 800px) {
-  .certtrophycont, .mosaicCont{
+  /* .certtrophycont, .mosaicCont{
     width: 300px;
     height: 300px;
-  }
+  } */
   /* .messageMobile{
     display: none;
   } */
@@ -1820,7 +1971,7 @@ input.resultFormInput, input.resultFormInput:focus{
         display: block;
         max-height: 100px;
       }
-      .modalCard h1, .modalCard1 h1, .modalCard2 h1, .modalCard3 h1, .modalCard4 h1, .modalCard5 h1, .modalCard6 h1{
+      .modalCard h1, .modalCard1 h1, .modalCard2 h1, .modalCard3 h1, .modalCard4 h1, .modalCard5 h1, .modalCard6 h1, .modalCard7 h1{
         font-size: 24px;
         margin-bottom: 0px;
       }
@@ -1891,7 +2042,7 @@ input.resultFormInput, input.resultFormInput:focus{
   }
 }
 
-@media (max-height: 580px) {
+/* @media (max-height: 580px) {
   .certtrophycont, .mosaicCont{
     width: 260px;
     height: 260px;
@@ -1903,7 +2054,7 @@ input.resultFormInput, input.resultFormInput:focus{
     width: 200px;
     height: 200px;
   }
-}
+} */
 
 /* ######################################################################################## */
 
