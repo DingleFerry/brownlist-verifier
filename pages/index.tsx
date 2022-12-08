@@ -827,7 +827,7 @@ const checkMics = async () => {
                   </div>
                   <div className={styles.modalMetaMobPlat}>
                     <h1>Certified Platinum</h1>
-                    <p className={styles.modalParMob}>Awarded to anyone officially on the Platinumlist. You know why this is here ... congrats, MF! Let's build this dynasty together!!</p>
+                    <p className={styles.modalParMob}>Awarded to anyone officially on the Platinumlist. You know why this is here ... congrats, MF! Let&apos;s build this dynasty together!!</p>
                     <button>Share Trophy</button>
                   </div>
                 </div>
