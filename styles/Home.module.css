@@ -419,10 +419,15 @@
   flex-direction: column;
   justify-content: center;
   vertical-align: center;
-  padding: 40px 0px 0px;
+  padding: 0px;
 }
 
-.connectInst{
+/* .connectCont Image, .connectBtnsContMob Image, .connectCont button, .connectBtnsContMob button{
+  width: 40px;
+  height: 40px;
+} */
+
+.connectInst, .connectInstMob{
   margin: 0px auto 20px;
 }
 
@@ -480,7 +485,7 @@
   flex-wrap: wrap;
   gap: 0px;
   justify-content: center;
-  margin: 0px 40px;
+  margin: 20px 40px;
 }
 
 .trophyGridMob{
@@ -542,9 +547,14 @@
 }
 
 .connectMMMob, .connectBtnWCMob, .connectBtnCBMob{
+  position: relative;
   padding: 0px;
-  width: 40px;
-  height: 40px;
+  width: 40px !important;
+  height: 40px !important;
+  min-height: none;
+  min-width: none;
+  max-height: none;
+  max-width: none;
 }
 
 /* .connectBtnCB{
@@ -581,7 +591,7 @@
 
 .tweetBtnBrown, .tweetBtnGold, .tweetBtnPlat{
   margin: auto;
-  margin: 20px auto 0px;
+  margin: 40px auto 0px;
   color: #f5f5f5 !important;
 }
 
@@ -797,12 +807,22 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 .connectMMMob, .connectBtnWCMob, .connectBtnCBMob{
-  width: 40px;
-  height: 40px;
+  width: 40px !important;
+  height: 40px !important;
   background: none;
 }
 
+.connectMMMob{
+  background-image: url('https://brownlist.imgix.net/metamask.png/');
+  background-size: cover;
+  background-position: center;
+}
 
+.connectBtnWCMob{
+  background-image: url('https://brownlist.imgix.net/wallet-connect-1.png/');
+  background-size: cover;
+  background-position: center;
+}
 
 
 .mfBreakdown, .mfBreakdownMob{
@@ -910,7 +930,7 @@ input.resultFormInput, input.resultFormInput:focus{
 
 .modalCard7 button{
   background: #f5f5f5 !important;
-  color: #b742a0 !important;
+  color: #279029 !important;
 }
 
 .modalImgCont{
@@ -966,7 +986,7 @@ input.resultFormInput, input.resultFormInput:focus{
 
 .gridUnitContMobWorld button{
   background: #f5f5f5 !important;
-  color: #b742a0 !important;
+  color: #279029 !important;
 }
 
 .gridUnitContMobUSA, .gridUnitContMobUSA h1, .gridUnitContMobUSA p{
@@ -1038,10 +1058,14 @@ input.resultFormInput, input.resultFormInput:focus{
   color: #0a0a0a;
 }
 
-.pageDetails{
+.pageDetails, .pageDetailsMob{
   background: #0a0a0a;
   color: #f5f5f5 !important;
   width: 100vw;
+}
+
+.trophyDetailsMob{
+  display: none;
 }
 
 
@@ -1224,7 +1248,7 @@ input.resultFormInput, input.resultFormInput:focus{
   font-size: 18px;
 }
 
-.pointDef, .trophyDetails{
+.pointDef, .trophyDetails, .trophyDetailsMob{
   width: 60vw;
   font-family: poppins;
   font-weight: 400;
@@ -1280,7 +1304,7 @@ input.resultFormInput, input.resultFormInput:focus{
   .loseListOL{
     font-size: 32px;
   }
-  .pointDef, .trophyDetails{
+  .pointDef, .trophyDetails, .trophyDetailsMob{
     width: 68vw;
     font-size: 18px;
   }
@@ -1330,7 +1354,7 @@ input.resultFormInput, input.resultFormInput:focus{
   .loseListOL{
     font-size: 28px;
   }
-  .pointDef, .trophyDetails{
+  .pointDef, .trophyDetails, .trophyDetailsMob{
     width: 88vw;
     font-size: 16px;
   }
@@ -1377,7 +1401,7 @@ input.resultFormInput, input.resultFormInput:focus{
   .loseListOL{
     font-size: 20px;
   }
-  .pointDef, .trophyDetails{
+  .pointDef, .trophyDetails, .trophyDetailsMob{
     font-size: 14px;
   }
 }
@@ -1398,7 +1422,7 @@ input.resultFormInput, input.resultFormInput:focus{
   .totalSums h1{
     font-size: 20px;
   }
-  .pointDef, .trophyDetails{
+  .pointDef, .trophyDetails, .trophyDetailsMob{
     font-size: 12px;
   }
 }
@@ -1416,7 +1440,7 @@ input.resultFormInput, input.resultFormInput:focus{
   .loseListOL{
     font-size: 16px;
   }
-  .pointDef, .trophyDetails{
+  .pointDef, .trophyDetails, .trophyDetailsMob{
     font-size: 10px;
   }
   .countryName{
@@ -1746,6 +1770,18 @@ input.resultFormInput, input.resultFormInput:focus{
   .hamNav{
     display: block;
   }
+  .trophyDetails{
+    display: none;
+  }
+  .trophyDetailsMob{
+    display: block;
+  }
+  .mosaicCont{
+    margin-top: 20px;
+  }
+  .checkListCont{
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 960px){
@@ -1890,13 +1926,16 @@ input.resultFormInput, input.resultFormInput:focus{
   /* .mainCont{
     padding: 20px 0px;
   } */
+  .gridUnitContMobBrown, .gridUnitContMobGold, .gridUnitContMobPlat, .gridUnitContMobUSA, .gridUnitContMobWorld{
+    margin-bottom: 20px;
+  }
 }
 
-@media(max-width: 420px){
+/* @media(max-width: 420px){
   .connectCont{
     padding-top: 20px;
   }
-}
+} */
 
 @media (max-width: 380px) {
   /* .formUnderline, .resultFormUnderline{

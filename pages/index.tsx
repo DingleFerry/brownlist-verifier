@@ -63,6 +63,8 @@ const Home: NextPage = () => {
   const certTrophyBrown = (document.getElementById('certTrophyBrown') as HTMLImageElement);
   const pageDetails = (document.getElementById('pageDetails') as HTMLElement);
   const trophyDetails = (document.getElementById('trophyDetails') as HTMLElement);
+  const pageDetailsMob = (document.getElementById('pageDetailsMob') as HTMLElement);
+  const trophyDetailsMob = (document.getElementById('trophyDetailsMob') as HTMLElement);
   const checkListCont = (document.getElementById('checkListCont') as HTMLElement);
   const trophyGridMob = (document.getElementById('trophyGridMob') as HTMLElement);
   const platSwirlMob = (document.getElementById('platSwirlMob') as HTMLElement);
@@ -180,6 +182,9 @@ const Home: NextPage = () => {
       
       trophyDetails.classList.remove('Home_displayNone__dFRW_');
       trophyDetails.classList.add('Home_trophyDetails__frLPK');
+
+      trophyDetailsMob.classList.remove('Home_displayNone__dFRW_');
+      trophyDetailsMob.classList.add('Home_trophyDetailsMob__DTMoH');
       
       checkListCont.classList.add('Home_displayNone__dFRW_');
       queryBtn.classList.remove('Home_mainButton__dUc5h');
@@ -562,7 +567,7 @@ const checkMics = async () => {
         <div id='modalCont7' className={styles.displayNone} onClick={closeModal7}>
           <div className={styles.modalCard7}>
             <div className={styles.modalImgCont}>
-              <Image className={styles.modalImg} src='https://tmb.imgix.net/swirled-cup-world-2.png/' alt='Black BMA logo' width={900} height={900} />
+              <Image className={styles.modalImg} src='https://tmb.imgix.net/swirled-cup-world-3.png/' alt='Black BMA logo' width={900} height={900} />
             </div>
             <div className={styles.modalMeta}>
               <h1>S.C. 1st Place</h1>
@@ -724,7 +729,7 @@ const checkMics = async () => {
               <div id="trophyGrid" className={styles.displayNone}>
                 <div className={styles.gridUnitCont} onClick={popModal7}>
                   <div id="scWorld" className={styles.displayNone}>
-                    <Image className={styles.trophyImage} src='https://tmb.imgix.net/swirled-cup-world-2.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                    <Image className={styles.trophyImage} src='https://tmb.imgix.net/swirled-cup-world-3.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
                   </div>
                 </div>
                 <div className={styles.gridUnitCont} onClick={popModal6}>
@@ -768,7 +773,7 @@ const checkMics = async () => {
 
                 <div id="scWorldMob" className={styles.gridUnitContMobWorld}>
                   <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
-                    <Image className={styles.trophyImageMob} src='https://tmb.imgix.net/swirled-cup-world-2.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
+                    <Image className={styles.trophyImageMob} src='https://tmb.imgix.net/swirled-cup-world-3.png/' alt='Brown Karaoke Attendee Trophy' width={1200} height={1200} />
                   </div>
                   <div className={styles.modalMetaMobWorld}>
                     <h1>S.C. Player</h1>
@@ -927,10 +932,10 @@ const checkMics = async () => {
               {/* <div><h1>Connect:</h1></div> */}
               <h1 className={styles.connectInstMob}>Connect to Begin</h1>
               <button onClick={connectMM} className={styles.connectMMMob}>
-                <Image className={styles.connectMMMobImage} src='https://brownlist.imgix.net/metamask.png/' alt='MetaMask connect button' width={40} height={40} />
+                {/* <Image src='https://brownlist.imgix.net/metamask.png/' alt='MetaMask connect button' width={40} height={40} /> */}
               </button>
               <button onClick={connectWC} className={styles.connectBtnWCMob}>
-                <Image className={styles.connectMMMobImage} src='https://brownlist.imgix.net/wallet-connect-1.png/' alt='WalletConnect connect button' width={40} height={40} />
+                {/* <Image src='https://brownlist.imgix.net/wallet-connect-1.png/' alt='WalletConnect connect button' width={40} height={40} /> */}
               </button>
               {/* <button onClick={connectCB} className={styles.connectBtnCBMob}>
                 <Image className={styles.connectMMMobImage} src='https://brownlist.imgix.net/coinbase.png/' alt='CoinBase connect button' width={40} height={40} />
@@ -956,6 +961,10 @@ const checkMics = async () => {
 
         <div id="pageDetails" className={styles.pageDetails}>
           <p id="trophyDetails" className={styles.displayNone}>Click on any trophy to learn more.<br></br>If you believe a trophy is missing from your collection, stay calm MF and DM us on Twitter.<br></br><br></br>Note: final mint numbers correlating to swirl status will not be cummulative. For example, if Platinum yields 3 mints, Gold yields 2, and Brown yields an unguaranteed 1 ... you do not get 6 mints for having all three trophies in your collection, you get 3 mints for having platinum status. Again, these numbers are NOT final.</p>
+        </div>  
+
+        <div id="pageDetailsMob" className={styles.pageDetailsMob}>
+          <p id="trophyDetailsMob" className={styles.displayNone}>If you believe a trophy is missing from your collection, stay calm MF and DM us on Twitter.<br></br><br></br>Note: final mint numbers correlating to swirl status will not be cummulative. For example, if Platinum yields 3 mints, Gold yields 2, and Brown yields an unguaranteed 1 ... you do not get 6 mints for having all three trophies in your collection, you get 3 mints for having platinum status. Again, these numbers are NOT final.</p>
         </div>  
 
       </main>
