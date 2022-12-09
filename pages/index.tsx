@@ -305,7 +305,7 @@ const checkMics = async () => {
           scUSA.classList.add('Home_certTrophyCont__3hYjc');
           scUSAMob.classList.remove('Home_displayNone__dFRW_');
           scUSAMob.classList.add('Home_certTrophyContMob__p0lqd');
-          console.log("show US trophy")
+          console.log(response)
         } else if (country === "Nigeria") {
           console.log("show Nigerian trophy")
         } else {
