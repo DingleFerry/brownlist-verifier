@@ -803,6 +803,7 @@ input.resultFormInput, input.resultFormInput:focus{
 
 .connectBtnsContMob{
   display: none;
+  margin-bottom: 40px;
 }
 
 .connectMMMob, .connectBtnWCMob, .connectBtnCBMob{
