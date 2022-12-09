@@ -522,8 +522,7 @@
 .mainButton, .myTrophiesBlist{
   background: #B842A0;
   display: block;
-  margin: auto;
-  margin-top: 10px;
+  margin: 10px auto 40px;
 }
 
 .myTrophiesBlist{
