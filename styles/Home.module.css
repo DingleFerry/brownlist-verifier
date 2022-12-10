@@ -813,13 +813,15 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 .connectMMMob{
-  background-image: url('https://brownlist.imgix.net/metamask.png/');
+  background-color: #d6643c;
+  background-image: url('https://ik.imagekit.io/ts6bfcsg8/metamask.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670620948034');
   background-size: cover;
   background-position: center;
 }
 
 .connectBtnWCMob{
-  background-image: url('https://brownlist.imgix.net/wallet-connect-1.png/');
+  background-color: #2556b8;
+  background-image: url('https://ik.imagekit.io/ts6bfcsg8/wallet-connect-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670620949435');
   background-size: cover;
   background-position: center;
 }
@@ -871,6 +873,26 @@ input.resultFormInput, input.resultFormInput:focus{
   z-index: 100000000;
 }
 
+.modalMeta{
+  max-width: 440px;
+  text-align: left;
+  padding: 40px 0px 40px 40px;
+}
+
+.modalMeta h1{
+  margin-top: 0px;
+}
+
+.modalMeta p{
+  font-family: poppins;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.modalMeta button{
+  margin-top: 10px;
+}
+
 .modalCard, .modalCard1, .modalCard2, .modalCard3, .modalCard4, .modalCard5, .modalCard6, .modalCard7{
   position: fixed;
   width: 90vw;
@@ -890,9 +912,9 @@ input.resultFormInput, input.resultFormInput:focus{
   color: #f5f5f5 !important;
 }
 
-.modalCard3 button, .modalCard2 button{
-  background: #38291b !important;
-  color: #f5f5f5 !important;
+.modalCard3 button, .modalCard button{
+  background: #f5f5f5 !important;
+  color: #38291b !important;
 }
 
 .modalCard4, .modalCard4 h1, .modalCard4 p, .modalCard1, .modalCard1 h1, .modalCard1 p{
@@ -901,16 +923,18 @@ input.resultFormInput, input.resultFormInput:focus{
 }
 
 .modalCard4 button, .modalCard1 button{
-  background: #3d2305 !important;
+  background: #f5f5f5 !important;
+  color: #3d2305 !important;
+}
+
+.modalCard5, .modalCard5 h1, .modalCard5 p, .modalCard2, .modalCard2 h1, .modalCard2 p{
+  background: #0a0a0a !important;
   color: #f5f5f5 !important;
 }
 
-.modalCard5, .modalCard2{
-  background: #E0E0E0;
-}
-
-.modalCard5 button{
-  /* color: #E0E0E0 !important; */
+.modalCard5 button, .modalCard2 button{
+  background: #f5f5f5 !important;
+  color: #0a0a0a !important;
 }
 
 .modalCard6, .modalCard6 h1, .modalCard6 p{
@@ -942,30 +966,6 @@ input.resultFormInput, input.resultFormInput:focus{
 
 .modalImg{
   border-radius: 20px;
-}
-
-.modalMeta{
-  max-width: 440px;
-  text-align: left;
-  padding: 40px 0px 40px 40px;
-}
-
-.modalMeta h1{
-  margin-top: 0px;
-  color: #0a0a0a;
-}
-
-.modalMeta p{
-  color: #0a0a0a;
-  font-family: poppins;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-.modalMeta button{
-  background-color: #0a0a0a;
-  color: #f5f5f5;
-  margin-top: 10px;
 }
 
 

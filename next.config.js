@@ -7,7 +7,8 @@ const nextConfig = {
     remotePatterns:[
       { protocol:'https', hostname:'tmb.imgix.net'}, 
       { protocol:'https', hostname:'brownlist.imgix.net'}, 
-      { protocol: 'https', hostname: 'storage.googleapis.com'}
+      { protocol: 'https', hostname: 'storage.googleapis.com'},
+      { protocol: 'https', hostname: 'ik.imagekit.io'}
     ]
   },
 };
