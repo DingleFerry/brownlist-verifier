@@ -732,7 +732,7 @@ const Home: NextPage = () => {
                   </div>
                   <div className={styles.modalMetaMobWorld}>
                     <h1>Team World</h1>
-                    <p className={styles.modalParMob}>Awarded to each competitor of the BMA Swirled Cup 2022 that didn't quite make it. Keep in mind MF, only true OGs find this trophy in their collection. Go team BMA!</p>
+                    <p className={styles.modalParMob}>Awarded to each competitor of the BMA Swirled Cup 2022 that didn&apos;t quite make it. Keep in mind MF, only true OGs find this trophy in their collection. Go team BMA!</p>
                     <button>Share Trophy</button>
                   </div>
                 </div>
