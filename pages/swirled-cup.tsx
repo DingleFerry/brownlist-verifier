@@ -1,4 +1,3 @@
-// import { useAddress, useMetamask, useCoinbaseWallet, useWalletConnect } from '@thirdweb-dev/react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -40,7 +39,7 @@ const bmaCup: NextPage = () => {
         <div className={styles.logo}>
             <Link href="/">
               <a>
-                <Image src='https://brownlist.imgix.net/black-logo.png/' alt='Black BMA logo' width={90} height={90} />
+                <Image src='https://ik.imagekit.io/ts6bfcsg8/all-black-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455908' alt='Black BMA logo' width={90} height={90} />
               </a>
             </Link>
           </div>
@@ -71,7 +70,7 @@ const bmaCup: NextPage = () => {
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
               <a target="_blank">
-                <Image src='https://brownlist.imgix.net/twitter-white-black.png/' alt='Black Twitter logo' width={45} height={45} />
+                <Image src='https://ik.imagekit.io/ts6bfcsg8/twitter-black-circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629456279' alt='Black Twitter logo' width={45} height={45} />
               </a>
             </Link>
           </div>
@@ -82,20 +81,20 @@ const bmaCup: NextPage = () => {
             <div className={styles.hamSocial}>
                 <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
                     <a className={styles.twitLogoCont} target="_blank">
-                    <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/twitter-black-circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629456279' alt='Black Twitter logo' width={45} height={45} />
                     </a>
                 </Link>
             </div>
             <div className={styles.hamLogo}>
                 <Link href="/">
                     <a>
-                    <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={60} height={60} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/all-black-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455908' alt='Black BMA logo' width={60} height={60} />
                     </a>
                 </Link>
             </div>
             <div className={styles.hamMenu} onClick={showHamMenu}>
                 <Link href="">
-                    <Image src='https://tmb.imgix.net/hamburger-1.png/' alt='Black Twitter logo' width={40} height={40} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/hamburger-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629518138' alt='Black Twitter logo' width={40} height={40} />
                 </Link>
             </div>
         </div>
@@ -104,20 +103,20 @@ const bmaCup: NextPage = () => {
             <div className={styles.hamSocial}>
                 <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
                     <a className={styles.twitLogoCont} target="_blank">
-                    <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/twitter-white-circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629456050' alt='Black Twitter logo' width={45} height={45} />
                     </a>
                 </Link>
             </div>
             <div className={styles.hamLogo}>
                 <Link href="/">
                     <a>
-                    <Image src='https://tmb.imgix.net/bma-f5f5f5-trans.png/' alt='White BMA logo' width={60} height={60} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/all-white-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455900' alt='White BMA logo' width={60} height={60} />
                     </a>
                 </Link>
             </div>
             <div className={styles.closeBtn} onClick={hideHamMenu}>
                 <Link href="">
-                    <Image src='https://tmb.imgix.net/close-btn-f5f5f5.png/' alt='X button' width={45} height={45} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/close-btn-f5f5f5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629518301' alt='X button' width={45} height={45} />
                 </Link>
             </div>
             <div className={styles.hamLinks}>
@@ -158,37 +157,30 @@ const bmaCup: NextPage = () => {
 
         <div className={styles.listsCont}>
 
-            {/* <div className={styles.totalSums}>
-                <h1>Current Point Total: {totalsSum}</h1>
-                <p className={styles.pointDef}>1 point = 1 unique user from that country</p>
-            </div> */}
-
             <div className={styles.winListCont}>
-                {/* <h1>Leaders</h1> */}
                 <ol className={styles.winListOL}>
                     <li className={styles.worldLi}>
-                        <Image src='https://tmb.imgix.net/world.png/' alt='1st Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://ik.imagekit.io/ts6bfcsg8/world.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670634511156' alt='World Icon' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> World</span><span className={styles.usersTotal}>{totalsSum}</span>
                     </li>
                     <li>
-                        <Image src='https://tmb.imgix.net/united-states.png/' alt='1st Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://ik.imagekit.io/ts6bfcsg8/united-states.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670634511351' alt='1st Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[0]}</span><span className={styles.usersTotal}>{pointTotals[0]}</span>
                     </li>
                     <li>
-                        <Image src='https://tmb.imgix.net/indonesia.png/' alt='2nd Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://ik.imagekit.io/ts6bfcsg8/indonesia.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670634510720' alt='2nd Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[1]}</span><span className={styles.usersTotal}>{pointTotals[1]}</span></li>
                     <li>
-                        <Image src='https://tmb.imgix.net/nigeria-1.png/' alt='3rd Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://ik.imagekit.io/ts6bfcsg8/nigeria-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670634511028' alt='3rd Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[2]}</span><span className={styles.usersTotal}>{pointTotals[2]}</span>
                     </li>
                     <li>
-                        <Image src='https://tmb.imgix.net/united-kingdom-1.png/' alt='4th Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://ik.imagekit.io/ts6bfcsg8/united-kingdom-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670634511212' alt='4th Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[3]}</span><span className={styles.usersTotal}>{pointTotals[3]}</span>
                     </li>
                     <li>
-                        <Image src='https://tmb.imgix.net/canada.png/' alt='5th Place Flag' className={styles.countryImg} width={60} height={60} />
+                        <Image src='https://ik.imagekit.io/ts6bfcsg8/canada.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670634511072' alt='5th Place Flag' className={styles.countryImg} width={60} height={60} />
                         <span className={styles.countryName}> {countries[4]}</span><span className={styles.usersTotal}>{pointTotals[4]}</span>
-
                     </li>
                 </ol>
             </div>

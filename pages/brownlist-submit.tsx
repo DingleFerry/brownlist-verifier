@@ -11,25 +11,6 @@ import platinumList from "../public/platinumList.json";
 import { getDisplayName } from 'next/dist/shared/lib/utils';
 
 
-// const jotFormURL = "https://form.jotform.com/223266588147061";
-
-
-// const showHamMenu = async() => {
-//     const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
-//     hamMenu.classList.add('Home_hamMenuDropdownActive__iT_P6')
-// }
-
-// const hideHamMenu = async() => {
-//     const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
-//     hamMenu.classList.remove('Home_hamMenuDropdownActive__iT_P6')
-// }
-
-// const reload = async() => {
-//     location.reload();
-// }
-
-// const address = useAddress();
-
 const BrownlistSubmit: NextPage = () => {
     const connectMM = useMetamask();
     const connectWC = useWalletConnect();
@@ -84,35 +65,11 @@ const BrownlistSubmit: NextPage = () => {
         const blistMsgTitle = (document.getElementById('blistMsgTitle') as HTMLElement);
         const blistMsgPar = (document.getElementById('blistMsgPar') as HTMLElement);
 
-        // noBlistMsg.classList.remove('Home_displayNone__dFRW_');
-
-        // if (brownHit !== undefined || goldHit !== undefined || platHit !== undefined){
-        //     noBlistMsg.classList.add('Home_displayNone__dFRW_');
-        // } else if (brownHit == undefined && goldHit == undefined && platHit == undefined){
-        //     yesBlistMsg.classList.add('Home_displayNone__dFRW_');
-        //     submitForm.classList.remove('Home_newForm__ijaKq');
-        //     submitForm.classList.add('Home_newFormDisabled__wK_Qj');
-        // } else {};
-
-        // if (address == undefined) {
-        //     yesBlistMsg.classList.add('Home_displayNone__dFRW_');
-        // } else if (brownHit !== undefined) {
-        //     yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
-        //     noBlistMsg.classList.add('Home_displayNone__dFRW_');
-        //     submitForm.classList.remove('Home_newForm__ijaKq');
-        //     submitForm.classList.add('Home_newFormDisabled__wK_Qj');
-        // } else {};
-
         if (address === undefined){
             noConnectedWal.classList.remove('Home_displayNone__dFRW_');
         } else if (address !== undefined && brownHit !== undefined || goldHit !== undefined || platHit !== undefined){
-            // blistMsgTitle.innerHTML = "The connected address IS currently on the Brownlist.";
-            // blistMsgPar.innerHTML = "The form below has been disabled. This form is for MFs NOT on the Brownlist that would like to request placement."
-            // noBlistMsg.classList.add('Home_displayNone__dFRW_');
             noConnectedWal.classList.add('Home_displayNone__dFRW_');
             yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
-            // submitForm.classList.remove('Home_newForm__ijaKq');
-            // submitForm.classList.add('Home_newFormDisabled__wK_Qj');
         } else {
             noConnectedWal.classList.add('Home_displayNone__dFRW_');
             noBlistMsg.classList.remove('Home_displayNone__dFRW_');
@@ -123,19 +80,10 @@ const BrownlistSubmit: NextPage = () => {
 
     showBlistConnectMsg();
 
-    // window.onbeforeunload = function(e) {
-    //     const noBlistMsg = (document.getElementById('noBlistMsg') as HTMLElement);
-    //     const yesBlistMsg = (document.getElementById('yesBlistMsg') as HTMLElement);
-    //     yesBlistMsg.classList.remove('Home_displayNone__dFRW_');
-    //     noBlistMsg.classList.remove('Home_displayNone__dFRW_');
-    // }
-
-
 
   return (
     <>
     <div className={styles.container}>
-
 
         {/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV */}
         {/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV */}
@@ -144,7 +92,7 @@ const BrownlistSubmit: NextPage = () => {
         <div className={styles.logo}>
             <Link href="/">
               <a>
-                <Image src='https://brownlist.imgix.net/black-logo.png/' alt='Black BMA logo' width={90} height={90} />
+                <Image src='https://ik.imagekit.io/ts6bfcsg8/all-black-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455908' alt='Black BMA logo' width={90} height={90} />
               </a>
             </Link>
           </div>
@@ -175,7 +123,7 @@ const BrownlistSubmit: NextPage = () => {
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
               <a target="_blank">
-                <Image src='https://brownlist.imgix.net/twitter-white-black.png/' alt='Black Twitter logo' width={45} height={45} />
+                <Image src='https://ik.imagekit.io/ts6bfcsg8/twitter-black-circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629456279' alt='Black Twitter logo' width={45} height={45} />
               </a>
             </Link>
           </div>
@@ -187,20 +135,20 @@ const BrownlistSubmit: NextPage = () => {
             <div className={styles.hamSocial}>
                 <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
                     <a className={styles.twitLogoCont} target="_blank">
-                    <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/twitter-black-circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629456279' alt='Black Twitter logo' width={45} height={45} />
                     </a>
                 </Link>
             </div>
             <div className={styles.hamLogo}>
                 <Link href="/">
                     <a>
-                    <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={60} height={60} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/all-black-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455908' alt='Black BMA logo' width={60} height={60} />
                     </a>
                 </Link>
             </div>
             <div className={styles.hamMenu} onClick={showHamMenu}>
                 <Link href="">
-                    <Image src='https://tmb.imgix.net/hamburger-1.png/' alt='Black Twitter logo' width={40} height={40} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/hamburger-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629518138' alt='Black Twitter logo' width={40} height={40} />
                 </Link>
             </div>
         </div>
@@ -209,20 +157,20 @@ const BrownlistSubmit: NextPage = () => {
             <div className={styles.hamSocial}>
                 <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
                     <a className={styles.twitLogoCont} target="_blank">
-                    <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/twitter-white-circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629456050' alt='Black Twitter logo' width={45} height={45} />
                     </a>
                 </Link>
             </div>
             <div className={styles.hamLogo}>
                 <Link href="/">
                     <a>
-                    <Image src='https://tmb.imgix.net/bma-f5f5f5-trans.png/' alt='White BMA logo' width={60} height={60} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/all-white-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455900' alt='White BMA logo' width={60} height={60} />
                     </a>
                 </Link>
             </div>
             <div className={styles.closeBtn} onClick={hideHamMenu}>
                 <Link href="">
-                    <Image src='https://tmb.imgix.net/close-btn-f5f5f5.png/' alt='X button' width={45} height={45} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/close-btn-f5f5f5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629518301' alt='X button' width={45} height={45} />
                 </Link>
             </div>
             <div className={styles.hamLinks}>
@@ -273,10 +221,10 @@ const BrownlistSubmit: NextPage = () => {
 
                 <div className={styles.connectBtnsContMob}>
                     <button onClick={connectMM} className={styles.connectMMMob}>
-                        <Image className={styles.connectMMMobImage} src='https://brownlist.imgix.net/metamask.png/' alt='MetaMask connect button' width={40} height={40} />
+                        <Image className={styles.connectMMMobImage} src='https://ik.imagekit.io/ts6bfcsg8/metamask.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670620948034' alt='MetaMask connect button' width={40} height={40} />
                     </button>
                     <button onClick={connectWC} className={styles.connectBtnWCMob}>
-                        <Image className={styles.connectMMMobImage} src='https://brownlist.imgix.net/wallet-connect-1.png/' alt='WalletConnect connect button' width={40} height={40} />
+                        <Image className={styles.connectMMMobImage} src='https://ik.imagekit.io/ts6bfcsg8/wallet-connect-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670620949435' alt='WalletConnect connect button' width={40} height={40} />
                     </button>
                 </div>
             </div>

@@ -4,7 +4,6 @@ import Image from 'next/image'
 import styles from "../styles/Home.module.css";
 
 
-
 const Nonsense: NextPage = () => {
 
   const showHamMenu = async() => {
@@ -33,7 +32,7 @@ const Nonsense: NextPage = () => {
         <div className={styles.logo}>
             <Link href="/">
               <a>
-                <Image src='https://brownlist.imgix.net/black-logo.png/' alt='Black BMA logo' width={90} height={90} />
+                <Image src='https://ik.imagekit.io/ts6bfcsg8/all-black-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455908' alt='Black BMA logo' width={90} height={90} />
               </a>
             </Link>
           </div>
@@ -64,7 +63,7 @@ const Nonsense: NextPage = () => {
           <div className={styles.social}>
             <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
               <a target="_blank">
-                <Image src='https://brownlist.imgix.net/twitter-white-black.png/' alt='Black Twitter logo' width={45} height={45} />
+                <Image src='https://ik.imagekit.io/ts6bfcsg8/twitter-black-circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629456279' alt='Black Twitter logo' width={45} height={45} />
               </a>
             </Link>
           </div>
@@ -75,20 +74,20 @@ const Nonsense: NextPage = () => {
             <div className={styles.hamSocial}>
                 <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
                     <a className={styles.twitLogoCont} target="_blank">
-                    <Image src='https://tmb.imgix.net/twitter-black-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/twitter-black-circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629456279' alt='Black Twitter logo' width={45} height={45} />
                     </a>
                 </Link>
             </div>
             <div className={styles.hamLogo}>
                 <Link href="/">
                     <a>
-                    <Image src='https://tmb.imgix.net/black-logo.png/' alt='Black BMA logo' width={60} height={60} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/all-black-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455908' alt='Black BMA logo' width={60} height={60} />
                     </a>
                 </Link>
             </div>
             <div className={styles.hamMenu} onClick={showHamMenu}>
                 <Link href="">
-                    <Image src='https://tmb.imgix.net/hamburger-1.png/' alt='Black Twitter logo' width={40} height={40} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/hamburger-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629518138' alt='Black Twitter logo' width={40} height={40} />
                 </Link>
             </div>
         </div>
@@ -97,20 +96,20 @@ const Nonsense: NextPage = () => {
             <div className={styles.hamSocial}>
                 <Link href="https://twitter.com/BMAssholesNFT" target="_blank">
                     <a className={styles.twitLogoCont} target="_blank">
-                    <Image src='https://tmb.imgix.net/twitter-white-circle.png/' alt='Black Twitter logo' width={45} height={45} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/twitter-white-circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629456050' alt='Black Twitter logo' width={45} height={45} />
                     </a>
                 </Link>
             </div>
             <div className={styles.hamLogo}>
                 <Link href="/">
                     <a>
-                    <Image src='https://tmb.imgix.net/bma-f5f5f5-trans.png/' alt='White BMA logo' width={60} height={60} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/all-white-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455900' alt='White BMA logo' width={60} height={60} />
                     </a>
                 </Link>
             </div>
             <div className={styles.closeBtn} onClick={hideHamMenu}>
                 <Link href="">
-                    <Image src='https://tmb.imgix.net/close-btn-f5f5f5.png/' alt='X button' width={45} height={45} />
+                    <Image src='https://ik.imagekit.io/ts6bfcsg8/close-btn-f5f5f5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629518301' alt='X button' width={45} height={45} />
                 </Link>
             </div>
             <div className={styles.hamLinks}>
