@@ -17,6 +17,7 @@
 
 .main {
   /* min-height: 100vh; */
+  min-width: 100vw;
   padding: 0;
   flex: 1;
   display: flex;
@@ -314,20 +315,6 @@
 /* .messageMobile{
   display: none;
 } */
-
-.mistake{
-  color: #0a0a0a;
-  font-family: poppins;
-  font-weight: 700;
-  font-size: 22px;
-  max-width: 90vw;
-  margin: auto !important;
-}
-
-.mistake{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 
 .totalGold, .totalBrown, .totalPlat{
   color: #f5f5f5 !important;
@@ -1626,7 +1613,7 @@ input.resultFormInput, input.resultFormInput:focus{
     padding-bottom: 0px;
   }
   .sect1, .sect2, .sect3{
-    padding: 20px;
+    padding: 20px 0px;
   }
   /* .busModel{
     font-size: 108px !important;
@@ -1948,6 +1935,24 @@ input.resultFormInput, input.resultFormInput:focus{
   }
   .modalMetaMobUSA p, .modalMetaMobPlat p, .modalMetaMobWorld p{
     font-size: 14px;
+  }
+  .mfBreakdownMob, .mfBreakdownMob h1{
+    /* width: 100vw;
+    height: 100px;
+    background: #0a0a0a;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; */
+    gap: 20px;
+    font-size: 32px;
+    height: 60px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    /* align-items: center; */
+  }
+  .busModel{
+    font-size: 48px !important;
+    padding: 0px 20px;
   }
 }
 
