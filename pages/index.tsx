@@ -185,8 +185,8 @@ const Home: NextPage = () => {
   };
 
   const checkMics = async () => {
-    const brownMicList = brownMics.karaokeAttendees;
-    const goldMicList = goldMics.karaokeSingers;
+    const brownMicList = brownMics.karaokeSingers;
+    const goldMicList = goldMics.karaokeStunners;
     const platMicList = platMics.karaokeStars;
     const arr: string[] = brownMicList;
     const arr1: string[] = goldMicList;
