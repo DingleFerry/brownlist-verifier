@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 
 
 
-const countries = ["United States","Indonesia","Nigeria","United Kingdom","Canada","Germany","Netherlands","Australia","India","Mexico","Philippines","France","New Zealand","Singapore","Italy","Turkey","Colombia","Argentina","Hong Kong","Russia","Spain","Vietnam","Austria","China","Belgium","Greece","Morocco","Pakistan","Switzerland","Croatia","Portugal","Belarus","Brazil","Guatemala","Hungary","Seychelles","Denmark","Estonia","Japan","Malaysia","Papua New Guinea","Slovakia","Syria","Algeria","Bahrain","Bangladesh","Cameroon","Chile","Czechia","El Salvador","Georgia","Iran","Ireland","Nepal","Norway","Qatar","Saudi Arabia","Senegal","South Africa","South Korea","Sweden","Thailand"]
+const countries = ["USA","Indonesia","Nigeria","UK","Canada","Germany","Netherlands","Australia","India","Mexico","Philippines","France","New Zealand","Singapore","Italy","Turkey","Colombia","Argentina","Hong Kong","Russia","Spain","Vietnam","Austria","China","Belgium","Greece","Morocco","Pakistan","Switzerland","Croatia","Portugal","Belarus","Brazil","Guatemala","Hungary","Seychelles","Denmark","Estonia","Japan","Malaysia","Papua New Guinea","Slovakia","Syria","Algeria","Bahrain","Bangladesh","Cameroon","Chile","Czechia","El Salvador","Georgia","Iran","Ireland","Nepal","Norway","Qatar","Saudi Arabia","Senegal","South Africa","South Korea","Sweden","Thailand"]
 const pointTotals = [448,389,164,58,39,31,27,22,21,20,15,14,12,11,10,9,8,7,7,7,7,7,6,6,5,5,5,5,5,4,4,3,3,3,3,3,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 const totalsSum = pointTotals.reduce((partialSum, a) => partialSum + a, 0);
 
