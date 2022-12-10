@@ -244,152 +244,152 @@ const Home: NextPage = () => {
     } else {}
   };
 
-  const checkSC = async() => {
-    // Update lists to time-capped Swirled Cup list when ready
-    // const bList = brownList.brownList;
-    // const gList = goldList.goldList;
-    // const pList = platinumList.platinumList;
+  // const checkSC = async() => {
+  //   // Update lists to time-capped Swirled Cup list when ready
+  //   // const bList = brownList.brownList;
+  //   // const gList = goldList.goldList;
+  //   // const pList = platinumList.platinumList;
 
-    const arr: string[] = bList;
-    const arr1: string[] = gList;
-    const arr2: string[] = pList;
-    const str = address?.toString();
-    const found = arr.find((element) => {
-      return element.toLocaleLowerCase() === str?.toLowerCase();
-    });
-    const found1 = arr1.find((element) => {
-      return element.toLocaleLowerCase() === str?.toLowerCase();
-    });
-    const found2 = arr2.find((element) => {
-      return element.toLocaleLowerCase() === str?.toLowerCase();
-    });
+  //   const arr: string[] = bList;
+  //   const arr1: string[] = gList;
+  //   const arr2: string[] = pList;
+  //   const str = address?.toString();
+  //   const found = arr.find((element) => {
+  //     return element.toLocaleLowerCase() === str?.toLowerCase();
+  //   });
+  //   const found1 = arr1.find((element) => {
+  //     return element.toLocaleLowerCase() === str?.toLowerCase();
+  //   });
+  //   const found2 = arr2.find((element) => {
+  //     return element.toLocaleLowerCase() === str?.toLowerCase();
+  //   });
 
-    const ipinfoWrapper = new IPinfoWrapper("5689eeab9ca86e");
-    const scUSA = (document.getElementById('scUSA') as HTMLElement);
-    const scUSAMob = (document.getElementById('scUSAMob') as HTMLElement);
-    const scWorld = (document.getElementById('scWorld') as HTMLElement);
-    const scWorldMob = (document.getElementById('scWorldMob') as HTMLElement);
+  //   const ipinfoWrapper = new IPinfoWrapper("5689eeab9ca86e");
+  //   const scUSA = (document.getElementById('scUSA') as HTMLElement);
+  //   const scUSAMob = (document.getElementById('scUSAMob') as HTMLElement);
+  //   const scWorld = (document.getElementById('scWorld') as HTMLElement);
+  //   const scWorldMob = (document.getElementById('scWorldMob') as HTMLElement);
 
-    ipinfoWrapper.lookupIp("1.1.1.1").then((response: IPinfo) => {
-      const country = response.country;
-      console.log(response)
-      if (country === "United States" && found !== undefined || found1 !== undefined || found2 !== undefined) {
-        scUSA.classList.remove('Home_displayNone__dFRW_');
-        scUSA.classList.add('Home_certTrophyCont__3hYjc');
-        scUSAMob.classList.remove('Home_displayNone__dFRW_');
-        scUSAMob.classList.add('Home_gridUnitContMobUSA__NfsoF');
-        // show custom first place world trophy
-      } else if (country === "Nigeria" && found !== undefined || found1 !== undefined || found2 !== undefined) {
-        console.log("show Nigerian trophy")
-      } else if (found !== undefined || found1 !== undefined || found2 !== undefined) {
-        scWorld.classList.remove('Home_displayNone__dFRW_');
-        scWorld.classList.add('Home_certTrophyCont__3hYjc');
-        scWorldMob.classList.remove('Home_displayNone__dFRW_');
-        scWorldMob.classList.add('Home_gridUnitContMobWorld__QNzwn');
-      } else {};
-    });
-  }
+  //   ipinfoWrapper.lookupIp("1.1.1.1").then((response: IPinfo) => {
+  //     const country = response.country;
+  //     console.log(response)
+  //     if (country === "United States" && found !== undefined || found1 !== undefined || found2 !== undefined) {
+  //       scUSA.classList.remove('Home_displayNone__dFRW_');
+  //       scUSA.classList.add('Home_certTrophyCont__3hYjc');
+  //       scUSAMob.classList.remove('Home_displayNone__dFRW_');
+  //       scUSAMob.classList.add('Home_gridUnitContMobUSA__NfsoF');
+  //       // show custom first place world trophy
+  //     } else if (country === "Nigeria" && found !== undefined || found1 !== undefined || found2 !== undefined) {
+  //       console.log("show Nigerian trophy")
+  //     } else if (found !== undefined || found1 !== undefined || found2 !== undefined) {
+  //       scWorld.classList.remove('Home_displayNone__dFRW_');
+  //       scWorld.classList.add('Home_certTrophyCont__3hYjc');
+  //       scWorldMob.classList.remove('Home_displayNone__dFRW_');
+  //       scWorldMob.classList.add('Home_gridUnitContMobWorld__QNzwn');
+  //     } else {};
+  //   });
+  // }
 
   const checkAll = async() =>{
     showTrophies();
     checkStatus();
     checkMics();
     // checkSC();
-  }
+  };
 
   const popModal = async() => {
     const modal = (document.getElementById('modalCont') as HTMLElement);
     modal.classList.remove('Home_displayNone__dFRW_');
     modal.classList.add('Home_modalCont__SFakS');
-  }
+  };
   const closeModal = async() => {
     const modal = (document.getElementById('modalCont') as HTMLElement);
     modal.classList.remove('Home_modalCont__SFakS');
     modal.classList.add('Home_displayNone__dFRW_');
-  }
+  };
   const popModal1 = async() => {
     const modal1 = (document.getElementById('modalCont1') as HTMLElement);
     modal1.classList.remove('Home_displayNone__dFRW_');
     modal1.classList.add('Home_modalCont__SFakS');
-  }
+  };
   const closeModal1 = async() => {
     const modal1 = (document.getElementById('modalCont1') as HTMLElement);
     modal1.classList.remove('Home_modalCont__SFakS');
     modal1.classList.add('Home_displayNone__dFRW_');
-  }
+  };
   const popModal2 = async() => {
     const modal2 = (document.getElementById('modalCont2') as HTMLElement);
     modal2.classList.remove('Home_displayNone__dFRW_');
     modal2.classList.add('Home_modalCont__SFakS');
-  }
+  };
   const closeModal2 = async() => {
     const modal2 = (document.getElementById('modalCont2') as HTMLElement);
     modal2.classList.remove('Home_modalCont__SFakS');
     modal2.classList.add('Home_displayNone__dFRW_');
-  }
+  };
   const popModal3 = async() => {
     const modal3 = (document.getElementById('modalCont3') as HTMLElement);
     modal3.classList.remove('Home_displayNone__dFRW_');
     modal3.classList.add('Home_modalCont__SFakS');
-  }
+  };
   const closeModal3 = async() => {
     const modal3 = (document.getElementById('modalCont3') as HTMLElement);
     modal3.classList.remove('Home_modalCont__SFakS');
     modal3.classList.add('Home_displayNone__dFRW_');
-  }
+  };
   const popModal4 = async() => {
     const modal4 = (document.getElementById('modalCont4') as HTMLElement);
     modal4.classList.remove('Home_displayNone__dFRW_');
     modal4.classList.add('Home_modalCont__SFakS');
-  }
+  };
   const closeModal4 = async() => {
     const modal4 = (document.getElementById('modalCont4') as HTMLElement);
     modal4.classList.remove('Home_modalCont__SFakS');
     modal4.classList.add('Home_displayNone__dFRW_');
-  }
+  };
   const popModal5 = async() => {
     const modal5 = (document.getElementById('modalCont5') as HTMLElement);
     modal5.classList.remove('Home_displayNone__dFRW_');
     modal5.classList.add('Home_modalCont__SFakS');
-  }
+  };
   const closeModal5 = async() => {
     const modal5 = (document.getElementById('modalCont5') as HTMLElement);
     modal5.classList.remove('Home_modalCont__SFakS');
     modal5.classList.add('Home_displayNone__dFRW_');
-  }
-  const popModal6 = async() => {
-    const modal6 = (document.getElementById('modalCont6') as HTMLElement);
-    modal6.classList.remove('Home_displayNone__dFRW_');
-    modal6.classList.add('Home_modalCont__SFakS');
-  }
-  const closeModal6 = async() => {
-    const modal6 = (document.getElementById('modalCont6') as HTMLElement);
-    modal6.classList.remove('Home_modalCont__SFakS');
-    modal6.classList.add('Home_displayNone__dFRW_');
-  }
-  const popModal7 = async() => {
-    const modal7 = (document.getElementById('modalCont7') as HTMLElement);
-    modal7.classList.remove('Home_displayNone__dFRW_');
-    modal7.classList.add('Home_modalCont__SFakS');
-  }
-  const closeModal7 = async() => {
-    const modal7 = (document.getElementById('modalCont7') as HTMLElement);
-    modal7.classList.remove('Home_modalCont__SFakS');
-    modal7.classList.add('Home_displayNone__dFRW_');
-  }
+  };
+  // const popModal6 = async() => {
+  //   const modal6 = (document.getElementById('modalCont6') as HTMLElement);
+  //   modal6.classList.remove('Home_displayNone__dFRW_');
+  //   modal6.classList.add('Home_modalCont__SFakS');
+  // }
+  // const closeModal6 = async() => {
+  //   const modal6 = (document.getElementById('modalCont6') as HTMLElement);
+  //   modal6.classList.remove('Home_modalCont__SFakS');
+  //   modal6.classList.add('Home_displayNone__dFRW_');
+  // }
+  // const popModal7 = async() => {
+  //   const modal7 = (document.getElementById('modalCont7') as HTMLElement);
+  //   modal7.classList.remove('Home_displayNone__dFRW_');
+  //   modal7.classList.add('Home_modalCont__SFakS');
+  // }
+  // const closeModal7 = async() => {
+  //   const modal7 = (document.getElementById('modalCont7') as HTMLElement);
+  //   modal7.classList.remove('Home_modalCont__SFakS');
+  //   modal7.classList.add('Home_displayNone__dFRW_');
+  // }
 
   const reload = async() => {
     location.reload();
-  }
+  };
 
   const showHamMenu = async() => {
     const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
     hamMenu.classList.add('Home_hamMenuDropdownActive__iT_P6')
-  }
+  };
   const hideHamMenu = async() => {
     const hamMenu = (document.getElementById('hamMenu') as HTMLElement);
     hamMenu.classList.remove('Home_hamMenuDropdownActive__iT_P6')
-  }
+  };
 
 
   return (
@@ -541,7 +541,7 @@ const Home: NextPage = () => {
 
         {/* MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS */}
         {/* MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS MODALS */}
-        <div id='modalCont7' className={styles.displayNone} onClick={closeModal7}>
+        {/* <div id='modalCont7' className={styles.displayNone} onClick={closeModal7}>
           <div className={styles.modalCard7}>
             <div className={styles.modalImgCont}>
               <Image className={styles.modalImg} src='https://ik.imagekit.io/ts6bfcsg8/swirled-cup-world-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629243792' alt='Black BMA logo' width={900} height={900} />
@@ -549,7 +549,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>S.C. 1st Place</h1>
               <p className={styles.modalPar}>Awarded to everyone that helped the USA take Platinum in the recent BMA Swirled Cup. Congrats you MF&#39;n champion!</p>
-              <button>Share Trophy</button>
+              <button><a href="https://twitter.com/intent/tweet?text=" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -562,10 +562,10 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>S.C. 1st Place</h1>
               <p className={styles.modalPar}>Awarded to everyone that helped the USA take Platinum in the recent BMA Swirled Cup. Congrats you MF&#39;n champion!</p>
-              <button>Share Trophy</button>
+              <button><a href="https://twitter.com/intent/tweet?text=" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div id='modalCont5' className={styles.displayNone} onClick={closeModal5}>
           <div className={styles.modalCard5}>
@@ -575,7 +575,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>Karaoke Star</h1>
               <p className={styles.modalPar}>Awarded to a select few, hand-picked by the community for positively melting faces at a BMA Karaoke night! Easily one of the most coveted trophies in the entire world!!</p>
-              <button>Share Trophy</button>
+              <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -588,7 +588,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>Karaoke Stunner</h1>
               <p className={styles.modalPar}>Awarded to every performer that makes it into a &#34;Winner&#39;s Poll.&#34; Your talent impressed us all MF! Share this golden mic with pride!!</p>
-              <button>Share Trophy</button>
+              <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -601,7 +601,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>Karaoke Singer</h1>
               <p className={styles.modalPar}>Awarded to anyone courageous enough to sing, rap, or otherwise entertain at a BMA Karaoke Night. This is no easy feat, MF! Seriously impressive!!</p>
-              <button>Share Trophy</button>
+              <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -614,7 +614,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>Certified Platinum</h1>
               <p className={styles.modalPar}>Awarded to anyone officially on the Platinumlist. You know why this is here ... congrats, MF! We build this dynasty together!!</p>
-              <button>Share Trophy</button>
+              <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20It's%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20The%20list%20is%20almost%20full%20MF%20...%20don't%20say%20I%20didn't%20warn%20you!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -627,7 +627,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>Certified Gold</h1>
               <p className={styles.modalPar}>Awarded to anyone officially on the Goldlist. We like your style MF and want to see you shine! Get ready for Mint Day!!</p>
-              <button>Share Trophy</button>
+              <button><a href="https://twitter.com/intent/tweet?text=Sorry%20if%20I%20blinded%20you%20MF,%20my%20official%20@BMAssholesNFT%20Gold%20Status%20is%20just%20too%20damn%20shiny!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/5GL5mtcDnC%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -640,7 +640,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>Certified Brown</h1>
               <p className={styles.modalPar}>Awarded to anyone officially on the Brownlist. Note: being on the Brownlist does not guarantee you a mint. Only Gold & Platinum MFs have guaranteed mints.</p>
-              <button>Share Trophy</button>
+              <button><a href="https://twitter.com/intent/tweet?text=Smell%20that?!%20That's%20the%20smell%20of%20my%20official%20@BMAssholesNFT%20Brownlist%20spot!%20A%20dynasty%20is%20being%20born%20and%20I'm%20not%20missing%20out!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/LUnk6cm1v7%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -661,7 +661,7 @@ const Home: NextPage = () => {
                 <script async src="https://platform.twitter.com/widgets.js"></script>
                 <button className={styles.displayNone} id="tweetBtnBrown"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Smell%20that?!%20That's%20the%20smell%20of%20my%20official%20@BMAssholesNFT%20Brownlist%20spot!%20A%20dynasty%20is%20being%20born%20and%20I'm%20not%20missing%20out!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/LUnk6cm1v7%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
                 <button className={styles.displayNone} id="tweetBtnGold"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Sorry%20if%20I%20blinded%20you%20MF,%20my%20official%20@BMAssholesNFT%20Gold%20Status%20is%20just%20too%20damn%20shiny!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/5GL5mtcDnC%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
-                <button className={styles.displayNone} id="tweetBtnPlat"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
+                <button className={styles.displayNone} id="tweetBtnPlat"><a className={styles.tweetAnc} href="https://twitter.com/intent/tweet?text=Oh%20this?%20It's%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20The%20list%20is%20almost%20full%20MF%20...%20don't%20say%20I%20didn't%20warn%20you!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Tweet Status</a></button>
               </div>
               {/* STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS */}
               {/* STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS STATUS BTNS */}
@@ -674,7 +674,7 @@ const Home: NextPage = () => {
               {/* DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID  */}
               {/* DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID DESKTOP GRID  */}
               <div id="trophyGrid" className={styles.displayNone}>
-                <div className={styles.gridUnitCont} onClick={popModal7}>
+                {/* <div className={styles.gridUnitCont} onClick={popModal7}>
                   <div id="scWorld" className={styles.displayNone}>
                     <Image className={styles.trophyImage} src='https://ik.imagekit.io/ts6bfcsg8/swirled-cup-world-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629243792' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
@@ -683,7 +683,7 @@ const Home: NextPage = () => {
                   <div id="scUSA" className={styles.displayNone}>
                     <Image className={styles.trophyImage} src='https://ik.imagekit.io/ts6bfcsg8/swirled-cup-usa.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629243661' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
-                </div>
+                </div> */}
                 <div className={styles.gridUnitCont} onClick={popModal5}>
                   <div id="platMic" className={styles.displayNone}>
                     <Image className={styles.trophyImage} src='https://ik.imagekit.io/ts6bfcsg8/karaoke-star.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670621095654' alt='Plat Karaoke Star Trophy' width={1269} height={1269} />
@@ -726,84 +726,84 @@ const Home: NextPage = () => {
               {/* MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID  */}
               {/* MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID MOBILE GRID  */}
               <div id="trophyGridMob" className={styles.displayNone}> {/* trophyGridMob */}
-                <div id="scWorldMob" className={styles.displayNone}>
-                  <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
+                {/* <div id="scWorldMob" className={styles.displayNone}>
+                  <div className={styles.certTrophyContMob}>
                     <Image className={styles.trophyImageMob} src='https://ik.imagekit.io/ts6bfcsg8/swirled-cup-world-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629243792' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
                   <div className={styles.modalMetaMobWorld}>
                     <h1>Team World</h1>
                     <p className={styles.modalParMob}>Awarded to each competitor of the BMA Swirled Cup 2022 that didn&apos;t quite make it. Keep in mind MF, only true OGs find this trophy in their collection. Go team BMA!</p>
-                    <button>Share Trophy</button>
+                    <button><a href="https://twitter.com/intent/tweet?text=" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
                 <div id="scUSAMob" className={styles.displayNone}>
-                  <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
+                  <div className={styles.certTrophyContMob}>
                     <Image className={styles.trophyImageMob} src='https://ik.imagekit.io/ts6bfcsg8/swirled-cup-usa.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629243661' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
                   <div className={styles.modalMetaMobUSA}>
                     <h1>S.C. 1st Place</h1>
                     <p className={styles.modalParMob}>Awarded to every MF from team USA for clinching Platinum in the BMA Swirled Cup 2022. Congrats you MF&#39;n champion!</p>
-                    <button>Share Trophy</button>
+                    <button><a href="https://twitter.com/intent/tweet?text=" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
-                </div>
+                </div> */}
                 <div id="platMicMob" className={styles.displayNone}>
-                  <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
+                  <div className={styles.certTrophyContMob}>
                     <Image className={styles.trophyImageMob} src='https://ik.imagekit.io/ts6bfcsg8/karaoke-star.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670621095654' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
                   <div className={styles.modalMetaMobPlat}>
                     <h1>Karaoke Star</h1>
                     <p className={styles.modalParMob}>Awarded to a select few for positively melting faces at a BMA Karaoke night! Easily one of the most coveted trophies in the entire world!!</p>
-                    <button>Share Trophy</button>
+                    <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
                 <div id="goldMicMob" className={styles.displayNone}>
-                  <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
+                  <div className={styles.certTrophyContMob}>
                     <Image className={styles.trophyImageMob} src='https://ik.imagekit.io/ts6bfcsg8/karaoke-stunner.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670621095690' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
                   <div className={styles.modalMetaMobGold}>
                     <h1>Karaoke Stunner</h1>
                     <p className={styles.modalParMob}>Awarded to anyone courageous enough to sing, rap, or otherwise entertain at a BMA Karaoke Night. This is no easy feat, MF! Seriously impressive!!</p>
-                    <button>Share Trophy</button>
+                    <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
                 <div id="brownMicMob" className={styles.displayNone}>
-                  <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
+                  <div className={styles.certTrophyContMob}>
                     <Image className={styles.trophyImageMob} src='https://ik.imagekit.io/ts6bfcsg8/karaoke-singer-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670630991269' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
                   <div className={styles.modalMetaMobBrown}>
                     <h1>Karaoke Singer</h1>
                     <p className={styles.modalParMob}>Awarded to anyone courageous enough to sing, rap, or otherwise entertain at a BMA Karaoke Night. This is no easy feat, MF! Seriously impressive!!</p>
-                    <button>Share Trophy</button>
+                    <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
                 <div id="platSwirlMob" className={styles.displayNone}>
-                  <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
+                  <div className={styles.certTrophyContMob}>
                     <Image className={styles.trophyImageMob} src='https://ik.imagekit.io/ts6bfcsg8/certified-plat.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670628960125' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
                   <div className={styles.modalMetaMobPlat}>
                     <h1>Certified Platinum</h1>
                     <p className={styles.modalParMob}>Awarded to anyone officially on the Platinumlist. You know why this is here ... congrats, MF! Let&apos;s build this dynasty together!!</p>
-                    <button>Share Trophy</button>
+                    <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20It's%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20The%20list%20is%20almost%20full%20MF%20...%20don't%20say%20I%20didn't%20warn%20you!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
                 <div id="goldSwirlMob" className={styles.displayNone}>
-                  <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
+                  <div className={styles.certTrophyContMob}>
                     <Image className={styles.trophyImageMob} src='https://ik.imagekit.io/ts6bfcsg8/certified-gold.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670628960235' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
                   <div className={styles.modalMetaMobGold}>
                     <h1>Certified Gold</h1>
                     <p className={styles.modalParMob}>Awarded to anyone officially on the Goldlist. We like your style MF and want to see you shine! Get ready for Mint Day!!</p>
-                    <button>Share Trophy</button>
+                    <button><a href="https://twitter.com/intent/tweet?text=Sorry%20if%20I%20blinded%20you%20MF,%20my%20official%20@BMAssholesNFT%20Gold%20Status%20is%20just%20too%20damn%20shiny!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/5GL5mtcDnC%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
                 <div id="brownSwirlMob" className={styles.displayNone}>
-                  <div className={styles.certTrophyContMob}> {/* certTrophyContMob */}
+                  <div className={styles.certTrophyContMob}>
                     <Image className={styles.trophyImageMob} src='https://ik.imagekit.io/ts6bfcsg8/certified-brown.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670628960242' alt='Brown Karaoke Attendee Trophy' width={1269} height={1269} />
                   </div>
                   <div className={styles.modalMetaMobBrown}>
                     <h1>Certified Brown</h1>
                     <p className={styles.modalParMob}>Awarded to anyone officially on the Brownlist. Note: being on the Brownlist does not guarantee you a mint. Only Gold & Platinum MFs have guaranteed mints.</p>
-                    <button>Share Trophy</button>
+                    <button><a href="https://twitter.com/intent/tweet?text=Smell%20that?!%20That's%20the%20smell%20of%20my%20official%20@BMAssholesNFT%20Brownlist%20spot!%20A%20dynasty%20is%20being%20born%20and%20I'm%20not%20missing%20out!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/LUnk6cm1v7%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
               </div>
