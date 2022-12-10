@@ -402,7 +402,7 @@ const Home: NextPage = () => {
           <div className={styles.logo} onClick={reload}>
             <Link href="">
               <a>
-                <Image src='https://ik.imagekit.io/ts6bfcsg8/all-black-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455908' alt='Black BMA logo' width={90} height={90} />
+                <Image src='https://ik.imagekit.io/ts6bfcsg8/all-black-trans.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670629455908' alt='Black BMA logo' width={80} height={80} />
               </a>
             </Link>
           </div>
@@ -575,7 +575,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>Karaoke Star</h1>
               <p className={styles.modalPar}>Awarded to a select few, hand-picked by the community for positively melting faces at a BMA Karaoke night! Easily one of the most coveted trophies in the entire world!!</p>
-              <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
+              <button><a href="https://twitter.com/intent/tweet?text=New%20addition%20to%20my%20@BMAssholesNFT%20trophy%20collection.%20No%20big%20deal%20...%20just%20the%20rarest%20trophy%20in%20the%20entire%20system.%20Thanks%20for%20the%20votes%20MFs,%20I%20mean%20it!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -588,7 +588,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>Karaoke Stunner</h1>
               <p className={styles.modalPar}>Awarded to every performer that makes it into a &#34;Winner&#39;s Poll.&#34; Your talent impressed us all MF! Share this golden mic with pride!!</p>
-              <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
+              <button><a href="https://twitter.com/intent/tweet?text=It's%20true%20what%20they%20say,%20I%20did%20stun%20some%20buns%20at%20@BMAssholesNFT%20karaoke%20night.%20Mark%20your%20calendars%20for%20the%20next%20one%20MFs!%20I%20wanna%20see%20your%20cheeks%20there!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -601,7 +601,7 @@ const Home: NextPage = () => {
             <div className={styles.modalMeta}>
               <h1>Karaoke Singer</h1>
               <p className={styles.modalPar}>Awarded to anyone courageous enough to sing, rap, or otherwise entertain at a BMA Karaoke Night. This is no easy feat, MF! Seriously impressive!!</p>
-              <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
+              <button><a href="https://twitter.com/intent/tweet?text=I%20can't%20help%20it,%20my%20voice%20is%20just%20too%20damn%20beautiful%20not%20to%20share!%20I%20wanna%20hear%20yours%20at%20the%20next%20@BMAssholesNFT%20karaoke%20night!%20I%20promise%20I%20won't%20hog%20the%20mic%20all%20night...&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
             </div>
           </div>
         </div>
@@ -753,7 +753,7 @@ const Home: NextPage = () => {
                   <div className={styles.modalMetaMobPlat}>
                     <h1>Karaoke Star</h1>
                     <p className={styles.modalParMob}>Awarded to a select few for positively melting faces at a BMA Karaoke night! Easily one of the most coveted trophies in the entire world!!</p>
-                    <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
+                    <button><a href="https://twitter.com/intent/tweet?text=New%20addition%20to%20my%20@BMAssholesNFT%20trophy%20collection.%20No%20big%20deal%20...%20just%20the%20rarest%20trophy%20in%20the%20entire%20system.%20Thanks%20for%20the%20votes%20MFs,%20I%20mean%20it!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
                 <div id="goldMicMob" className={styles.displayNone}>
@@ -763,7 +763,7 @@ const Home: NextPage = () => {
                   <div className={styles.modalMetaMobGold}>
                     <h1>Karaoke Stunner</h1>
                     <p className={styles.modalParMob}>Awarded to anyone courageous enough to sing, rap, or otherwise entertain at a BMA Karaoke Night. This is no easy feat, MF! Seriously impressive!!</p>
-                    <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
+                    <button><a href="https://twitter.com/intent/tweet?text=It's%20true%20what%20they%20say,%20I%20did%20stun%20some%20buns%20at%20@BMAssholesNFT%20karaoke%20night.%20Mark%20your%20calendars%20for%20the%20next%20one%20MFs!%20I%20wanna%20see%20your%20cheeks%20there!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
                 <div id="brownMicMob" className={styles.displayNone}>
@@ -773,7 +773,7 @@ const Home: NextPage = () => {
                   <div className={styles.modalMetaMobBrown}>
                     <h1>Karaoke Singer</h1>
                     <p className={styles.modalParMob}>Awarded to anyone courageous enough to sing, rap, or otherwise entertain at a BMA Karaoke Night. This is no easy feat, MF! Seriously impressive!!</p>
-                    <button><a href="https://twitter.com/intent/tweet?text=Oh%20this?%20This%20is%20just%20my%20official%20@BMAssholesNFT%20Platinum%20status%20trophy!%20Not%20much%20space%20left%20MF%20...%20act%20now%20or%20forever%20hold%20your%20pee!!&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
+                    <button><a href="https://twitter.com/intent/tweet?text=I%20can't%20help%20it,%20my%20voice%20is%20just%20too%20damn%20beautiful%20not%20to%20share!%20I%20wanna%20hear%20yours%20at%20the%20next%20@BMAssholesNFT%20karaoke%20night!%20I%20promise%20I%20won't%20hog%20the%20mic%20all%20night...&hashtags=BMA,MakeMemesNotWar,KissMyAss%0Dpic.twitter.com/nAPozwvx1N%0DCheck%20your%20status%20now:%20https://bearmarketassholes.io/" data-show-count="false" target="_blank" rel="noreferrer">Share Trophy</a></button>
                   </div>
                 </div>
                 <div id="platSwirlMob" className={styles.displayNone}>

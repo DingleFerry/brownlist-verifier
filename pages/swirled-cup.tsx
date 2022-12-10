@@ -6,8 +6,8 @@ import styles from "../styles/Home.module.css";
 
 
 
-const countries = ["USA","Indonesia","Nigeria","UK","Canada","Germany","Australia","India","Mexico","Netherlands","Philippines","France","Italy","Singapore","Turkey","Argentina","New Zealand","Russia","Austria","China","Colombia","Spain","Greece","Morocco","Pakistan","Switzerland","Belgium","Belarus","Hungary","Vietnam","Denmark","Estonia","Guatemala","Hong Kong","Malaysia","Papua New Guinea","Portugal","Syria","Algeria","Bahrain","Brazil","Cameroon","Chile","Croatia","Czechia","El Salvador","Georgia","Iran","Japan","Nepal","Norway","Qatar","Senegal","Seychelles","South Africa","South Korea","Sweden"]
-const pointTotals = [342,313,144,44,34,21,20,19,18,17,12,9,9,9,8,7,7,7,6,6,6,6,5,5,5,5,4,3,3,3,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+const countries = ["United States","Indonesia","Nigeria","United Kingdom","Canada","Germany","Netherlands","Australia","India","Mexico","Philippines","France","New Zealand","Singapore","Italy","Turkey","Colombia","Argentina","Hong Kong","Russia","Spain","Vietnam","Austria","China","Belgium","Greece","Morocco","Pakistan","Switzerland","Croatia","Portugal","Belarus","Brazil","Guatemala","Hungary","Seychelles","Denmark","Estonia","Japan","Malaysia","Papua New Guinea","Slovakia","Syria","Algeria","Bahrain","Bangladesh","Cameroon","Chile","Czechia","El Salvador","Georgia","Iran","Ireland","Nepal","Norway","Qatar","Saudi Arabia","Senegal","South Africa","South Korea","Sweden","Thailand"]
+const pointTotals = [448,389,164,58,39,31,27,22,21,20,15,14,12,11,10,9,8,7,7,7,7,7,6,6,5,5,5,5,5,4,4,3,3,3,3,3,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 const totalsSum = pointTotals.reduce((partialSum, a) => partialSum + a, 0);
 
 
@@ -241,6 +241,49 @@ const bmaCup: NextPage = () => {
                         <li>55. {countries[54]}<span className={styles.usersTotal}>{pointTotals[54]}</span></li>
                         <li>56. {countries[55]}<span className={styles.usersTotal}>{pointTotals[55]}</span></li>
                         <li>57. {countries[56]}<span className={styles.usersTotal}>{pointTotals[56]}</span></li>
+                        <li>58. {countries[57]}<span className={styles.usersTotal}>{pointTotals[57]}</span></li>
+                        <li>59. {countries[58]}<span className={styles.usersTotal}>{pointTotals[58]}</span></li>
+                        <li>60. {countries[59]}<span className={styles.usersTotal}>{pointTotals[59]}</span></li>
+                        <li>61. {countries[60]}<span className={styles.usersTotal}>{pointTotals[60]}</span></li>
+                        <li>62. {countries[61]}<span className={styles.usersTotal}>{pointTotals[61]}</span></li>
+                        {/* <li>63. {countries[62]}<span className={styles.usersTotal}>{pointTotals[62]}</span></li>
+                        <li>64. {countries[63]}<span className={styles.usersTotal}>{pointTotals[63]}</span></li>
+                        <li>65. {countries[64]}<span className={styles.usersTotal}>{pointTotals[64]}</span></li>
+                        <li>66. {countries[65]}<span className={styles.usersTotal}>{pointTotals[65]}</span></li>
+                        <li>67. {countries[66]}<span className={styles.usersTotal}>{pointTotals[66]}</span></li>
+                        <li>68. {countries[67]}<span className={styles.usersTotal}>{pointTotals[67]}</span></li>
+                        <li>69. {countries[68]}<span className={styles.usersTotal}>{pointTotals[68]}</span></li>
+                        <li>70. {countries[69]}<span className={styles.usersTotal}>{pointTotals[69]}</span></li>
+                        <li>71. {countries[70]}<span className={styles.usersTotal}>{pointTotals[70]}</span></li>
+                        <li>72. {countries[71]}<span className={styles.usersTotal}>{pointTotals[71]}</span></li>
+                        <li>73. {countries[72]}<span className={styles.usersTotal}>{pointTotals[72]}</span></li>
+                        <li>74. {countries[73]}<span className={styles.usersTotal}>{pointTotals[73]}</span></li>
+                        <li>75. {countries[74]}<span className={styles.usersTotal}>{pointTotals[74]}</span></li>
+                        <li>76. {countries[75]}<span className={styles.usersTotal}>{pointTotals[75]}</span></li>
+                        <li>77. {countries[76]}<span className={styles.usersTotal}>{pointTotals[76]}</span></li>
+                        <li>78. {countries[77]}<span className={styles.usersTotal}>{pointTotals[77]}</span></li>
+                        <li>79. {countries[78]}<span className={styles.usersTotal}>{pointTotals[78]}</span></li>
+                        <li>80. {countries[79]}<span className={styles.usersTotal}>{pointTotals[79]}</span></li>
+                        <li>81. {countries[80]}<span className={styles.usersTotal}>{pointTotals[80]}</span></li>
+                        <li>82. {countries[81]}<span className={styles.usersTotal}>{pointTotals[81]}</span></li>
+                        <li>83. {countries[82]}<span className={styles.usersTotal}>{pointTotals[82]}</span></li>
+                        <li>84. {countries[83]}<span className={styles.usersTotal}>{pointTotals[83]}</span></li>
+                        <li>85. {countries[84]}<span className={styles.usersTotal}>{pointTotals[84]}</span></li>
+                        <li>86. {countries[85]}<span className={styles.usersTotal}>{pointTotals[85]}</span></li>
+                        <li>87. {countries[86]}<span className={styles.usersTotal}>{pointTotals[86]}</span></li>
+                        <li>88. {countries[87]}<span className={styles.usersTotal}>{pointTotals[87]}</span></li>
+                        <li>89. {countries[88]}<span className={styles.usersTotal}>{pointTotals[88]}</span></li>
+                        <li>90. {countries[89]}<span className={styles.usersTotal}>{pointTotals[89]}</span></li>
+                        <li>91. {countries[90]}<span className={styles.usersTotal}>{pointTotals[90]}</span></li>
+                        <li>92. {countries[91]}<span className={styles.usersTotal}>{pointTotals[91]}</span></li>
+                        <li>93. {countries[92]}<span className={styles.usersTotal}>{pointTotals[92]}</span></li>
+                        <li>94. {countries[93]}<span className={styles.usersTotal}>{pointTotals[93]}</span></li>
+                        <li>95. {countries[94]}<span className={styles.usersTotal}>{pointTotals[94]}</span></li>
+                        <li>96. {countries[95]}<span className={styles.usersTotal}>{pointTotals[95]}</span></li>
+                        <li>97. {countries[96]}<span className={styles.usersTotal}>{pointTotals[96]}</span></li>
+                        <li>98. {countries[97]}<span className={styles.usersTotal}>{pointTotals[97]}</span></li>
+                        <li>99. {countries[98]}<span className={styles.usersTotal}>{pointTotals[98]}</span></li>
+                        <li>100. {countries[99]}<span className={styles.usersTotal}>{pointTotals[99]}</span></li> */}
                     </ol>
                 </div>
             </div>

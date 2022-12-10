@@ -151,8 +151,8 @@
   transition: all;
   transition-duration: 200ms;
   position: absolute;
-  left: 5px;
-  top: 5px;
+  left: 10px;
+  top: 10px;
 }
 
 .social{
